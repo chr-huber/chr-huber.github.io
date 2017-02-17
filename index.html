@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Christoph Huber</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -12,38 +12,112 @@
     <![endif]-->
   </head>
 
-  <body>
-    <h1>Hello, world!</h1>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-main-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#">Christoph Huber</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="page-scroll" href="#about">About</a></li>
+            <li><a class="page-scroll" href="#news">News</a></li>
+            <li><a class="page-scrolL" href="#contact">Contact</a></li>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container" style="max-width:970px">
+            <h1>Ready. Set. Code.</h1>
+            <p>Are you ready to boilerstrap your cross-compatible buzzword? We're Sassy, flat and semantic, so what are you waiting for?</p>
+            <br>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Free Trial »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------- -->
+	<!-- ABOUT SECTION START -->
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
+    <section id="about">
+		<div class="container" style="max-width:970px">
+            <div class="row text-center header">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+					<h3>About</h3>
+					<hr/>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- ABOUT SECTION END -->
+
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
+	<!-- NEWS SECTION START -->
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
+	<section id="news">
+		<div class="container" style="max-width:970px">
+            <div class="row text-center header">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+					<h3>News</h3>
+					<hr/>
+				</div>
+			</div>
+			<p>Hello World.</p>
+		</div>
+	</section>
+	<!-- HOME SECTION END -->
+
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
+	<!-- CONTACT SECTION START -->
+	<!-- ---------------------------------------------------------------------------------------------------------- -->
+	<section id="contact">
+		<div class="container" style="max-width:970px">
+            <div class="row text-center header">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+					<h3>Contact</h3>
+					<hr/>
+				</div>
+			</div>
+
+            <table class="table table-responsive">
+                <tr>
+                    <td></td>
+                    <td>E-Mail:</td>
+                    <td><a href=mailto:christoph.huber@uibk.ac.at>Christoph.Huber@uibk.ac.at</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Tel.:</td>
+                    <td>+43(0)512 507 73015</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Address:</td>
+                    <td>Christoph Huber <br>
+                        Department of Banking and Finance <br>
+                        University of Innsbruck <br>
+                        Universitaetsstrasse 15 <br>
+                        6020 Innsbruck <br>
+                        Austria
+                    </td>
+                </tr>
+            </table>
+
+
+		</div>
+	</section>
+	<!-- CONTACT SECTION END -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 
-  <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Balance Web Development</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">About</a></li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#">Design</a></li>
-                          <li><a href="#">Development</a></li>
-                          <li><a href="#">Consulting</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="#">Contact</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+
 </html>
