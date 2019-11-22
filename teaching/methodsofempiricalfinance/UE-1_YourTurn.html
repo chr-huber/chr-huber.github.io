@@ -130,46 +130,38 @@ summary(data)
 ```
 
 ```
-##     LAST_UPDATE_DT                      NAME    
-##  2019-11-18:505    3M CO                  :  1  
-##                    ABBOTT LABORATORIES    :  1  
-##                    ABBVIE INC             :  1  
-##                    ABIOMED INC            :  1  
-##                    ACCENTURE PLC-CL A     :  1  
-##                    ACTIVISION BLIZZARD INC:  1  
-##                    (Other)                :499  
-##                INDUSTRY_SECTOR                INDUSTRY_GROUP
-##  Consumer, Non-cyclical:106    REITS                 : 31   
-##  Financial             : 99    Retail                : 29   
-##  Consumer, Cyclical    : 70    Electric              : 25   
-##  Industrial            : 67    Banks                 : 23   
-##  Technology            : 51    Insurance             : 22   
-##  Communications        : 37    Diversified Finan Serv: 21   
-##  (Other)               : 75    (Other)               :354   
-##                 INDUSTRY_SUBGROUP    PX_LAST         CHG_NET_YTD      
-##  Electric-Integrated     : 22     Min.   :   8.95   Min.   :-146.950  
-##  Oil Comp-Explor&amp;Prodtn  : 13     1st Qu.:  49.25   1st Qu.:   5.395  
-##  Electronic Compo-Semicon: 11     Median :  88.73   Median :  15.170  
-##  Commercial Serv-Finance : 10     Mean   : 134.82   Mean   :  28.076  
-##  Medical Products        : 10     3rd Qu.: 147.63   3rd Qu.:  33.490  
-##  Medical-Biomedical/Gene :  9     Max.   :3652.64   Max.   :1215.650  
-##  (Other)                 :430                       NA&#39;s   :6         
-##  EQY_DVD_YLD_IND       EQY_BETA         PE_RATIO        CUR_MKT_CAP       
-##  Min.   : 0.01963   Min.   :0.3954   Min.   :  5.499   Min.   :3.950e+09  
-##  1st Qu.: 1.42585   1st Qu.:0.8485   1st Qu.: 13.780   1st Qu.:1.308e+10  
-##  Median : 2.19592   Median :1.0167   Median : 20.662   Median :2.323e+10  
-##  Mean   : 2.44812   Mean   :0.9887   Mean   : 27.016   Mean   :5.635e+10  
-##  3rd Qu.: 3.13591   3rd Qu.:1.1327   3rd Qu.: 29.485   3rd Qu.:5.055e+10  
-##  Max.   :10.72961   Max.   :1.7004   Max.   :708.164   Max.   :1.187e+12  
-##  NA&#39;s   :81         NA&#39;s   :11       NA&#39;s   :15                           
-##    BOARD_SIZE    PCT_WOMEN_ON_BOARD NUMBER_OF_WOMEN_ON_BOARD
-##  Min.   : 5.00   Min.   : 0.00      Min.   :0.000           
-##  1st Qu.:10.00   1st Qu.:18.18      1st Qu.:2.000           
-##  Median :11.00   Median :25.00      Median :3.000           
-##  Mean   :10.98   Mean   :24.62      Mean   :2.709           
-##  3rd Qu.:12.00   3rd Qu.:30.00      3rd Qu.:3.000           
-##  Max.   :21.00   Max.   :55.56      Max.   :7.000           
-##  NA&#39;s   :3       NA&#39;s   :3          NA&#39;s   :3               
+##     LAST_UPDATE_DT                      NAME                   INDUSTRY_SECTOR
+##  2019-11-18:505    3M CO                  :  1   Consumer, Non-cyclical:106   
+##                    ABBOTT LABORATORIES    :  1   Financial             : 99   
+##                    ABBVIE INC             :  1   Consumer, Cyclical    : 70   
+##                    ABIOMED INC            :  1   Industrial            : 67   
+##                    ACCENTURE PLC-CL A     :  1   Technology            : 51   
+##                    ACTIVISION BLIZZARD INC:  1   Communications        : 37   
+##                    (Other)                :499   (Other)               : 75   
+##                 INDUSTRY_GROUP                INDUSTRY_SUBGROUP    PX_LAST       
+##  REITS                 : 31    Electric-Integrated     : 22     Min.   :   8.95  
+##  Retail                : 29    Oil Comp-Explor&amp;Prodtn  : 13     1st Qu.:  49.25  
+##  Electric              : 25    Electronic Compo-Semicon: 11     Median :  88.73  
+##  Banks                 : 23    Commercial Serv-Finance : 10     Mean   : 134.82  
+##  Insurance             : 22    Medical Products        : 10     3rd Qu.: 147.63  
+##  Diversified Finan Serv: 21    Medical-Biomedical/Gene :  9     Max.   :3652.64  
+##  (Other)               :354    (Other)                 :430                      
+##   CHG_NET_YTD       EQY_DVD_YLD_IND       EQY_BETA         PE_RATIO      
+##  Min.   :-146.950   Min.   : 0.01963   Min.   :0.3954   Min.   :  5.499  
+##  1st Qu.:   5.395   1st Qu.: 1.42585   1st Qu.:0.8485   1st Qu.: 13.780  
+##  Median :  15.170   Median : 2.19592   Median :1.0167   Median : 20.662  
+##  Mean   :  28.076   Mean   : 2.44812   Mean   :0.9887   Mean   : 27.016  
+##  3rd Qu.:  33.490   3rd Qu.: 3.13591   3rd Qu.:1.1327   3rd Qu.: 29.485  
+##  Max.   :1215.650   Max.   :10.72961   Max.   :1.7004   Max.   :708.164  
+##  NA&#39;s   :6          NA&#39;s   :81         NA&#39;s   :11       NA&#39;s   :15       
+##   CUR_MKT_CAP          BOARD_SIZE    PCT_WOMEN_ON_BOARD NUMBER_OF_WOMEN_ON_BOARD
+##  Min.   :3.950e+09   Min.   : 5.00   Min.   : 0.00      Min.   :0.000           
+##  1st Qu.:1.308e+10   1st Qu.:10.00   1st Qu.:18.18      1st Qu.:2.000           
+##  Median :2.323e+10   Median :11.00   Median :25.00      Median :3.000           
+##  Mean   :5.635e+10   Mean   :10.98   Mean   :24.62      Mean   :2.709           
+##  3rd Qu.:5.055e+10   3rd Qu.:12.00   3rd Qu.:30.00      3rd Qu.:3.000           
+##  Max.   :1.187e+12   Max.   :21.00   Max.   :55.56      Max.   :7.000           
+##                      NA&#39;s   :3       NA&#39;s   :3          NA&#39;s   :3               
 ##  BOARD_AVERAGE_TENURE BOARD_AVERAGE_AGE NUMBER_OF_DIRECTORS_ON_BOARD
 ##  Min.   : 0.7436      Min.   :52.15     Min.   : 5.00               
 ##  1st Qu.: 6.3238      1st Qu.:61.09     1st Qu.:10.00               
@@ -268,17 +260,17 @@ data %&gt;%
 
 ```
 ## # A tibble: 9 x 4
-##   INDUSTRY_SECTOR  `mean(BOARD_SIZE, ~ `min(BOARD_SIZE, ~ `max(BOARD_SIZE,~
-##   &lt;fct&gt;                          &lt;dbl&gt;              &lt;int&gt;             &lt;int&gt;
-## 1 Basic Materials                 11.1                  6                16
-## 2 Communications                  10.7                  7                15
-## 3 Consumer, Cycli~                11.0                  5                14
-## 4 Consumer, Non-c~                11.0                  6                16
-## 5 Energy                          10.6                  7                16
-## 6 Financial                       11.6                  7                21
-## 7 Industrial                      10.7                  6                14
-## 8 Technology                      10.1                  5                15
-## 9 Utilities                       11.8                  8                15
+##   INDUSTRY_SECTOR    `mean(BOARD_SIZE, na.~ `min(BOARD_SIZE, na.~ `max(BOARD_SIZE, na.~
+##   &lt;fct&gt;                               &lt;dbl&gt;                 &lt;int&gt;                 &lt;int&gt;
+## 1 Basic Materials                      11.1                     6                    16
+## 2 Communications                       10.7                     7                    15
+## 3 Consumer, Cyclical                   11.0                     5                    14
+## 4 Consumer, Non-cyc~                   11.0                     6                    16
+## 5 Energy                               10.6                     7                    16
+## 6 Financial                            11.6                     7                    21
+## 7 Industrial                           10.7                     6                    14
+## 8 Technology                           10.1                     5                    15
+## 9 Utilities                            11.8                     8                    15
 ```
 
 ---
@@ -297,17 +289,17 @@ data %&gt;%
 
 ```
 ## # A tibble: 9 x 4
-##   INDUSTRY_SECTOR  `mean(PCT_WOMEN_O~ `min(PCT_WOMEN_ON~ `max(PCT_WOMEN_ON~
-##   &lt;fct&gt;                         &lt;dbl&gt;              &lt;dbl&gt;              &lt;dbl&gt;
-## 1 Basic Materials                25.9              15.4                41.7
-## 2 Communications                 24.6               0                  55.6
-## 3 Consumer, Cycli~               26.1               8.33               50  
-## 4 Consumer, Non-c~               25.0               9.09               45.5
-## 5 Energy                         22.0               9.09               36.4
-## 6 Financial                      25.4              10                  45.5
-## 7 Industrial                     23.0               7.69               37.5
-## 8 Technology                     22.8               8.33               44.4
-## 9 Utilities                      25.5              14.3                50
+##   INDUSTRY_SECTOR   `mean(PCT_WOMEN_ON_BO~ `min(PCT_WOMEN_ON_BOA~ `max(PCT_WOMEN_ON_BO~
+##   &lt;fct&gt;                              &lt;dbl&gt;                  &lt;dbl&gt;                 &lt;dbl&gt;
+## 1 Basic Materials                     25.9                  15.4                   41.7
+## 2 Communications                      24.6                   0                     55.6
+## 3 Consumer, Cyclic~                   26.1                   8.33                  50  
+## 4 Consumer, Non-cy~                   25.0                   9.09                  45.5
+## 5 Energy                              22.0                   9.09                  36.4
+## 6 Financial                           25.4                  10                     45.5
+## 7 Industrial                          23.0                   7.69                  37.5
+## 8 Technology                          22.8                   8.33                  44.4
+## 9 Utilities                           25.5                  14.3                   50
 ```
 
 ---
