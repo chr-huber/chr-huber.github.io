@@ -2880,10 +2880,10 @@
          id="g1918"><text
            id="text1922"
            style="font-variant:normal;font-weight:normal;font-size:9.9989996px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,63.8656,26.0742)"><tspan
+           transform="matrix(1,0,0,-1,65.5305,26.0742)"><tspan
              id="tspan1920"
              y="0"
-             x="0 6.1093888">FI</tspan></text>
+             x="0">1</tspan></text>
 </g><path
          id="path1924"
          style="fill:none;stroke:#000000;stroke-width:5.76000023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -2892,23 +2892,47 @@
          id="g1926"><text
            id="text1930"
            style="font-variant:normal;font-weight:normal;font-size:9.9989996px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,137.376,26.0742)"><tspan
+           transform="matrix(1,0,0,-1,138.766,26.0742)"><tspan
              id="tspan1928"
              y="0"
-             x="0 5.559444">LI</tspan></text>
+             x="0">2</tspan></text>
 </g><path
          id="path1932"
          style="fill:none;stroke:#000000;stroke-width:5.76000023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          d="M 2147.8,390.801 V 350.832" /><g
          transform="scale(10)"
          id="g1934"><text
-           id="text1940"
+           id="text1938"
            style="font-variant:normal;font-weight:normal;font-size:9.9989996px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,210.336,26.0742)"><tspan
+           transform="matrix(1,0,0,-1,212.001,26.0742)"><tspan
              id="tspan1936"
              y="0"
-             x="0 6.1093888">TI</tspan><tspan
-             id="tspan1938"
+             x="0">3</tspan></text>
+</g><path
+         id="path1940"
+         style="fill:none;stroke:#000000;stroke-width:5.76000023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 2880.28,390.801 V 350.832" /><g
+         transform="scale(10)"
+         id="g1942"><text
+           id="text1946"
+           style="font-variant:normal;font-weight:normal;font-size:9.9989996px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,285.248,26.0742)"><tspan
+             id="tspan1944"
+             y="0"
+             x="0">4</tspan></text>
+</g><path
+         id="path1948"
+         style="fill:none;stroke:#000000;stroke-width:5.76000023;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 3612.63,390.801 V 350.832" /><g
+         transform="scale(10)"
+         id="g1950"><text
+           id="text1956"
+           style="font-variant:normal;font-weight:normal;font-size:9.9989996px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,358.484,26.0742)"><tspan
+             id="tspan1952"
+             y="0"
+             x="0">5</tspan><tspan
+             id="tspan1954"
              y="11.0016"
-             x="-7.2238302 -2.2243299 2.7751701 8.3346138 10.554392">scale</tspan></text>
+             x="-155.371 -150.37151 -145.37199 -139.81256 -137.59277">scale</tspan></text>
 </g></g></g></svg>
