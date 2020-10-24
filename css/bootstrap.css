@@ -4962,8 +4962,9 @@ a.badge:focus {
   color: inherit;
   background-color: #eee;
   background: #000 url("../IMG_20191211_083219a-min.jpg") no-repeat center center;
-  background-position: 0px -580px;
+  /* background-position: 0px -580px; */
   background-size: cover;
+  background-position: bottom;
 }
 .jumbotron h1,
 .jumbotron .h1 {
