@@ -79,7 +79,7 @@
                     <hr />
                 </div>
             </div>
-            <div style="clear:both">
+            <div style="clear:both" id="noContextMenu">
 
                 <h4>
                     Sommersemester 2021
@@ -195,7 +195,7 @@
                 <p style="text-align:right; font-size:small; color: gray">
                     © 2021 Christoph Huber
                 </p>
-            </div>  
+            </div>
 
         </div>
 
@@ -240,6 +240,15 @@
     <script src="../../js/scrolling-nav.js"></script>
 
     <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+
+    <script>
+        noContext = document.getElementById('noContextMenu');
+
+        noContext.addEventListener('contextmenu', e => {
+          e.preventDefault();
+        });
+    </script>
+    
 </body>
 
 
