@@ -12,6 +12,11 @@ a.btn {
     font-family: Verdana;
 }
 
+button.btn-default{
+    font-size: 12px;
+    font-family: Verdana;
+}
+
 a.btn.jumbo {
     margin-left: 1px;
     margin-top: 1px;
@@ -21,6 +26,18 @@ a.btn.jumbo {
     font-size: 10px;
     font-family: Verdana;
     background: rgb(35, 82, 125, .6);
+    color: white;
+    border-color: rgb(35, 82, 125, .8);
+}
+a.btn.jumbo:hover {
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 1px 7px;
+    font-weight: light;
+    font-size: 10px;
+    font-family: Verdana;
+    background: rgb(35, 82, 125, .9);
     color: white;
     border-color: rgb(35, 82, 125, .8);
 }
