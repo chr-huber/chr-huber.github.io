@@ -48,7 +48,8 @@ h5 {
 
 
 .btn-apply {
-    color: #ffff;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff!important;
     background-color: #e64e46;
     border-color: #e64e46;
 }
@@ -104,7 +105,7 @@ h5 {
   width: 100%;
   padding: 0px 0px;
   margin-top: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 140px;
   transition: all 0.3s;
 }
 
