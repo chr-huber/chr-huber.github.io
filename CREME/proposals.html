@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,132 +19,137 @@
     <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
 
     <title>CREME</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
-      <div id="wrapper">
+    <div id="wrapper">
 
-          <!-- Navbar -->
-          <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand display-1" href="index.html">
                     <span style="color: #be9c6c!important;">CREME</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          About
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                          <a class="dropdown-item" href="index.html">Overview</a>
-                          <a class="dropdown-item" href="index.html#schedule">Schedule</a>
-                          <a class="dropdown-item" href="index.html#team">Project coordinators</a>
-                      </div>
-                    </li>
-                    <li class="nav-item dropdown active">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDesigns" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Researcher Tasks
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownDesigns">
-                          <a class="dropdown-item" href="#overview">Overview</a>
-                          <a class="dropdown-item" href="#requirements">Requirements</a>
-                          <a class="dropdown-item" href="#selection">Design selection</a>
-                          <a class="dropdown-item" href="#evaluation">Peer evaluation</a>
-                          <a class="dropdown-item" href="#analyses">Data & analyses</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="application.html">
-                          Application Procedure
-                      </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="btn btn-apply" href="#">Apply now!</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                                <a class="dropdown-item" href="index.html">Overview</a>
+                                <a class="dropdown-item" href="index.html#schedule">Schedule</a>
+                                <a class="dropdown-item" href="index.html#team">Project coordinators</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDesigns" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Researcher Tasks
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownDesigns">
+                                <a class="dropdown-item" href="proposals.html#overview">Overview</a>
+                                <a class="dropdown-item" href="proposals.html#requirements">Requirements</a>
+                                <a class="dropdown-item" href="proposals.html#selection">Design selection</a>
+                                <a class="dropdown-item" href="proposals.html#evaluation">Peer assessment</a>
+                                <a class="dropdown-item" href="proposals.html#software">Experimental software</a>
+                                <a class="dropdown-item" href="proposals.html#analyses">Data & analyses</a>
+                                <a class="dropdown-item" href="proposals.html#authorship">Data usage & authorship</a> 
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="application.html">
+                                Application Procedure
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-apply" href="application.html#apply">Apply now</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-          </nav>
+        </nav>
 
-          <div id="content">
+        <div id="content">
 
-              <div id="overview" class="anchor">
+            <div id="overview" class="anchor">
 
-                  <div class="container">
+                <div class="container">
 
-                      <h2>overview</h2>
+                    <h2>overview</h2>
 
-<!--
+                    <!--
                       <h5>Propose and run an experiment</h5>
 -->
-                      <h5>What?</h5>
-                      <p>
-                          Research teams (RTs) are solicited to participate in a project examining the <span class="emph">methodological variability and design variability of experiments in behavioral economics</span>.
-                          In particular, the project focuses on the variablity in methods when the same research question is examined by different research teams.
-                          As there are various choices to make along the way, methods as well as results are likely to show some heterogeneity.
-                          The variation in experimental methods will allow for valuable metascientific insights.
-                      </p>
-                      <p>
-                          All participating RTs will propose <span class="emph">an experimental research design with the objective of analyzing the impact of competition on moral behavior</span> fulfilling a certain set of very simple criteria.
-                          Each RT will freely analyze the data using their own methodology and will provide effect sizes and standard errors regarding several specific a-priori hypotheses. All RTs will be anonymized prior to reporting or subsequent sharing of the submitted results.
-                      </p>
-                      <p>
-                          In particular, in Stage 1, each participating RT will submit a design proposal following a given template, outlining the key parameters of their proposed experiment.
-                          If <i>more</i> than 40 submitted design proposals are eligible for participation, 40 designs will be <i>randomly</i> selected for being included in the study.
+                    <h5>What?</h5>
+                    <p>
+                        Research teams (RTs) are solicited to participate in a project examining the <span class="emph">methodological variability and design variability of experiments in behavioral economics</span>.
+                        In particular, the project focuses on the variablity in methods when the same research question is examined by different research teams.
+                        As there are various choices to make along the way, methods as well as results are likely to show some heterogeneity.
+                        The variation in experimental methods will allow for valuable metascientific insights.
+                    </p>
+                    <p>
+                        All participating RTs will propose <span class="emph">an experimental research design with the objective of analyzing the impact of competition on moral behavior</span> fulfilling a certain set of very simple criteria.
+                        Each RT will analyze the data using their own methodology and will provide effect sizes and standard errors regarding the a-priori hypothesis. All RTs will be anonymized prior to reporting or subsequent sharing of the
+                        submitted results.
+                    </p>
+                    <p>
+                        In particular, in Stage 1, each participating RT will submit a design proposal following a given template, outlining the key parameters of their proposed experiment.
+                        If <i>more</i> than 40 submitted design proposals are eligible for participation, 40 designs will be <i>randomly</i> selected for being included in the study.
 
-                          In Stage 2, each of the 40 selected design proposals will be implemented as an online experiments using Prolific.
-                          RTs are programmig the software for their submitted design proposals als are hosting the software while the experiment is conducted and paid for by the project coordinators (PCs).
+                        In Stage 2, each of the 40 selected design proposals will be implemented as an online experiments using Prolific.
+                        RTs are programmig the software for their submitted design proposals als are hosting the software while the experiment is conducted and paid for by the project coordinators (PCs).
 
-                          In Stage 3, all RTs will be asked to read 10 other design proposals, submitted by their peers, and evaluate them using a short questionnaire.
-                      </p>
-<!--
+                        In Stage 3, all RTs will be asked to read 10 other design proposals, submitted by their peers, and evaluate them using a short questionnaire.
+                    </p>
+                    <!--
                       <p>
                           When applying to participate, RTs will fill out a survey with background information about the team. After reporting their Stage 1 results, they will fill out an incentivized survey about their beliefs about the variation in Stage 1 results across RTs for each hypothesis. Sign-up as a research team! [sign-up closed: see Overview for details]
                       </p>
 -->
-                      <p>
-                          We expect that the total workload for research teams participating in the project will be between two and three weeks.
-                      </p>
+                    <p>
+                        We expect that the total workload for research teams participating in the project will be between two and three weeks.
+                    </p>
 
-                      <h5>When?</h5>
-                      <p>
-                          The project coordinators recruit research teams (RTs) between April and May 2021.
-                          Eligible RTs will design their experiment and submit their proposals by June 2021.
-                          During the summer, all selected RTs will program the experimental software for their submitted designs and submit their software and instructions by the end of September 2021.
-                          Starting in October 2021, pilot sessions for all experiments will be run to confirm feasibility.
-                          From November 2021 to February 22, all selected experiments will be conducted online using Prolific.
-                          Data analysis by RTs and the project coordinators will start after all selected experiments have been completed.
-                          The overall project will last until summer 2022. For a detailed schedule of the project, please refer to the schedule.
-                      </p>
+                    <h5>When?</h5>
+                    <p>
+                        The project coordinators recruit research teams (RTs) between April and May 2021.
+                        Eligible RTs will design their experiment and submit their proposals by June 2021.
+                        During the summer, all selected RTs will program the experimental software for their submitted designs and submit their software and instructions by the end of September 2021.
+                        Starting in October 2021, pilot sessions for all experiments will be run to confirm feasibility.
+                        From November 2021 to February 22, all selected experiments will be conducted online using Prolific.
+                        Data analysis by RTs and the project coordinators will start after all selected experiments have been completed.
+                        The overall project will last until summer 2022. For a detailed schedule of the project, please refer to the schedule.
+                    </p>
 
-                      <h5>Why participate?</h5>
-                      <p>
-                          In addition to being part of a fascinating project, you will get the chance to satisfy the curiosity of the academic in you, hungry for answers to a highly relevant and controversial research question.
-                          For the proposals selected for implementation, we will cover the costs for participant payments.
-                          Moreover, all participating researchers of the selected RTs will be listed as co-authors on the final paper.
-                          They will thus become co-author of a paper that targets publication in a top scientific journal.
-                          The organizers were very successful with a paper on crowd-analyses  in neuroscience, which yielded a 2020 publication in Nature (see <a href="https://www.nature.com/articles/s41586-020-2314-9" target="_blank">here</a>).
-                          We take an innovative approach by &ndash; for the first time in behavioral economics &ndash; crowd-sourcing the research designs and letting the relevant community judge which proposals it considers the most valid and most relevant ones.
-                      </p>
+                    <h5>Why participate?</h5>
+                    <p>
+                        In addition to being part of a fascinating project, you will get the chance to satisfy the curiosity of the academic in you, hungry for answers to a highly relevant and controversial research question.
+                        For the proposals selected for implementation, we will cover the costs for participant payments.
+                        Moreover, all participating researchers of the selected RTs will be listed as co-authors on the final paper.
+                        They will thus become co-author of a paper that targets publication in a top scientific journal.
+                        The organizers were very successful with a paper on crowd-analyses in neuroscience, which yielded a 2020 publication in Nature (see <a href="https://www.nature.com/articles/s41586-020-2314-9" target="_blank">here</a>).
+                        We take an innovative approach by &ndash; for the first time in behavioral economics &ndash; crowd-sourcing the research designs and letting the relevant community judge which proposals it considers the most valid and most
+                        relevant ones.
+                    </p>
 
-                      <h5>Who?</h5>
-                      <p>
-                          RTs consist of one or two participants. At least one of the members of the RT has to hold a PhD in Economics, Psychology or a related field and at least one team member needs one experimental study that is either published (accepted for publication) or a working paper.
-                          The team should be sufficiently skilled in experimental methodology and should be familiar with the conceptualizing and implementing (programming) an economic online experiment.
-                          RTs need to apply to participate by filling out a brief survey about background characteristics and expertise in behavioral and experimental economics.
-                          The project coordinators will then decide whether the RT is sufficiently qualified to participate by majority voting.
-                          After an RT is invited to participate, an agreement is signed where the project coordinators pledge to ensure anonymity
-                          (i.e., not revealing the identity of RTs members to anyone outside the project coordination team) and RTs promise to ... XXXXXXX
-                      </p>
+                    <h5>Who?</h5>
+                    <p>
+                        RTs consist of one or two participants. At least one of the members of the RT has to hold a PhD in Economics, Psychology or a related field and at least one team member needs one experimental study that is either published
+                        (accepted for publication) or a working paper.
+                        The team should be sufficiently skilled in experimental methodology and should be familiar with the conceptualizing and implementing (programming) an economic online experiment.
+                        RTs need to apply to participate by filling out a brief survey about background characteristics and expertise in behavioral and experimental economics.
+                        The project coordinators will then decide whether the RT is sufficiently qualified to participate by majority voting.
+                        After an RT is invited to participate, an agreement is signed where the project coordinators pledge to ensure anonymity
+                        (i.e., not revealing the identity of RTs members to anyone outside the project coordination team) and RTs promise to ... XXXXXXX
+                    </p>
 
-<!--
+                    <!--
                       <h5>What is in it for science?</h5>
                       <p>
                           Here is science's end of the deal:
@@ -155,110 +160,229 @@
                       </p>
 -->
 
-                      <h5>Contact</h5>
-                      <p>
-                          In case you have any questions, please contact the project coordinators via <a href="mailto:info@creme.world">info@creme.academy</a>.
-                      </p>
-                  </div>
-              </div>
+                    <h5>Contact</h5>
+                    <p>
+                        In case you have any questions, please contact the project coordinators via <a href="mailto:info@creme.world">info@creme.academy</a>.
+                    </p>
+                </div>
+            </div>
 
-              <div id="requirements" class="anchor">
+            <div id="requirements" class="anchor">
 
-                  <div class="container">
+                <div class="container">
 
-                      <h2>design conditions</h2>
+                    <h2>design conditions</h2>
 
-                      <p>
-                          To be considered for this project, your experiment has to follow the following <span class="emph">design conditions</span>:
-                          <ul>
-                              <li>Be designed to be implemented as an online experiment on Prolific with 400 observations:</li>
-                              <ul>
-                                  <li>The experiment needs to be administered online on <a href="https://www.prolific.co/" target="_blank">Prolific</a>.</li>
-                                  <li>Design adheres to Prolific's <a href="https://www.prolific.co/assets/docs/Researcher_Terms.pdf" target="_blank">terms & conditions for researchers</a>.</li>
-                              </ul>
-                              <li>Employ a between-subjects treatment design with two equally sized control and treatment groups:</li>
-                                  <ul>
-                                      <li>one control condition without competition</li>
-                                      <li>one treatment condition with competition</li>
-                                  </ul>
-                              <li>Incentive compatible payments for subjects that cover at least the opportunity cost of time (Prolific implements the requirement of GBP 5 per hous as minimum payment), are not negative (losses), and are paid out confidentially.</li>
-                              <li>Define a clear measure of moral behavior.</li>
-                              <li>No deception of subjects.</li>
-                              <li>Subject anonymity regarding who is interacting with whom during the experiment.</li>
-                              <li>No measurements of physical state (e.g., saliva samples, blood samples) and no physical or psychological harm.</li>
-                              <li>Clear information for subjects regarding the experiment’s duration, repetitions, interactions, and random processes (like lotteries) that are relevant for subjects, and which information is common knowledge to other (groups of) subjects.</li>
-                              <li>Design clearly defines randomization procedures across treatments.</li>
-                          </ul>
-                          Borderline criteria will be voted on by the project coordinators (majority rule).
-                      </p>
+                    <p>
+                        To be considered for this project, your experiment has to follow the following <span class="emph">design conditions</span>:
+                    <ul>
+                        <li>Be designed to be implemented as an online experiment on Prolific with 400 observations:</li>
+                        <ul>
+                            <li>The experiment needs to be administered online on <a href="https://www.prolific.co/" target="_blank">Prolific</a>.</li>
+                            <li>Design adheres to Prolific's <a href="https://www.prolific.co/assets/docs/Researcher_Terms.pdf" target="_blank">terms & conditions for researchers</a>.</li>
+                        </ul>
+                        <li>Employ a between-subjects treatment design with two equally sized control and treatment groups:</li>
+                        <ul>
+                            <li>one control condition without competition</li>
+                            <li>one treatment condition with competition</li>
+                        </ul>
+                        <li>Incentive compatible payments for subjects that cover at least the opportunity cost of time (Prolific implements the requirement of GBP 5 per hous as minimum payment), are not negative (losses), and are paid out
+                            confidentially.</li>
+                        <li>Define a clear measure of moral behavior.</li>
+                        <li>No deception of subjects.</li>
+                        <li>Subject anonymity regarding who is interacting with whom during the experiment.</li>
+                        <li>No measurements of physical state (e.g., saliva samples, blood samples) and no physical or psychological harm.</li>
+                        <li>Clear information for subjects regarding the experiment’s duration, repetitions, interactions, and random processes (like lotteries) that are relevant for subjects, and which information is common knowledge to other
+                            (groups of) subjects.</li>
+                        <li>Design clearly defines randomization procedures across treatments.</li>
+                    </ul>
+                    Borderline criteria will be voted on by the project coordinators (majority rule).
+                    </p>
 
-                      <p>
-                          Each proposal should be no longer than two pages (see template <a href="#">here</a>) and should outline an experimental design (for further information on the proposal, click <a href="#">here</a>).
-                      </p>
+                    <p>
+                        Each proposal should be no longer than two pages (see template <a href="#">here</a>) and should outline an experimental design (for further information on the proposal, click <a href="#">here</a>).
+                    </p>
 
 
-                  </div>
-              </div>
+                </div>
+            </div>
 
-              <div id="selection" class="anchor">
+            <div id="selection" class="anchor">
 
-                  <div class="container">
+                <div class="container">
 
-                      <h2>design selection</h2>
+                    <h2>design selection</h2>
 
-                      <p>
-                          Alll submitted proposals will be pre-screened by the project coordinators (PCs) to eliminate studies that do not fit the above-mentioned criteria.
-                          If up to 40 eligible proposals are submitted, all of them will be implemented and run;
-                          if <i>more</i> than 40 eligible proposals are submitted, 40 of them will be randomly selected to be run
-                          (and the other ones will be "returned" to the submitting research teams and not be shared with anyone else).
-                      </p>
+                    <p>
+                        Alll submitted proposals will be pre-screened by the project coordinators (PCs) to eliminate studies that do not fit the above-mentioned criteria.
+                    </p>
+                    <p>
+                        If up to 40 eligible proposals are submitted, all of them will be implemented and run;
+                        if <i>more</i> than 40 eligible proposals are submitted, 40 of them will be randomly selected to be run
+                        (and the other ones will be "returned" to the submitting research teams and not be shared with anyone else).
+                    </p>
 
-                  </div>
-              </div>
+                </div>
+            </div>
 
-              <div id="evaluation" class="anchor">
+            <div id="evaluation" class="anchor">
 
-                  <div class="container">
+                <div class="container">
 
-                      <h2>peer evaluation</h2>
+                    <h2>peer assessment</h2>
 
-                      <p>
-                          ...
-                      </p>
+                    <p>
+                        All included RTs will be asked to assess each others' experimental designs anonymously.
+                        <i>Each member of every RT will be asked to assess 10 other designs</i> and rate them on a Likert scale from 0 to 10 with the following question:
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            To what extent does this design, within the <i>design conditions</i> defined above, provide an informative test of the research question: "does competition affect moral behavior?"
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-3" style="text-align: right;"><input type="radio" disabled></input></div>
+                        <div class="col-1" style="text-align: center;"><input type="radio" disabled></input></div>
+                        <div class="col-2" style="text-align: center;">...</div>
+                        <div class="col-1" style="text-align: center;"><input type="radio" disabled></input></div>
+                        <div class="col-3" style="text-align: left;"><input type="radio" disabled></input></div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-3" style="text-align: right;">0 <br> (not at all informative)</div>
+                        <div class="col-1" style="text-align: center;">1</div>
+                        <div class="col-2" style="text-align: center;">...</div>
+                        <div class="col-1" style="text-align: center;">9</div>
+                        <div class="col-3" style="text-align: left;">10 <br> (extremely informative)</div>
+                        <div class="col-1"></div>
+                    </div>
+                    </p>
 
-                  </div>
-              </div>
+                </div>
+            </div>
 
-              <div id="analyses" class="anchor">
+            <div id="software" class="anchor">
 
-                  <div class="container">
+                <div class="container">
 
-                      <h2>data & analyses</h2>
+                    <h2>experimental software</h2>
 
-                      <p>
-                          ...
-                      </p>
+                    <p>
+                        Up to 40 design proposals are randomly selected to be implemented.
+                        Once research teams (RTs) have been notified that their design has been selected, they have <i>three months time</i> to provide the <span class="emph">experimental software including experimental instructions</span>.
+                        All selected designs will be implemented as an <i>online experiment on <a href="https://prolific.co" target="_blank">Prolific</a></i> with up to 400 observations.
+                        RTs therefore have to make sure that their experimental software adheres to the following <span class="emph">software conditions</span>:
 
-                      <p>
-                          ...
-                      </p>
+                    <ul>
+                        <li>RTs are responsible for hosting the experimental software and provide the project coordinators (PCs) with:</li>
+                        <ul>
+                            <li>One anonymous link per experimental treatment to be sent to participants via Prolific.
+                            <li>Access to the server on which the experimental software is hosted such that PCs are able to retrieve the data.</li>
+                        </ul>
+                        <li>Experimental software has to be compatible with Prolific &ndash; i.e., it has to be possible to ...</li>
+                        <ol>
+                            <li>... send participants to the experiment using an anonymous link, </li>
+                            <li>... record their Prolific IDs, and </li>
+                            <li>... redirect them back to Prolific upon completion.</li>
+                        </ol>
+                        <ul>
+                            <li>See <a href="https://researcher-help.prolific.co/hc/en-gb/articles/360009094574-What-survey-experimental-software-is-compatible-with-Prolific" target="_blank">here</a>
+                                for more information.</li>
+                        </ul>
+                        <li>Design has to adhere to Prolific's <a href="https://www.prolific.co/assets/docs/Researcher_Terms.pdf" target="_blank">terms & conditions for researchers</a>.</li>
+                        <li>Experimental software and instructions have to be in English.</li>
+                    </ul>
+                    </p>
 
-                  </div>
-              </div>
+                </div>
+            </div>
 
-      </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+            <div id="analyses" class="anchor">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+                <div class="container">
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+                    <h2>data & analyses</h2>
+
+                    <p>
+                        After all included RTs' designs have been experimentally implemented and data collection is complete,
+                        RT will analyze their respective data.
+                    </p>
+                    <p>
+                        Each RT is free to analyze the data using their own methodology
+                        as specified in their pre-analysis plan under only one condition:
+                        <span class="emph">RTs estimate a linear model using ordinary least squares (OLS)</span>,
+                        with moral behavior as the dependent variable and a dummy variable equal to 1 for observations from the
+                        COMPETITION treatment (and 0 otherwise).
+                    </p>
+
+                    <p>
+                        RT will ...
+                    <ul>
+                        <li>... provide <span class="emph">effect sizes</span> and <span class="emph">standard errors</span> regarding the a-priori hypothesis outlined above.</li>
+                        <li>... submit their raw data and their analysis scripts so the PCs can do additional, own analyses and check the RT analyses for reproducibility.</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        For the metascientific analyses, the project coordinators (PCs) will then run two separate analyses:
+                        one based on the effect sizes from the analysis proposed by the RTs, and one based on standardized effect sizes.
+                    </p>
+
+                </div>
+            </div>
+
+            <div id="authorship" class="anchor">
+
+                <div class="container">
+
+                    <h2>data usage &amp; authorship</h2>
+
+                    <p>
+                        The data from each experiment is initially only shared with the RT belonging to the particular design proposal.
+                        Users of the data, i.e. RTs, will not be allowed to release, publicize, or discuss their results until the end of a specified embargo period.
+                        After an embardo period of one year (beginning at the start of data collection), all data will become publicly available under CC-BY licence
+                        and can be freely used.
+                    </p>
+                    <p>
+                        For the final paper to be produced from this project (including analysis of RTs' design proposals, RTs' peer assessments, and RTs' analyses, the project coordinators will draft the manuscript.
+                        All members of each RT will be offered co-authorship on the paper(s); each RT is limited to no more than two participants.
+                        Authorship will be limited to RTs who complete all stages of the project; i.e., to those whose design proposal is selected to be included, provide appropriate and feasible experimental software,
+                        complete the peer assessments, and submit their data and results by the respective deadlines.
+                        Co-authors from the RTs will be given two weeks to review any drafts of papers prior to submission.
+                    </p>
+                    <p>
+                        Each member of the RTs must sign a consent form before participating in the project.
+                        Sharing of data and/or results or discussing outcomes from the analyses with any other person during the embargo period is strictly forbidden
+                        (see <a href="index.html#about">information on the confidentiality agreement</a>).
+                        Sharing information during the embargo will compromise the entire belief elicitation and data analysis process of the research teams in the
+                        project.
+                    </p>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
 
-  </body>
+</body>
 
 </html>
