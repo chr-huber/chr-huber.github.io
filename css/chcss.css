@@ -54,3 +54,9 @@ span.label {
 .refereeing {
     font-size: 14px;
 }
+
+.publicationsheader {
+    font-size: 15px;
+    font-stretch: expanded;
+    padding-top: 8px;
+}
