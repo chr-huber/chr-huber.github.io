@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Heterogeneity of Beliefs and Trading Behavior</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sascha Füllbrunn, Christoph Huber, Catherine Eckel, Utz Weitzel" />
+    <meta name="date" content="2023-04-28" />
+    <script src="libs/header-attrs-2.18/header-attrs.js"></script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, middle
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #3399CC;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+# Heterogeneity of Beliefs and Trading Behavior: A Reexamination
+
+#### Sascha Füllbrunn, &lt;u&gt;Christoph Huber&lt;/u&gt;, Catherine Eckel, Utz Weitzel
+
+&lt;br&gt;
+#### Seminar, University of Alicante
+#### April 28, 2023
+
+---
+
+# Introduction
+
+- Heterogeneity of beliefs is a key element of trading in asset markets
+
+.small[
+Theoretical: e.g, Harrison/Kreps (1978),  Scheinkman/Xiong (2003), Hong/Stein (2007)
+]
+
+.small[
+Empirical: e.g., Giglio et al. (2021).,  Meeuwis et al. (2022)
+]
+
+&lt;br&gt;
+
+--
+
+Beliefs can differ because of differences in, for example: 
+- acquiring information (Basak, 2005)
+- how traders evaluate information (Detemple/Murphy, 1994)
+- how they apply different mechanisms, learning, or effort (Goeree/Hommes, 2005)
+- opinions, preferences, traits (Jouini/Napp, 2007)
+
+--
+
+__Experimental asset markets__ allow us to study the relationship between beliefs and trading behavior in a __controlled environment__.
+
+---
+
+# Introduction
+
+- Carlé et al. (2019) analyze data fom Haruvy et al. (2007):
+
+`\(\rightarrow\)` price expectations guide trading behavior
+
+--
+
+.pull-left[
+Haruvy et al. (2007)
+- call market, decreasing FV, students
+- 6 markets, 795 short-term beliefs
+]
+
+--
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+- only one experiment with six markets `\(\rightarrow\)` generalizability? replicability?
+
+--
+
+- experimental setup ("SSW") which yields results sensitive to seemingly small design variations; e.g.:
+
+  - different fundamental value developments: Kirchler et al., 2012
+  - framing effects: Kirchler et al. 2012; Huber et al., 2019
+
+---
+
+# This Paper
+
+#### What is the role of (the heterogeneity of) beliefs in the organization of trading behavior?
+
+--
+
+- we collect _no new data_, but:
+
+--
+
+&lt;br&gt;
+
+- we combine _data from 7 previous, original studies_ on __experimental asset markets__
+
+--
+
+- we attempt to _replicate previous results_ from Carlé et al. (2019) on this (much) larger data set
+
+--
+
+- we aim to provide valid and _robust evidence for the role of beliefs_ in trading behavior
+
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experimental Economics ... and Finance?
+
+- application of experimental methods to study economic questions &lt;br&gt;
+  in a _controlled environment_
+
+- monetary payments used to mimic real-world incentives
+
+--
+
+- Experimental Finance?
+  
+  - research questions related to _finance_
+  - strategic interactions, individuals’ investment decisions, and asset pricing—more broadly defined &lt;br&gt;
+  `\(\rightarrow\)` _human behavior in financial markets_
+  
+--
+
+- Participants:
+  Students, General Population, __Finance Professionals__
+
+
+---
+
+# Why Experimental Finance?
+
+"Finance does not need experiments, because we have lots of data" (Anonymous Reviewer)
+
+--
+
+Why do we need even more data? Isn‘t there enough real data, especially in finance?
+
+--
+
+- "Real" data typically includes many unobservable events that had an influence of market data (prices).
+
+- E.g. we normally cannot know investor’s expectations.
+
+- Theory of financial markets (and economics of uncertainty) is built on expectations.
+
+- We thus need data on expectations to distinguish among competing theories.
+
+---
+
+# Why Experimental Finance?
+
+- In experimental markets, the researcher can affect the expectations and knows the underlying parameters.
+
+- With this knowledge, we know for example the fundamental value and also other predictions of alternative theories.
+
+- We can therefore conduct powerful tests of theories which were not possible from the field data (because we know little about the parameters and expectations that generate the field data from the stock exchanges).
+
+--
+
+.center[
+`\(\rightarrow\)` __control__
+]
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009.png)
+
+.small[Levitt/List (2009)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009_highlighted.png)
+
+.small[Levitt/List (2009)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009_highlighted2.png)
+
+.small[Levitt/List (2009)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+.pull-left[
+University Laboratory
+![:width 100%](figures/wulabs.jpeg)
+]
+
+--
+
+.pull-right[
+Lab-in-the-Field
+![:width 100%](figures/mobile_lab1.png)
+]
+
+---
+
+# This Paper
+
+#### What is the role of (the heterogeneity of) beliefs in the organization of trading behavior?
+
+- we collect _no new data_, but:
+
+&lt;br&gt;
+
+- we combine _data from 7 previous, original studies_ on __experimental asset markets__
+
+- we attempt to _replicate previous results_ from Carlé et al. (2019) on this (much) larger data set
+
+- we aim to provide valid and _robust evidence for the role of beliefs_ in trading behavior
+
+---
+class: inverse, middle, center
+
+# Included Studies and Datasets: 
+## Market Prices and Beliefs
+
+
+---
+
+# Included studies / datasets
+
+
+.pull-left[
+Eckel and Füllbrunn (2015, 2017)
+- continuous double auction, decreasing FV, males/females
+- 43 markets, 5,805 short-term beliefs
+]
+
+--
+
+.pull-right[
+Duchene et al. (2019)
+- call market, decreasing FV, students
+- 35 markets, 2,100 short-term beliefs
+]
+&lt;br&gt;
+
+--
+
+.pull-left[
+Weitzel et al. (2020), Huber et al. (2019)
+- continuous double auction, constant/decreasing FV, students/prof.
+- 145 markets, 22,676 short-term beliefs
+]
+
+--
+
+.pull-right[
+Holt et al. (2017)
+- call market, flat/decreasing FV, males/females
+- 26 markets, 4,950 short-term beliefs
+]
+
+---
+
+# Included studies / datasets
+
+
+.pull-left[
+Eckel and Füllbrunn (2015, 2017)
+- continuous double auction, decreasing FV, males/females
+- 43 markets, 5,805 short-term beliefs
+]
+
+.pull-right[
+Duchene et al. (2019)
+- call market, decreasing FV, students
+- 35 markets, 2,100 short-term beliefs
+]
+&lt;br&gt;
+
+.pull-left[
+&lt;u&gt;&lt;b&gt;Weitzel et al. (2020)&lt;/b&gt;&lt;/u&gt;, Huber et al. (2019)
+- continuous double auction, constant/decreasing FV, students/prof.
+- 145 markets, 22,676 short-term beliefs
+]
+
+.pull-right[
+Holt et al. (2017)
+- call market, flat/decreasing FV, males/females
+- 26 markets, 4,950 short-term beliefs
+]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+##### Motivation
+
+- Financial bubbles have been recurring phenomena in history, spanning across different time periods, economies, and asset classes
+
+- Conjecture that bubbles emerged with different investor classes being active (e.g.,professionals, inexperienced investors)
+
+--
+&lt;br&gt;&lt;br&gt;
+
+__Research Question:__
+How do financial professionals contribute to price efficiency in asset markets?
+
+???
+
+Behavior of financial professionals can differ from student subjects:  higher degree of myopic loss aversion; less prone to anchoring than students; react more strongly to rank incentives; also show herd behavior similar to students
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+##### Experimental Design
+
+- Experimental asset market over 20 periods of 120s
+
+  - 8 traders per market
+
+  - Final buyback price of 28 Taler
+  
+  - Dividend and interest payments &lt;br&gt;
+    `\(\rightarrow\)` Fundamental value of the asset is 28 at each point in time
+  
+--
+
+- 4 Treatments:
+
+  - 2 Bubble Drivers: INCreasing cash, HIGH cash (in relation to assets)
+  
+  - 2 Bubble Moderators: increasing cash with SHORT selling, LOW cash 
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+##### Trading Screen
+
+.center[
+![:width 65%](figures/TradingScreen_en_new-1.svg)
+]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+##### Experimental Implementation
+
+- Professionals
+
+  - 38 markets (10 in INC and HIGH), 20 periods per market
+  - 294 professionals: 89.5% male, age: 35.6 years, 10.4 years industry experience, avg. payout: EUR 77
+  
+- Students
+
+  - 48 markets, 12 in each treatment
+  - 384 students from Innsbruck and Nijmegen: also predominantly male, mgmt./econ. 
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_moderators_mean_color.svg)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_mean_color.svg)]
+
+--
+
+.pull-right[![:width 100%](figures/GraphTreatmentPricesPROF_clean_moderators_mean_color.svg)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Weitzel et al. (2020)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_mean_color.svg)]
+
+.pull-right[![:width 100%](figures/GraphTreatmentPricesPROF_clean_mean_color.svg)]
+
+--
+
+
+- Bubble driver markets in PROF are significantly more efficient compared to student markets.
+
+- BUT: Similar treatment effects within the professional sample as with students.
+
+---
+
+# Weitzel et al. (2020)
+
+.pull-left[![:width 100%](figures/GraphBeliefsBASEmedian_color.svg)]
+
+.pull-right[![:width 100%](figures/GraphBeliefsBASEmedianprof_color.svg)]
+
+---
+
+# Weitzel et al. (2020)
+
+.pull-left[![:width 100%](figures/GraphBeliefsHIGHmedian_color.svg)]
+
+.pull-right[![:width 100%](figures/GraphBeliefsHIGHmedianprof_color.svg)]
+
+---
+
+# Included studies / datasets
+
+.pull-left[
+&lt;u&gt;&lt;b&gt;Haruvy et al. (2007)&lt;/b&gt;&lt;/u&gt;
+- call market, decreasing FV, students
+- 6 markets, 795 short-term beliefs
+]
+
+---
+
+# Haruvy et al. (2007)
+
+.center[
+![:width 50%](figures/Haruvy2007.jpg)
+]
+
+---
+
+# Haruvy et al. (2007)
+
+.center[
+![:width 70%](figures/Haruvy2007beliefs.jpg)
+]
+
+---
+
+# Included studies / datasets
+
+
+.pull-left[
+Eckel and Füllbrunn (2015, 2017)
+- continuous double auction, decreasing FV, males/females
+- 43 markets, 5,805 short-term beliefs
+]
+
+.pull-right[
+Duchene et al. (2019)
+- call market, decreasing FV, students
+- 35 markets, 2,100 short-term beliefs
+]
+&lt;br&gt;
+
+.pull-left[
+Weitzel et al. (2020), Huber et al. (2019)
+- continuous double auction, constant/decreasing FV, students/prof.
+- 145 markets, 22,676 short-term beliefs
+]
+
+.pull-right[
+&lt;u&gt;&lt;b&gt;Holt et al. (2017)&lt;/b&gt;&lt;/u&gt;
+- call market, flat/decreasing FV, males/females
+- 26 markets, 4,950 short-term beliefs
+]
+
+---
+
+# Holt et al. (2017)
+
+.center[
+![:width 70%](figures/Holt2017beliefs.jpg)
+]
+
+
+
+---
+
+# Included studies / datasets
+
+.pull-left[
+Haruvy et al. (2007)
+- call market, decreasing FV, students
+- 6 markets, 795 short-term beliefs
+]
+
+---
+
+# Included studies / datasets
+
+
+.pull-left[
+Eckel and Füllbrunn (2015, 2017)
+- continuous double auction, decreasing FV, males/females
+- 43 markets, 5,805 short-term beliefs
+]
+
+.pull-right[
+Duchene et al. (2019)
+- call market, decreasing FV, students
+- 35 markets, 2,100 short-term beliefs
+]
+&lt;br&gt;
+
+.pull-left[
+Weitzel et al. (2020), Huber et al. (2019)
+- continuous double auction, constant/decreasing FV, students/prof.
+- 145 markets, 22,676 short-term beliefs
+]
+
+.pull-right[
+Holt et al. (2017)
+- call market, flat/decreasing FV, males/females
+- 26 markets, 4,950 short-term beliefs
+]
+
+&lt;br&gt;
+Overall: __255 independent markets__; __36,326 short-term beliefs__
+
+
+---
+class: inverse, middle, center
+
+# Measurement and Methodology
+
+
+---
+
+# Measurement and methodology 
+
+Do the results of Carlé et al. (2019) generalize to other datasets?
+
+`\(\rightarrow\)` same empirical strategy 
+
+&lt;br&gt;
+
+--
+
+- _Short-Term Belief_: `\(STB_{git} = B^t_{gi,s}\)`
+
+--
+
+- _Mid-Term Belief_: `\(MTB_{git}=\frac{B^t_{gi,t+1}-V_{t+1}}{2V_{t+1}}+\frac{B^t_{gi,t+2}-V_{t+2}}{2V_{t+2}}\)` 
+
+--
+
+- _Long-Term Belief_: `\(LTB_{git}=\frac{1}{T-t} \sum_{k=1}^{T-t}\frac{B^t_{gi,t+k}-V_{t+k}}{V_{t+k}}\)`
+
+--
+
+&lt;br&gt;
+`\(\rightarrow\)` use __ranks__  - e.g., `\(rSTB_{git} = \text{rank}(STB_{git})%\)`
+
+
+---
+
+# Adjusting for differences in studies
+
+
+- target price differences
+
+- number of traders
+
+- number of shares
+
+- call auction vs. double auction
+
+---
+class: inverse, middle, center
+
+# Results
+
+
+---
+
+# Results
+
+#### Individual Beliefs and Behavior
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/NetPurchases_rSTB_HLN.svg"&gt;
+    &lt;/td&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/NetPurchases_rSTB_DGHN.svg"&gt;
+    &lt;/td&gt;    
+    &lt;td width=300px&gt;
+      &lt;img src="figures/NetPurchases_rSTB_HPS.svg"&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/NetPurchases_rSTB_EF.svg"&gt;
+    &lt;/td&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/NetPurchases_rSTB_WH.svg"&gt;
+    &lt;/td&gt;
+    &lt;td width=300px style="background-color:#3399CC;"&gt;
+      &lt;img src="figures/NetPurchases_rSTB_All.svg"&gt;
+    &lt;/td&gt;    
+  &lt;/tr&gt;  
+&lt;/table&gt;
+
+---
+
+# Results
+
+#### Individual Beliefs and Behavior
+
+.center[
+![:width 80%](figures/NetPurchases.png)
+]
+
+--
+
+Result 1: Subjects who believe that prices will be higher tend to be buyers and subjects who believe that prices will be lower tend to be sellers.
+`\(\checkmark\)`
+
+---
+
+# Results 
+
+#### Individual Beliefs and Behavior
+
+.center[
+![:width 80%](figures/NetPurchases.png)
+]
+
+Result 2: Short-term beliefs are neither better nor worse determinants of trading behavior than long-term beliefs.
+`\(\rightarrow\)` not replicated
+
+---
+
+# Results
+
+#### Individual Beliefs and Behavior
+
+.center[
+![:width 80%](figures/Bids.png)
+]
+
+--
+
+Result 3: Subjects who believe that prices will be higher submit higher
+bids and asks, and subjects who believe that prices will be lower submit lower bids and asks.
+`\(\checkmark\)`
+
+---
+
+# Results 
+
+#### Individual Beliefs and Behavior
+
+&lt;br&gt;
+.center[
+![:width 80%](figures/Asks.png)
+]
+
+Result 3: Subjects who believe that prices will be higher submit higher
+bids and asks, and subjects who believe that prices will be lower submit lower bids and asks.
+`\(\checkmark\)`
+
+---
+
+# Results
+
+#### Individual Beliefs and Behavior
+
+Upward impulse: short-term belief falls short of the realized price (i.e., `\(STB_{g,i,t-1}&lt;P_{g,t-1}\)`) &lt;br&gt;
+Does that increase in short-term beliefs, in mid-term beliefs, in long-term beliefs, in overlapping beliefs?
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/obs4_HLN.png"&gt;
+    &lt;/td&gt;
+    &lt;td width=300px&gt;
+      &lt;img src="figures/obs4_All.png"&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+--
+
+Result 4: Individuals increase their price estimates when their short-term belief has turned out to be below the realized market price and vice versa.
+`\(\checkmark\)`
+
+---
+
+# Results
+
+#### Beliefs and Earnings
+
+Relative Belief-Price Deviation: `\(RBPD_{gi}=\frac{1}{T}\sum^T_{t=1}\frac{STB_{git}-\bar{P}_{gt}}{\bar{P}_{gt}}\)`
+
+.center[
+![:width 90%](figures/Profits.png)
+]
+
+--
+
+Result 5: Subjects who accurately forecast asset prices and subjects who
+expect prices close to fundamentals earn higher profits.
+`\(\checkmark\)`
+
+
+---
+
+# Results
+
+#### Belief Dispersion and Market Behavior: Trading Volume
+
+Short-Term Belief Dispersion:  `\(STBD_{gt}=\frac{1}{\bar{B}^t_{gt}}\sqrt{\frac{1}{n-1}\sum^n_{i=1}(B^t_{gi}-\bar{B}^t_{g})^2}\)`
+
+.center[
+![:width 90%](figures/Volume.png)
+]
+
+--
+
+Result 6: We find no robust effect of belief dispersion on transaction volume.
+`\(\checkmark\)`
+
+---
+
+# Results
+
+#### Belief Dispersion and Market Behavior: Relative Deviation (RD)
+
+Relative Deviation: `\(RD_g=\frac{1}{T}\sum^T_{t=1}\frac{P_{gt}-V_{gt}}{V_{gt}}\)`
+
+.center[
+![:width 90%](figures/RD.png)
+]
+
+--
+
+Result 7: We find we find no robust association between belief dispersion or initial belief dispersion and overpricing.
+`\(\rightarrow\)` not replicated
+
+
+---
+class: middle, inverse
+
+# Conclusion
+
+--
+
+- aimed to replicate and substantially extend the initial results by Carlé et al. (2019, JFQA): 255 from 7 different studies instead of 6 markets from 1 study
+
+--
+
+- 5 out of 7 observations replicate
+
+&lt;br&gt;
+
+--
+
+- optimists become buyers while pessimists become sellers `\(\checkmark\)`
+
+--
+
+- optimists submit higher bids and asks than pessimists `\(\checkmark\)`
+
+--
+
+- beliefs change in line with price impulses `\(\checkmark\)`
+
+--
+
+- subjects with more accurate forecasts earn higher profits `\(\checkmark\)`
+
+--
+
+- no robust relationship between belief dispersion and overpricing `\(\rightarrow\)` not replicated
+
+--
+
+__Experimental asset markets provide rich data sets which allow us to analyse beliefs, trading behavior, and aggregate market variables in controlled environments.__
+
+
+---
+class: center, middle
+
+
+# Thanks!
+
+#### christoph.huber@wu.ac.at
+
+#### chr-huber.com
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
