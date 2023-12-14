@@ -454,6 +454,16 @@
       }</style></aside>
 </div>
 </section>
+<section id="aim" class="slide level2 center">
+<h2>Aim</h2>
+<div>
+<ul>
+<li class="fragment"><p>Estimate reproducibility in Management Science, overall and across different fields</p></li>
+<li class="fragment"><p>Compare reproducibility before/since the introduction of a code and data disclosure policy</p></li>
+<li class="fragment"><p>Identify main reason for non-reproducibility</p></li>
+</ul>
+</div>
+</section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
 <p>(Social science) Research results need to be robust, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).</p>
@@ -508,7 +518,7 @@
 <ul>
 <li class="fragment">publication bias (De Long &amp; Lang, 1992)</li>
 <li class="fragment">HARKing (Hypothesizing After Results are Known) (Kerr, 1998)</li>
-<li class="fragment">p-hacking ((Brodeur et al., 2016)</li>
+<li class="fragment">p-hacking (Brodeur et al., 2016)</li>
 <li class="fragment">under-powered studies (Szucs &amp; Ioannidis, 2017; Benjamin et al., 2018)</li>
 <li class="fragment">fraud and dishonesty (John et al., 2012)</li>
 </ul>
@@ -550,11 +560,14 @@
 <section id="reproducibility" class="slide level2">
 <h2>Reproducibility</h2>
 <p><strong>Reproducibility</strong></p>
+<div>
 <ul>
-<li><p>an antecedent of replicability/generalizability</p></li>
-<li><p>minimum criterion for scientific credibility<sup>1</sup></p></li>
-<li><p>should not be affected by “questionable research practices” (publication bias, p-hacking, HARKing, under-powered sample sizes)</p></li>
+<li class="fragment"><p>an antecedent of replicability/generalizability</p></li>
+<li class="fragment"><p>minimum criterion for scientific credibility (e.g., Christensen &amp; Miguel, 2018)</p></li>
+<li class="fragment"><p>should not be affected by “questionable research practices” (publication bias, p-hacking, HARKing, under-powered sample sizes)</p></li>
 </ul>
+</div>
+<div class="fragment">
 <p><br><br> If reproducibility is not possible (e.g.&nbsp;missing data, missing code, missing information, false reporting), then the replication crisis is partly also a reproducibility crisis.</p>
 <aside class="notes">
 <p>This table displays several types of reanalyses used in empirical economics and finance. Each case pertains to a test of whether the original result β in a given article can be regenerated through the reanalysis process fR, mapping the data and the code, which is a function of the method, to the result βR. Reanalyses differ in that they use the same or different data (d vs.&nbsp;d′), the same or different codes (c vs.&nbsp;c′), and the same or different methods (m vs.&nbsp;m′). When the same code is used, we omit the method argument as it is, by definition, identical to the one used in the original study. Depending on the definition, the test is whether the original result (β) and the regenerated result (βR) are either equal (=) or similar (≈). Sources: National Academies of Sciences, Engineering, and Medicine, 2019; Harvey, 2019; Welch, 2019.</p>
@@ -569,7 +582,8 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Christensen &amp; Miguel, 2018</p></li></ol></aside></section>
+</div>
+</section>
 <section id="disclosure-policies" class="slide level2">
 <h2>Disclosure Policies</h2>
 <ul>
@@ -606,8 +620,18 @@
 <li><p>Dewald et al.&nbsp;(1986, J Money Credit Banking): could only examine 5 out of 154 articles.</p></li>
 <li><p>McCullough et al.&nbsp;(2006): despite policy at JMCB, for only 62 out of 193 papers reproduction could be attempted, and 14 (22.6%) could be reproduced.</p></li>
 <li><p>Chang and Li (2016): 67 empirical papers in macroeconomics: 33% reproduced independently of authors, 49% when excluding papers with confidential data/no software, and getting help from authors, 68% when only considering journals with data policy.</p></li>
-<li><p>Herbert et al.&nbsp;(2021): 303 studies AEJ Applied Economics 2009-2018. only 162 contained non-confidential/non-proprietary data. 68 of these could be reproduced (42.0%), and another 69 (42.6%) were ”partially successful”.</p></li>
+<li><p>Herbert et al.&nbsp;(2021): 303 studies AEJ Applied Economics 2009-2018. only 162 contained non-confidential/non-proprietary data. 68 of these could be reproduced (42.0%), and another 69 (42.6%) were ”partially successful”</p></li>
 <li><p>Pérignon et al.&nbsp;(2023, empirical finance): Assess replication materials of 168 analyst teams independently testing the same six hypotheses on the same data (Menkveld et al., 2023). Out of 1008 tests, 524 (52.0%) were fully reproducible, and 114 (11.3%) had results with small differences.</p></li>
+</ul>
+</section>
+<section id="previous-studies-on-reproducibility-1" class="slide level2" data-visibility="uncounted">
+<h2>Previous studies on reproducibility</h2>
+<ul>
+<li><p><a style="color: grey" href="">Dewald et al.&nbsp;(1986, J Money Credit Banking): could only examine 5 out of 154 articles.</a></p></li>
+<li><p><a style="color: grey" href="">McCullough et al.&nbsp;(2006): despite policy at JMCB, for only 62 out of 193 papers reproduction could be attempted, and 14 (22.6%) could be reproduced.</a></p></li>
+<li><p><a style="color: grey" href="">Chang and Li (2016): 67 empirical papers in macroeconomics: 33% reproduced independently of authors, 49% when excluding papers with confidential data/no software, and getting help from authors, 68% when only considering journals with data policy.</a></p></li>
+<li><p><a style="color: #335c85" href="">Herbert et al.&nbsp;(2021): 303 studies AEJ Applied Economics 2009-2018. only 162 contained non-confidential/non-proprietary data. 68 of these could be reproduced (42.0%), and another 69 (42.6%) were ”partially successful” <span class="math inline">\(\rightarrow\)</span> overall, 84.6%</a></p></li>
+<li><p><a style="color: grey" href="">Pérignon et al.&nbsp;(2023, empirical finance): Assess replication materials of 168 analyst teams independently testing the same six hypotheses on the same data (Menkveld et al., 2023). Out of 1008 tests, 524 (52.0%) were fully reproducible, and 114 (11.3%) had results with small differences.</a></p></li>
 </ul>
 </section>
 <section id="management-science" class="slide level2">
@@ -685,12 +709,17 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="manscirep-management-science-reproducibility-project" class="slide level2">
-<h2>ManSciReP: Management Science Reproducibility Project</h2>
+<section id="management-science-reproducibility-project" class="slide level2">
+<h2>Management Science Reproducibility Project</h2>
 <ul>
-<li>The Code &amp; Data Editor team at ManSci reviews replication packages forcompleteness but does not test reproducibility.</li>
+<li>The Code &amp; Data Editor team at ManSci reviews replication packages for completeness but does not test reproducibility.</li>
 </ul>
-<p>ManSciReP: Large-scale project to assess the reproducibility of articles published in Management Science before and after 2019 policy change.</p>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>ManSciReP</strong>: Large-scale project to assess the reproducibility of articles published in Management Science before and after 2019 policy change.</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> Crowd-science approach</p>
+</div>
 </section>
 <section id="initial-sampling" class="slide level2">
 <h2>Initial Sampling</h2>
@@ -724,7 +753,8 @@
 <h2>Initial Sampling</h2>
 <p><strong>Reviewers</strong></p>
 <ul>
-<li>Volunteers, recruited after sending emails to ManSci reviewers/mailing lists.</li>
+<li><p>Crowd-science approach</p></li>
+<li><p>Volunteers, recruited after sending emails to ManSci reviewers/mailing lists.</p></li>
 </ul>
 <div class="fragment">
 <div style="text-align:center;">
@@ -743,9 +773,10 @@
 <ul>
 <li><p>Round 1 (Early Feb 2023)</p>
 <ul>
-<li><p>Hungarian method (Kuhn, 1955, Hornik, 2005) to find a reviewer (out of 927) for each of the 489 packages. Penalties for mismatches in department, software skills, and database access, with a random resolution of ties</p></li>
-<li><p>Matches were screened for potential conflicts of interest.</p></li>
-<li><p>Email to matched reviewers with assignment details.</p></li>
+<li><p>Match each of the 927 reviewers with one of the 489 articles</p></li>
+<li><p>Hungarian method (Kuhn, 1955, Hornik, 2005) with penalties for mismatches in department, software skills, and database access, with a random resolution of ties</p></li>
+<li><p>Matches were screened for potential conflicts of interest</p></li>
+<li><p>Email to matched reviewers with assignment details</p></li>
 </ul></li>
 </ul>
 </section>
@@ -755,9 +786,9 @@
 <ul>
 <li><p>Round 2 (Mid-Feb 2023)</p>
 <ul>
-<li><p>Papers: previously unmatched papers (which received priority) and 2nd set of all papers.</p></li>
+<li><p>Papers: previously unmatched articles (which received priority) and 2nd set of all articles.</p></li>
 <li><p>Reviewers: All reviewers with no assignment yet, plus or reviewers available for another report.</p></li>
-<li><p>Hungarian method with “regular” penalties for department and software mismatches and prohibitive penalties for assignments of the same paper or previous assignments.</p></li>
+<li><p>Hungarian method with moderate penalties for department and software mismatches and prohibitive penalties for assignments of the same article or previous assignments.</p></li>
 <li><p>Screened for conflicts of interests.</p></li>
 <li><p>End of February: Email reminders to reviewers who did not confirm assignment yet.</p></li>
 </ul></li>
@@ -770,7 +801,7 @@
 <li><p>Round 3 (From March 2023):</p>
 <ul>
 <li>Mostly manual matching, continuously in several waves.</li>
-<li>Pool of papers: rejections of assignments, leftover</li>
+<li>Pool of articles: rejections of assignments, leftover</li>
 <li>Pool of reviewers: unmatched reviewers, or reviewers available for another report.</li>
 </ul></li>
 </ul>
@@ -780,8 +811,8 @@
 <ul>
 <li><p>Reviewers were asked to:</p>
 <ul>
-<li><p>make an “honest attempt” to reproduce the paper’s main results (figures, tables, other),</p></li>
-<li><p>not to contact the original authors of the papers,</p></li>
+<li><p>make an “honest attempt” to reproduce the article’s main results (figures, tables, other),</p></li>
+<li><p>not to contact the original authors of the articles,</p></li>
 <li><p>provide their report within 5 weeks.</p></li>
 </ul></li>
 </ul>
@@ -818,8 +849,8 @@
       }</style></aside>
 </div>
 </section>
-<section id="reviewers-and-reports" class="slide level2">
-<h2>Reviewers and Reports</h2>
+<section id="final-dataset-reviewers-and-reports" class="slide level2">
+<h2>Final Dataset: Reviewers and Reports</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Reviewers:</p>
@@ -831,7 +862,7 @@
 </div><div class="column" style="width:50%;">
 <p>Articles:</p>
 <ul>
-<li>753 reports for 459 papers</li>
+<li>753 reports for 459 articles</li>
 </ul>
 
 <table>
@@ -928,8 +959,8 @@ Package avail. and report
 </div>
 </div>
 </section>
-<section id="reviewers" class="slide level2">
-<h2>Reviewers</h2>
+<section id="final-dataset-reviewers" class="slide level2">
+<h2>Final Dataset: Reviewers</h2>
 
 <table style="text-align: center; border-collapse: collapse;">
 <tbody><tr>
@@ -1055,8 +1086,8 @@ Other
 
 </tbody></table>
 </section>
-<section id="reviewed-articles" class="slide level2">
-<h2>Reviewed articles</h2>
+<section id="final-dataset-reviewed-articles" class="slide level2">
+<h2>Final Dataset: Reviewed articles</h2>
 
 <table style="font-size: 16pt; text-align: center; width: 100%; border-collapse: collapse;">
 <tbody><tr>
@@ -1558,9 +1589,9 @@ Not reproduced.
 </tr>
 
 </tbody></table>
-<ul>
-<li>Overall, no significant differences in self-assessed expertise in methods and topics between weakly more positive and weakly more negative reviewers (but in the “right” direction).</li>
-</ul>
+<div class="fragment">
+<p><br><br> - Overall, no significant differences in self-assessed expertise in methods and topics between weakly more positive and weakly more negative reviewers.</p>
+</div>
 </section></section>
 <section>
 <section id="exploratory-results" class="title-slide slide level1 center">
@@ -1609,12 +1640,16 @@ Not reproduced.
 <section id="determinants-of-reproducibility-2" class="slide level2">
 <h2>Determinants of reproducibility</h2>
 <p><strong>Author affiliation Top 30</strong></p>
+<div class="fragment">
 <ul>
 <li><p>Top author affiliation: 67.40% reproducible</p></li>
 <li><p>Non-top author affiliation: 65.52% reproducible <br>(t-test: p = 0.670, Fisher exact test: p = 0.693)</p></li>
 </ul>
+</div>
 <div class="fragment">
 <p><strong>Number of different software (<span class="math inline">\(\rightarrow\)</span> complexity)</strong></p>
+</div>
+<div class="fragment">
 <ul>
 <li>One software used: 70.43% reproducible (n = 301)</li>
 <li>More than one software used: 60.17% reproducible (n = 118) <br>(t-test: p = 0.044, Fisher exact test: p = 0.049)</li>
@@ -1628,7 +1663,7 @@ Not reproduced.
 <h2>Determinants of reproducibility</h2>
 <p><strong>Reviewer affiliation Top 30</strong></p>
 <ul>
-<li>only 14% of reviewers from Top 30 schools, but 50% of papers (at least one author)</li>
+<li>only 14% of reviewers from Top 30 schools, but 50% of articles (at least one author)</li>
 <li>Reviewer affiliation does not predict reproducibility (p = 0.811)</li>
 </ul>
 <div class="fragment">
@@ -2140,7 +2175,7 @@ Theory/Simulation
 </div>
 <aside class="notes">
 <ul>
-<li>If ignoring papers with limited data access, then 43% of papers can be fully reproduced, and 53% can be largely reproduced (with minor issues).</li>
+<li>If ignoring articles with limited data access, then 43% of articles can be fully reproduced, and 53% can be largely reproduced (with minor issues).</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -2281,7 +2316,6 @@ Theory/Simulation
 <p>Christoph Huber (WU Vienna)</p>
 </div>
 </section></section>
-
     </div>
   </div>
 
