@@ -41,19 +41,19 @@ Christoph Huber
 
 Research:
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - generalizability, replicability, and credibility in (social science) research
 
 
 ## Background {auto-animate=true background-color="#003366"}
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - generalizability, replicability, and credibility in (social science) research
 
 
 ## Background {background-color="#335c85" visibility="uncounted"}
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - <u>generalizability</u>, replicability, and credibility in (social science) research
 
 __Generalizability:__
@@ -64,14 +64,11 @@ __Generalizability:__
 
   - Weitzel, Huber, Huber, et al. (RFS): Bubbles and Financial Professionals
     - lab-in-the-field experiment with financial professionals
-    - treatment effects from student are generalizable for financial professionals:
-      - high liquidity (short-selling) leads less (more) efficient prices
-    - but effect sizes are significantly smaller for professionals
 
 
 ## Background {background-color="#1a4775"}
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - generalizability, <u>replicability</u>, and credibility in (social science) research
 
 __Replicability:__
@@ -81,14 +78,12 @@ __Replicability:__
 . . .
 
   - Füllbrunn, Huber, Eckel, et al. (JFQA): Heterogeneity of Beliefs and Trading Behavior: A Reexamination
-    - reexamination of previous results originating from 6 experimental markets from 1 study 
-    - same analysis, but much larger data set: 255 exp. markets from 7 studies
-    - majority of results holds, but some do not
+    - reexamination of previous results with 255 instead of 6 experimental markets
 
 
 ## Background {background-color="#003366"}
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - generalizability, replicability, and <u>credibility</u> in (social science) research
 
 __Credibility:__
@@ -139,23 +134,23 @@ $\rightarrow$ **Reproducibility in Management Science**
 
 ## Introduction
 
-(Social science) Research needs to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
+Scientific results need to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
 
 :::: {.columns}
 
-::: {.column .incremental width="50%"}
+::: {.column width="50%"}
 
 __Replication Crisis__
 
 ::: {.small}
 - Open Science Collaboration (2015)
-  - 35 out of 97 psychology papers with significant effects replicated
+  - 36% of 97 psychology papers with significant effects replicated
   
 - Camerer et al. (2016)
-  - 11 out of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
+  - 61% of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
   
 - Camerer et al. (2018)
-  - 13 out of 21 social science experiments in Nature/Science replicated
+  - 62% of 21 social science experiments in Nature/Science replicated
 
 :::
 
@@ -171,7 +166,7 @@ __Replication Crisis__
 
 ## Introduction {visibility="uncounted"}
 
-(Social science) Research needs to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
+Scientific results need to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
 
 :::: {.columns}
 
@@ -181,13 +176,13 @@ __Replication Crisis__
 
 ::: {.small}
 - Open Science Collaboration (2015)
-  - 35 out of 97 psychology papers with significant effects replicated
+  - 36% of 97 psychology papers with significant effects replicated
   
 - Camerer et al. (2016)
-  - 11 out of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
+  - 61% of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
   
 - Camerer et al. (2018)
-  - 13 out of 21 social science experiments in Nature/Science replicated
+  - 62% of 21 social science experiments in Nature/Science replicated
 
 :::
 
@@ -208,7 +203,7 @@ __Replications__
 
 ## Introduction {visibility="uncounted"}
 
-(Social science) Research needs to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
+Scientific results need to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).
 
 :::: {.columns}
 
@@ -218,13 +213,13 @@ __Replication Crisis__
 
 ::: {.small}
 - Open Science Collaboration (2015)
-  - 35 out of 97 psychology papers with significant effects replicated
+  - 36% of 97 psychology papers with significant effects replicated
   
 - Camerer et al. (2016)
-  - 11 out of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
+  - 61% of 18 economics lab experiments replicated (with 66\% of the original effect size, on average)
   
 - Camerer et al. (2018)
-  - 13 out of 21 social science experiments in Nature/Science replicated
+  - 62% of 21 social science experiments in Nature/Science replicated
 
 :::
 
@@ -250,13 +245,8 @@ This paper $\rightarrow$ __Reproductions__
 
 ::::
 
+::: {.notes}
 
-## Reproducibility
-
-
-__Reproducibility__
-
-::: {.incremental}
 - an antecedent of replicability/generalizability
 
 - minimum criterion for scientific credibility (e.g., Christensen & Miguel, 2018)
@@ -266,12 +256,7 @@ __Reproducibility__
   - p-hacking
   - HARKing
   - under-powered sample sizes
-  
-:::
 
-
-
-::: {.notes}
 
 If reproducibility is not possible (e.g. missing data, missing code, missing information, false reporting), then the replication crisis is partly also a reproducibility crisis.
 
@@ -281,7 +266,7 @@ This table displays several types of reanalyses used in empirical economics and 
 :::
 
 
-## Previous estimates of reproducibility in Economics
+## Previous reproducibility estimates of in Economics
 
 - Dewald et al. (1986, J Money Credit Banking): could only examine <b>5 out of 154</b> articles.
 
@@ -294,7 +279,7 @@ This table displays several types of reanalyses used in empirical economics and 
 - Pérignon et al. (2023, empirical finance): Assess replication materials of 168 analyst teams independently testing the same six hypotheses on the same data (Menkveld et al., 2023). Out of 1008 tests, <b>524 (52.0%) were fully reproducible</b>, and 114 (11.3%) had results with small differences.
 
 
-## Previous estimates of reproducibility in Economics {visibility="uncounted"}
+## Previous reproducibility estimates of in Economics {visibility="uncounted"}
 
 - <a style="color: #bfbfbf">Dewald et al. (1986, J Money Credit Banking): could only examine <b>5 out of 154</b> articles.</a>
 
@@ -317,9 +302,8 @@ This table displays several types of reanalyses used in empirical economics and 
 
   - _”Authors of accepted papers ... must provide ... the data, programs, and other details ... sufficient to permit replication.”_
 
-  - Establishment of the position of Code and Data Editor (CDE) <br> and a team of three Code & Data Associate Editors (CDAEs).
-
-  - Code & Data Editor team reviews replication packages for completeness but <u>does not test reproducibility</u>.
+  - Code and Data Editor (CDE) Code & Data Associate Editors (CDAEs)
+    - review replication packages for completeness but <u>do not test reproducibility</u>
 
 :::
 
@@ -380,12 +364,12 @@ $\rightarrow$ Crowd-science approach
 
 __Articles and Replication Packages__
 
-- All articles in Management Science that fell under the 2019 policy and were reviewed between April 2020 and January 2023.
-  - 447 articles accepted/published, all of them with replication packages.
+- All articles in Management Science that fell under the 2019 policy and were reviewed between April 2020 and January 2023:
+  - 447 articles accepted/published, all of them with a replication package.
 
 . . .
 
-- As a comparison set, all articles that were accepted between January 2018 and April 2019 (before the new policy) would have fallen under the disclosure policy (i.e., include code or data).
+- As a comparison set, all articles that were accepted between January 2018 and April 2019 (before the new policy) would have fallen under the disclosure policy:
   - 334 articles, of which 42 voluntarily provided a replication package.
   
 . . .
@@ -411,13 +395,13 @@ __Reviewers__
 . . .
 
 ::: {style="text-align:center;"}
-$\rightarrow$ 935 researchers registered
+$\rightarrow$ 927 researchers registered
 :::
 
-. . .
-
+::: {.notes}
 - Information collected on the typical department, software skills, and data access.
-    
+:::
+
 
 ## Article-Reviewer Matching
 
@@ -428,20 +412,24 @@ Matching of the 927 reviewers with 489 articles based on:
 
 . . .
 
+
+- Optimization algorithm in two automated matching rounds with random resolution of ties to solve assignment problem
+
+- Manual assignment after screening for conflicts of interest, etc. 
+
+::: {.notes}
+
 - Round 1 (Early Feb 2023)
 
   - Solve assignment problem with optimization algorithm (Hungarian method (Kuhn, 1955; Hornik, 2005)) with random resolution of ties
   
   - Screen matches for potential conflicts of interest
-  
-. . .
 
 - Round 2 (Mid-Feb 2023): same as Round 1
 
-. . .
-
 - Round 3 (from March 2023): manual matching in several waves
 
+:::
 
 
 
@@ -449,11 +437,12 @@ Matching of the 927 reviewers with 489 articles based on:
 
 - Reviewers were asked to:
 
-  - make an “honest attempt” to reproduce the article’s main results (figures, tables, other),
-  
-  - not to contact the original authors of the articles,
-  
+  - make an “honest attempt” to reproduce the article’s main results (figures, tables, other)
+
   - provide a reproducibility report within 5 weeks
+  
+  - (not to contact the original authors of the articles)
+
 
 . . .
 
@@ -461,8 +450,6 @@ Matching of the 927 reviewers with 489 articles based on:
 
   - overall assessment
   
-  - info about the content of the replication file (readme , data, code, etc.) and their quality
-
   - individual reproducibility assessment of all results, tables, and figures
   
   - documentation of their analysis (log files and screenshots)
@@ -484,13 +471,12 @@ Matching of the 927 reviewers with 489 articles based on:
 
 Reviewers:
 
-- 675 reviewers submitted usable report(s) <br>
-  (597 reviewers 1 report; 76 reviewers 2 reports; 2 reviewers 3 reports)
+- 675 reviewer teams submitted valid report(s)
+
+  - 597 reviewers 1 report 
+  - 76 reviewers 2 reports 
+  - 2 reviewers 3 reports
   
-- 58 reports had a second reviewer assisting
-
-- over 6,500 hours spent
-
 :::
 
 ::: {.column width="50%"}
@@ -521,7 +507,7 @@ Articles:
   <td>447</td>
   <td>489</td>
 </tr>
-<tr style="font-weight:bold;">
+<tr style="font-weight:bold; background-color: #adbece">
   <td>Package available and $\geq 1$ report</td>
   <td>40</td>
   <td>419</td>
@@ -649,11 +635,35 @@ Articles:
 
 ## Reproducibility assessment
 
+
 __Assessment scale__
 
 :::: {.columns}
 
-::: {.column .incremental}
+::: {.column}
+
+<p style="text-align:center;">Reproduced</p>
+
+:::
+
+::: {.column}
+
+<p style="text-align:center;">Not reproduced</p>
+
+:::
+
+::::
+
+
+## Reproducibility assessment {visibility="uncounted"}
+
+
+
+__Assessment scale__
+
+:::: {.columns}
+
+::: {.column}
 
 <p style="text-align:center;">Reproduced</p>
 
@@ -666,6 +676,8 @@ __Assessment scale__
 :::
 
 ::: {.column}
+
+<p style="text-align:center;">Not reproduced</p>
 
 :::
 
@@ -689,7 +701,7 @@ __Assessment scale__
 
 :::
 
-::: {.column .incremental}
+::: {.column}
 
 <p style="text-align:center;">Not reproduced</p>
 
@@ -729,20 +741,6 @@ __Assessment scale__
 ## Overall reproducibility {visibility="uncounted"}
 
 ![](figures/reprod_overall.svg){fig-align="center"}
-
-## Overall reproducibility
-
-Linear probability model: **Largely or fully reproduced** (binary)
-
-![](figures/table4_reg.png){fig-align="center"}
-
-## Overall reproducibility {visibility="uncounted"}
-
-Linear probability model: **Largely or fully reproduced** (binary)
-
-![](figures/table4_reghl.png){fig-align="center"}
-
-
 
 
 ## Overall reproducibility by journal department
@@ -1290,7 +1288,7 @@ What proportion of Management Science articles _under the current Data & Code di
   - Only 7% of articles before 2019 policy can be reproduced.
   
 - Identify main reasons for non-reproducibility:
-  - no access to the data set (90%, proprietary / NDA / privacy / subscription).
+  - no access to the data set (88%, proprietary / NDA / privacy / subscription).
 
 :::
 
@@ -1315,14 +1313,14 @@ What proportion of Management Science articles _under the current Data & Code di
 
 ## Future directions {auto-animate=true background-color="#003366"}
 
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 - credibility and replicability in (social science) research
 
 
 ## Future directions {auto-animate=true background-color="#003366"}
 
 - credibility and replicability in (social science) research
-- experimental methods $\longleftrightarrow$ financial economics
+- experimental economics $\longleftrightarrow$ financial economics
 
 . . .
 
@@ -1332,12 +1330,12 @@ What proportion of Management Science articles _under the current Data & Code di
 . . .
 
 - address external validity concerns
-  - e.g., by conducting artefactual and framed field experiments <br>(experiments with financial professionals)
+  - e.g., by conducting artefactual and framed field experiments <br>(e.g., experiments with financial professionals)
 
 . . .
 
 - novel questions originating from recent developments in the field 
-  - e.g, cryptocurrency markets; how the COVID-19 crash affected decision making; deception and norms, e.g. in financial advice; attention and motivated information acquisition; competitiveness and speculation; ... 
+  - e.g, cryptocurrency markets; how the COVID-19 crash affected decision making; deception and social norms; attention and motivated information acquisition; competitiveness and speculation; ... 
 
   
 
@@ -1356,7 +1354,7 @@ What proportion of Management Science articles _under the current Data & Code di
   - Only 7% of articles before 2019 policy can be reproduced.
   
 - __Identify main reasons for non-reproducibility:__
-  - no access to the data set (90%, proprietary / NDA / privacy / subscription).
+  - no access to the data set (88%, proprietary / NDA / privacy / subscription).
 
 :::
 
@@ -1522,6 +1520,22 @@ Management Science
 
 <br><br>
 - Overall, no significant differences in self-assessed expertise in methods and topics between weakly more positive and weakly more negative reviewers.
+
+
+## Overall reproducibility {visibility="uncounted"}
+
+Linear probability model: **Largely or fully reproduced** (binary)
+
+![](figures/table4_reg.png){fig-align="center"}
+
+## Overall reproducibility {visibility="uncounted"}
+
+Linear probability model: **Largely or fully reproduced** (binary)
+
+![](figures/table4_reghl.png){fig-align="center"}
+
+
+
 
 
 ## Reproducibility of tables {visibility="uncounted"}
