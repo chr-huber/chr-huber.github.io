@@ -41,7 +41,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - [2023-09-12: ESA 2023, Exeter](202309-ESA-Comp.pdf)
   
 - _Heterogeneity in Beliefs and Trading Behavior:_
-  - [2023-04-28: Seminar, Alicante](202304-ALicante/slides.html)
+  - [2023-04-28: Seminar, Alicante](202304-Alicante/slides.html)
 
 - _Mining Centralization:_
   - [2023-06-21: Experimental Finance 2023, Sofia](202306-EF/slides.html)
