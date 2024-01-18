@@ -1,0 +1,53 @@
+---
+title: "Online Documents"
+author: "Christoph Huber"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Presentations
+
+- _Individual attitudes and market dynamics towards imprecision_:
+  - [2019-06-15: Experimental Finance 2019, Copenhagen](201906-EF/slides.html)
+
+- _Truthtelling and dishonesty norms in the finance industry_:
+  - [2019-06-29: JDMx meeting, Trento](201906-JDMx/slides.html)
+  - [2019-09-06: ESA 2019 European Meeting, Dijon](201909-ESA/slides.html)
+  - [2019-10-15: 3rd Annual SFB Workshop, Innsbruck](201910-SFB/slides.html)
+  
+- _Emotions in Financial Markets_:
+  - [2020-01-17: Reading Group, Innsbruck](202001-ReadingGroup/slides.html)
+  
+- _Incentives, Returns, and Deception in Financial Advice_:
+  - [2020-02-04: SEF 2020 Winter Meeting, Salt Lake City](202002-EF/slides.html)
+  - [2022-06-20: SEF 2022, Bonn](202206-EF/slides.html)
+  
+- _Volatility shocks and investment behavior_ / _Market shocks and professionals' investment behavior_:
+  - [2020-02-13: University of Arizona](202002-UA/slides.html)
+  - [2020-09-11: ESA Global Meeting](202009-ESA/slides.html)
+  - [2021-03-18: WEAI Virtual International Conference](202103-WEAI/slides.html) 
+  - [2021-06-17: Experimental Finance 2021, Innsbruck (online)](202106-EF/slides.html) 
+  
+- _Essays in Experimental Economics: Decisions, Beliefs, and Market Behavior in Finance:_
+  - [2021-02-04: Doctoral Thesis Defense (Rigorosum)](202102-Rigorosum/slides.html)
+  
+- _Competitiveness and Speculative Behavior:_
+  - [2022-06-21: SEF 2022, Bonn](202206-EF-Comp/slides.pdf)
+  - [2022-09-01: ESA 2022, Bologna](202208-ESA-Comp.pdf)  
+  - [2022-09-27: ANZWEE, Sydney](202209-ANZWEE-Comp.pdf)    
+  - [2023-09-12: ESA 2023, Exeter](202309-ESA-Comp.pdf)
+  
+- _Heterogeneity in Beliefs and Trading Behavior:_
+  - [2023-04-28: Seminar, Alicante](202304-ALicante/slides.html)
+
+- _Mining Centralization:_
+  - [2023-06-21: Experimental Finance 2023, Sofia](202306-EF/slides.html)
+  
+- _Reproducibility in Management Science:_
+  - [2023-12: Maastricht](202312-ManSciRep/slides.html)
+  - [2024-01: UQ](202401-ManSciRepUQ/slides.html)
+  - [2024-01: WU](202401-ManSciRepWU/slides.html)
+  - [2024-01: Exeter](202401-ManSciRepExeter/slides.html)
