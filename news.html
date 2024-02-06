@@ -30,7 +30,7 @@
     <script>
         $(document).ready(function() {
         // Load the table content into the container
-        $("#table-container").load("views/news.html");
+        $("#table-news").load("views/news.html");
         });
     </script>    
 
@@ -92,7 +92,9 @@ font-family:'Charter'; font-size:15px;">
             </div>
             <div style="clear:both">
 
-                <div id="table-container"></div>
+                <table class="table table-responsive" style="margin-bottom:0px;">   
+                    <div id="table-news"></div>
+                </table>
 
                 <hr>
             </div>
