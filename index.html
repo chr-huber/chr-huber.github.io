@@ -22,6 +22,19 @@
         @font-face { font-family: Charter; src: url('css/CharterBT-Roman.otf'); }
     </style>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include the table using JavaScript -->
+    <script>
+        $(document).ready(function() {
+        // Load the table content into the container
+        $("#table-news").load("views/news.html");
+        });
+    </script>    
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -29,6 +42,13 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "cxbjgpv0x6");
     </script>
+
+    <style>
+        /* Style the specific table with the "news" class to hide rows after the third one */
+        table.news tr:nth-child(n+5) {
+            display: none;
+        }
+    </style>    
 
 </head>
 
