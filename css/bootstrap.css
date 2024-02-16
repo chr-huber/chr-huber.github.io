@@ -1097,12 +1097,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #355d8f;
+  /* color: #355d8f; */
+  /* color: #003261; */
+  color: #004e98;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #3371ad;
   text-decoration: underline;
 }
 a:focus {
@@ -1186,7 +1188,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: #003362;
+  color: #004689;
 }
 h1 small,
 h2 small,
@@ -4275,7 +4277,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -6765,27 +6767,27 @@ button.close {
 /* NEW */
 
 .navbar-default .navbar-brand {
-    color: #003261;
+    color: #004689;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #355d8f;
+    color: #3371ad;
 }
 
 .navbar-default .navbar-brand:active {
-    color: #003261;
+    color: #3371ad;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #355d8f;
+    color: #004689;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #003261;
+    color: #3371ad;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #003261;
+    color: #004689;
     background-color: #e7e7e7;
 }
 
