@@ -107,3 +107,8 @@ span.label {
 .material {
     padding-top:2px;
 }
+
+.active-ch {
+    color: #003261;
+    background-color: #e7e7e7;
+}
