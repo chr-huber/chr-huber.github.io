@@ -108,6 +108,16 @@ span.label {
     padding-top:2px;
 }
 
+.abstract {
+    font-weight: 300; 
+    font-size:13px;    
+    padding: 10px;
+    border: 0px;
+    color: #004689;
+    background-color: white;
+}
+
+
 .active-ch {
     color: #004689;
     background-color: #e7e7e7;
