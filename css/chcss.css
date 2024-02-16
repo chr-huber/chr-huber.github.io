@@ -3,13 +3,25 @@
     display: none;
 }
 
+h3 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.jumbotron p{
+    font-weight: 300;
+}
+
 a.btn {
-    margin-left: 1px;
-    margin-top: 1px;
-    padding: 4px 7px;
+    /* margin-left: 1px; */
+    /* margin-top: 1px; */
+    padding: 2px 7px;
     font-weight: light;
-    font-size: 10.5px;
+    font-size: 10px;
     font-family: Verdana;
+    opacity: 0.4;
 }
 
 button.btn-default{
@@ -36,7 +48,7 @@ a.btn.jumbo:hover {
     padding: 1px 7px;
     font-weight: light;
     font-size: 10px;
-    font-family: Verdana;
+    font-family: Roboto;
     background: rgb(35, 82, 125, .9);
     color: white;
     border-color: rgb(35, 82, 125, .8);
@@ -49,7 +61,12 @@ span.label {
     font-size: 9.5px;
 }
 
-.papers,
+.papers {
+    font-size: 16px;
+}
+
+.workinprogress,
+.presentations,
 .grants,
 .refereeing {
     font-size: 14px;
@@ -60,4 +77,33 @@ span.label {
     font-stretch: expanded;
     padding-top: 8px;
     padding-bottom: 8px;
+}
+
+.authors {
+    font-weight: 300; 
+    font-size:13px;
+    padding-top: 0px;
+}
+
+.journalinfo {
+    font-family: 'Roboto Slab', serif; 
+    font-weight: 300; 
+    font-size:12px;
+    font-style: italic;
+    padding-top: 6px;
+}
+
+.publicationyear {
+    /* font-family: 'Roboto Slab', serif;  */
+    text-align: right;
+    font-weight: 300; 
+    /* font-size: 14px; */
+}
+
+.publication-item {
+    padding-bottom:12px;
+}
+
+.material {
+    padding-top:2px;
 }

@@ -12,16 +12,14 @@
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/chcss.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-    <style>
-        @font-face { font-family: Charter; src: url('css/CharterBT-Roman.otf'); }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Include the table using JavaScript -->
     <script>
@@ -52,9 +50,8 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="padding-top: 50px;
-font-family:'Charter'; font-size:15px;">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="lato-regular" style="padding-top: 50px; font-size:15px;">
+    <nav class="navbar navbar-default navbar-fixed-top roboto-slab-regular" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -82,8 +79,8 @@ font-family:'Charter'; font-size:15px;">
     </nav>
 
 
-    <div id="about" class="jumbotron" style="padding-top: 40px; padding-bottom: 5px">
-        <div class="container" style="max-width:950px; background: rgba(255,255,255,0.64); padding-top:15px; padding-bottom:0px; margin-top:5px;">
+    <div id="about" class="jumbotron roboto-slab-light" style="padding-top: 40px; padding-bottom: 5px">
+        <div class="container roboto-slab-regular" style="max-width:950px; background: rgba(255,255,255,0.78); padding-top:15px; padding-bottom:0px; margin-top:5px;">
             <p style="font-size: 32px; text-align: center;">
                 Welcome!
             </p>
@@ -126,26 +123,6 @@ font-family:'Charter'; font-size:15px;">
                     <a href="news.html">[all news]</a>
                 </div>
             </div>
-
-<!--
-            <div class="row">
-                <div class="col-md-8 col-xs-12">
-                    <p>
-                        <b>Research interests:</b>
-                        <ul>
-                            <li>Experimental Economics</li>
-                            <li>Behavioral Economics and Finance</li>
-                            <li>Decision-making under Uncertainty</li>
-                            <li>Market Efficiency and Bubbles</li>
-                            <li>(Un)ethical Behavior</li>
-                            <li>Social and Cognitive Finance</li>
-                        </ul>
-                    </p>
-                    <hr>
-                </div>
-            </div>
--->
-
         </div>
     </div>
     <!-- ---------------------------------------------------------------------------------------------------------- -->
@@ -175,267 +152,293 @@ font-family:'Charter'; font-size:15px;">
                                     <div class="publicationsheader">Journal Articles</div>
                                     <div class="container" style="width:100%; padding-left:0; padding-right:4;">
 
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>Fišar, M., Greiner, B., Huber, C., Katok, E., Ozkes A. I., Management Science Reproducibility Collaboration
-                                                        <a href="https://doi.org/10.1287/mnsc.2023.03556" target="_blank">
-                                                            Reproducibility in Management Science.
-                                                        </a>
-                                                        <i>Management Science</i>. Forthcoming. 
-                                                    </li>
-                                                </ul>
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>                                            
+                                            <div class="col-lg-11">
+                                                <a class="publicationtitle" href="https://doi.org/10.1287/mnsc.2023.03556" target="_blank">
+                                                    Reproducibility in Management Science
+                                                </a>
+                                                <div class="authors">
+                                                    Fišar, M., Greiner, B., Huber, C., Katok, E., Ozkes A. I., Management Science Reproducibility Collaboration
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Forthcoming. Management Science
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1287/mnsc.2023.03556" target="_blank">article</a>                                                
+                                                    <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/mydzv" target="_blank">preprint</a>
+                                                </div>                                                
                                             </div>
-                                              <div class="col-lg-3" style="text-align:right;">
-                                                  <a class="btn btn-default" href="https://doi.org/10.1287/mnsc.2023.03556" target="_blank">article</a>                                                
-                                                  <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/mydzv" target="_blank">preprint</a>
-                                              </div>
-                                          </div>                                    
+                                        </div>                                   
 
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Füllbrunn, S., Huber, C., Eckel, C., Weitzel, U.
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1"></div>
+                                            <div class="col-lg-11">
                                                         <a href="https://doi.org/10.1017/S002210902300011X" target="_blank">
-                                                            Heterogeneity of Beliefs and Trading Behavior: A Reexamination.
+                                                            Heterogeneity of Beliefs and Trading Behavior: A Reexamination
                                                         </a>
-                                                        <i>Journal of Financial and Quantitative Analysis</i>. Forthcoming.
-                                                    </li>
-                                                </ul>
+                                                        <div class="authors">
+                                                            Füllbrunn, S., Huber, C., Eckel, C., Weitzel, U.
+                                                        </div>                                                        
+                                                        <div class="journalinfo">
+                                                            Forthcoming. Journal of Financial and Quantitative Analysis
+                                                        </div>
+                                                        <div class="material">
+                                                            <a class="btn btn-default" href="https://doi.org/10.1017/S002210902300011X" target="_blank">article</a>
+                                                            <a class="btn btn-default" href="https://papers.ssrn.com/abstract=4141893" target="_blank">preprint</a>
+                                                        </div>                                                        
                                             </div>
-                                              <div class="col-lg-3" style="text-align:right;">
-                                                  <a class="btn btn-default" href="https://doi.org/10.1017/S002210902300011X" target="_blank">article</a>
-                                                  <a class="btn btn-default" href="https://papers.ssrn.com/abstract=4141893" target="_blank">preprint</a>
-                                              </div>
-                                          </div>                                        
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Litsios, C., Nieper, A., Promann, T.
-                                                        (2023) 
-                                                        <a href="https://doi.org/10.1016/j.jebo.2023.06.019" target="_blank">
-                                                            On Social Norms and Observability in (Dis)honest Behavior.
-                                                        </a>
-                                                        <i>Journal of Economic Behavior & Organization</i>, 212, pp. 1086-1099.
-                                                    </li>
-                                                </ul>
+                                        </div>  
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear">2023</div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1016/j.jebo.2023.06.019" target="_blank">
+                                                    On Social Norms and Observability in (Dis)honest Behavior
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Litsios, C., Nieper, A., Promann, T.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Economic Behavior & Organization, 212, pp. 1086-1099
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2023.06.019" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/2nxv8" target="_blank">preprint</a>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2023.06.019" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/2nxv8" target="_blank">preprint</a>
+                                        </div>    
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1073/pnas.2215572120" target="_blank">
+                                                    Competition and moral behavior: A meta-analysis of forty-five crowd-sourced experimental designs.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Dreber, A., Huber, J., Johannesson, M., Kirchler, M., Weitzel, U., ..., Holzmeister, F.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Proceedings of the National Academy of Sciences, 120(23)
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1073/pnas.2215572120" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/r6anc/" target="_blank">material</a>
+                                                </div>                                                
                                             </div>
-                                        </div>                                        
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Dreber, A., Huber, J., Johannesson, M., Kirchler, M., Weitzel, U., ..., Holzmeister, F.
-                                                        (2023)
-                                                        <a href="https://doi.org/10.1073/pnas.2215572120" target="_blank">
-                                                            Competition and moral behavior: A meta-analysis of forty-five crowd-sourced experimental designs.
-                                                        </a>
-                                                        <i>Proceedings of the National Academy of Sciences</i>, 120(23). 
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                              <div class="col-lg-3" style="text-align:right;">
-                                                  <a class="btn btn-default" href="https://doi.org/10.1073/pnas.2215572120" target="_blank">article</a>
-                                                  <a class="btn btn-default" href="https://osf.io/r6anc/" target="_blank">material</a>
-                                              </div>
-                                          </div>                                        
-                                      <div class="row">
-                                        <div class="col-lg-8">
-                                            <ul>
-                                                <li>
-                                                    Huber, C., Kirchler, M. (2023)
-                                                    <a href="https://doi.org/10.1016/j.jbef.2022.100737" target="_blank">
-                                                        Experiments in Finance: A Survey of Historical Trends.
-                                                    </a>
-                                                    <i>Journal of Behavioral and Experimental Finance</i>, 37, 100737.
-                                                </li>
-                                            </ul>
+                                          </div>      
+
+                                      <div class="row publication-item">
+                                        <div class="col-lg-1 publicationyear"></div>
+                                        <div class="col-lg-11">
+                                            <a href="https://doi.org/10.1016/j.jbef.2022.100737" target="_blank">
+                                                Experiments in Finance: A Survey of Historical Trends.
+                                            </a>
+                                            <div class="authors">
+                                                Huber, C., Kirchler, M.
+                                            </div>                                                        
+                                            <div class="journalinfo">
+                                                Journal of Behavioral and Experimental Finance, 37, 100737
+                                            </div>        
+                                            <div class="material">
+                                                <a class="btn btn-default" href="https://doi.org/10.1016/j.jbef.2022.100737" target="_blank">article</a>
+                                                <a class="btn btn-default" href="https://osf.io/cn3av/" target="_blank">material</a>
+                                            </div>                                                                              
                                         </div>
-                                          <div class="col-lg-4" style="text-align:right;">
-                                              <a class="btn btn-default" href="https://doi.org/10.1016/j.jbef.2022.100737" target="_blank">article</a>
-                                              <a class="btn btn-default" href="https://osf.io/cn3av/" target="_blank">material</a>
+                                      </div>
+
+                                      <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear">2022</div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1016/j.jebo.2021.12.007" target="_blank">
+                                                    Volatility shocks and investment behavior.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Huber, J., Kirchler, M.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Economic Behavior & Organization, 194, pp. 56-70
+                                                </div>      
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2021.12.007" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/9chg8/" target="_blank">material</a>
+                                                    <a class="btn btn-default" href="https://youtu.be/YjDQvcitgyw" target="_blank">talk</a>
+                                                </div>                                                                                    
                                           </div>
                                       </div>
-                                      <div class="row">
-                                          <div class="col-lg-8">
-                                              <ul>
-                                                  <li>
-                                                      Huber, C., Huber, J., Kirchler, M. (2022)
-                                                      <a href="https://doi.org/10.1016/j.jebo.2021.12.007" target="_blank">
-                                                          Volatility shocks and investment behavior.
-                                                      </a>
-                                                      <i>Journal of Economic Behavior & Organization</i>, 194, pp. 56-70.
-                                                  </li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-lg-4" style="text-align:right;">
-                                              <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2021.12.007" target="_blank">article</a>
-                                              <a class="btn btn-default" href="https://osf.io/9chg8/" target="_blank">material</a>
-                                              <a class="btn btn-default" href="https://youtu.be/YjDQvcitgyw" target="_blank">talk</a>
-                                          </div>
-                                      </div>
-                                        <div class="row">
-                                            <div class="col-lg-8">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Huber, J., Kirchler, M. (2021)
-                                                        <a href="https://doi.org/10.1016/j.jbankfin.2021.106247" target="_blank">
-                                                            Market shocks and professionals' investment behavior &mdash; Evidence from the COVID-19 crash.
-                                                        </a>
-                                                        <i>Journal of Banking & Finance</i>, 133, 106247.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-4" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.1016/j.jbankfin.2021.106247" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://osf.io/9chg8/" target="_blank">material</a>
-                                                <a class="btn btn-default" href="https://youtu.be/pfJefgCvSTc" target="_blank">talk</a>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear">2021</div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1016/j.jbankfin.2021.106247" target="_blank">
+                                                    Market shocks and professionals' investment behavior &mdash; Evidence from the COVID-19 crash.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Huber, J., Kirchler, M.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Banking & Finance, 133, 106247
+                                                </div>       
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1016/j.jbankfin.2021.106247" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/9chg8/" target="_blank">material</a>
+                                                    <a class="btn btn-default" href="https://youtu.be/pfJefgCvSTc" target="_blank">talk</a>
+                                                </div>                                                                                          
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Huber, J. (2020)
-                                                        <a href="https://doi.org/10.1016/j.jebo.2020.10.020">
-                                                            Bad bankers no more? Truth-telling and (dis)honesty in the finance industry.
-                                                        </a>
-                                                        <i>Journal of Economic Behavior & Organization</i>, 180, pp. 472-493.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2020.10.020" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://osf.io/c9dbj/" target="_blank">material</a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Weitzel, U., Huber, C., Huber, J., Kirchler, M., Lindner, F., Rose, J. (2020)
-                                                        <a href="https://doi.org/10.1093/rfs/hhz093" target="_blank">
-                                                            Bubbles and financial professionals.
-                                                        </a>
-                                                        <i>The Review of Financial Studies</i>, 33(6), pp. 2659–2696.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.1093/rfs/hhz093" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://osf.io/265dp/" target="_blank">material</a>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear">2020</div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1016/j.jebo.2020.10.020">
+                                                    Bad bankers no more? Truth-telling and (dis)honesty in the finance industry.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Huber, J.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Economic Behavior & Organization, 180, pp. 472-493
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1016/j.jebo.2020.10.020" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/c9dbj/" target="_blank">material</a>
+                                                </div>                                                
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Bindra, P.C., Kleinlercher, D. (2019)
-                                                        <a href="https://link.springer.com/article/10.1007%2Fs40881-019-00061-5" target="_blank">
-                                                            Design-features of bubble-prone experimental asset markets with a constant FV.
-                                                        </a>
-                                                        <i>Journal of the Economic Science Association</i>, 5(2), pp. 197-209.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://link.springer.com/article/10.1007%2Fs40881-019-00061-5" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://osf.io/y5pmd/" target="_blank">material</a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Huber, J., Hueber, L. (2019)
-                                                        <a href="https://doi.org/10.1016/j.jbankfin.2019.105662" target="_blank">
-                                                            The effect of experts' and laypeople's forecasts on others' stock market forecasts.
-                                                        </a>
-                                                        <i>Journal of Banking & Finance</i>, 109, 105662.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.1016/j.jbankfin.2019.105662" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/57m6g" target="_blank">preprint</a>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1093/rfs/hhz093" target="_blank">
+                                                    Bubbles and financial professionals.
+                                                </a>
+                                                <div class="authors">
+                                                    Weitzel, U., Huber, C., Huber, J., Kirchler, M., Lindner, F., Rose, J.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    The Review of Financial Studies, 33(6), pp. 2659–2696
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1093/rfs/hhz093" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/265dp/" target="_blank">material</a>
+                                                </div>                                                
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C. (2019).
-                                                        <a href="https://www.sciencedirect.com/science/article/pii/S2214635018301928" target="_blank">
-                                                            oTree: The bubble game.
-                                                        </a>
-                                                        <i>Journal of Behavioral and Experimental Finance</i>, 22, pp. 3-6.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://www.sciencedirect.com/science/article/pii/S2214635018301928" target="_blank">article</a>
-                                                <a class="btn btn-default" href="downloads.html">download</a>
+                                        
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear">2019</div>
+                                            <div class="col-lg-11">
+                                                <a href="https://link.springer.com/article/10.1007%2Fs40881-019-00061-5" target="_blank">
+                                                    Design-features of bubble-prone experimental asset markets with a constant FV.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Bindra, P.C., Kleinlercher, D.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of the Economic Science Association, 5(2), pp. 197-209
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://link.springer.com/article/10.1007%2Fs40881-019-00061-5" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/y5pmd/" target="_blank">material</a>
+                                                </div>                                                
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Huber, C., Huber, J. (2019).
-                                                        <a href="https://link.springer.com/article/10.1007/s10683-018-09598-4" target="_blank">
-                                                            Scale matters: Risk perception, return expectations, and investment propensity under different scalings.
-                                                        </a>
-                                                        <i>Experimental Economics</i>, 22(1), pp. 76-100.
-                                                    </li>
-                                                </ul>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.1016/j.jbankfin.2019.105662" target="_blank">
+                                                    The effect of experts' and laypeople's forecasts on others' stock market forecasts.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Huber, J., Hueber, L.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Banking & Finance, 109, 105662
+                                                </div>
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.1016/j.jbankfin.2019.105662" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://doi.org/10.31219/osf.io/57m6g" target="_blank">preprint</a>
+                                                </div>                                                
                                             </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://link.springer.com/article/10.1007/s10683-018-09598-4" target="_blank">article</a>
-                                                <a class="btn btn-default" href="https://osf.io/avfhe/" target="_blank">material</a>
+                                        </div>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://www.sciencedirect.com/science/article/pii/S2214635018301928" target="_blank">
+                                                    oTree: The bubble game.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Journal of Behavioral and Experimental Finance, 22, pp. 3-6
+                                                </div> 
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://www.sciencedirect.com/science/article/pii/S2214635018301928" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="downloads.html">download</a>
+                                                </div>                                                                                           
+                                            </div>
+                                        </div>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://link.springer.com/article/10.1007/s10683-018-09598-4" target="_blank">
+                                                    Scale matters: Risk perception, return expectations, and investment propensity under different scalings.
+                                                </a>
+                                                <div class="authors">
+                                                    Huber, C., Huber, J.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    Experimental Economics, 22(1), pp. 76-100
+                                                </div>      
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://link.springer.com/article/10.1007/s10683-018-09598-4" target="_blank">article</a>
+                                                    <a class="btn btn-default" href="https://osf.io/avfhe/" target="_blank">material</a>
+                                                </div>                                                                                              
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="publicationsheader">Book Chapters</div>
                                     <div class="container" style="width:100%; padding-left:0; padding-right:4;">
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Füllbrunn, S., Huber, C., König-Kersting, C. (2022)
-                                                        <a href="https://doi.org/10.4337/9781800372337.00012" target="_blank">
-                                                            Experimental Finance and Financial Professionals.
-                                                        </a>
-                                                        In Füllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 64–72). Edward Elgar Publishing. 
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.4337/9781800372337.00012" target="_blank">chapter</a>                                                
-                                                <a class="btn btn-default" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975949" target="_blank">preprint</a>
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.4337/9781800372337.00012" target="_blank">
+                                                    Experimental Finance and Financial Professionals.
+                                                </a>
+                                                <div class="authors">
+                                                    Füllbrunn, S., Huber, C., König-Kersting, C.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    2022. In Füllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 64–72). Edward Elgar Publishing 
+                                                </div>   
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.4337/9781800372337.00012" target="_blank">chapter</a>                                                
+                                                    <a class="btn btn-default" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975949" target="_blank">preprint</a>
+                                                </div>                                                                                         
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-9">
-                                                <ul>
-                                                    <li>
-                                                        Holzmeister, F., Huber, C., Palan, S. (2022)
-                                                        <a href="https://doi.org/10.4337/9781800372337.00037" target="_blank">
-                                                            A Critical Perspective on the Conceptualization of Risk in Behavioral and Experimental Finance
-                                                        </a>
-                                                        In Füllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 408–413). Edward Elgar Publishing.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-3" style="text-align:right;">
-                                                <a class="btn btn-default" href="https://doi.org/10.4337/9781800372337.00037" target="_blank">chapter</a>                                                            
-                                                <a class="btn btn-default" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3816460" target="_blank">preprint</a>
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-11">
+                                                <a href="https://doi.org/10.4337/9781800372337.00037" target="_blank">
+                                                    A Critical Perspective on the Conceptualization of Risk in Behavioral and Experimental Finance
+                                                </a>
+                                                <div class="authors">
+                                                    Holzmeister, F., Huber, C., Palan, S.
+                                                </div>                                                        
+                                                <div class="journalinfo">
+                                                    2022. In Füllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 408–413). Edward Elgar Publishing
+                                                </div>   
+                                                <div class="material">
+                                                    <a class="btn btn-default" href="https://doi.org/10.4337/9781800372337.00037" target="_blank">chapter</a>                                                            
+                                                    <a class="btn btn-default" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3816460" target="_blank">preprint</a>
+                                                </div>                                                                                             
                                             </div>
                                         </div>
                                     </div>
@@ -451,49 +454,40 @@ font-family:'Charter'; font-size:15px;">
                                 </div>
                                 <div class="panel-body papers">
                                   <div class="container" style="width:100%; padding-left:0; padding-right:4;">
-                                      <div class="row">
-                                        <div class="col-lg-9">
-                                            <ul>
-                                                <li>
-                                                    <a href="https://doi.org/10.48550/arXiv.2206.02871" target="_blank">
-                                                        Cooperation among an anonymous group protected Bitcoin during failures of decentralization
-                                                    </a>
-                                                    (with A. Blackburn, Y. Eliaz, M.S. Shamim, D. Weisz, G. Seshadri, K. Kim, S. Hang, E. Lieberman Aiden)
-                                                </li>
-                                            </ul>
+
+                                    <div class="row publication-item">
+                                        <div class="col-lg-1 publicationyear"></div>
+                                        <div class="col-lg-8">
+                                            <a href="https://doi.org/10.48550/arXiv.2206.02871" target="_blank">
+                                                Cooperation among an anonymous group protected Bitcoin during failures of decentralization
+                                            </a>
+                                            <div class="authors">
+                                                (with A. Blackburn, Y. Eliaz, M.S. Shamim, D. Weisz, G. Seshadri, K. Kim, S. Hang, E. Lieberman Aiden)
+                                            </div>                                                                                                        
                                         </div>
-                                          <div class="col-lg-3" style="text-align:right;">
-                                              <a class="btn btn-default" href="https://doi.org/10.48550/arXiv.2206.02871" target="_blank">preprint</a>
-                                          </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-lg-9">
-                                            <ul>
-                                                <li>
-                                                    <a href="https://econpapers.repec.org/RePEc:inn:wpaper:2022-07" target="_blank">
-                                                        Experimenting with Financial Professionals
-                                                    </a>
-                                                    (with C. König-Kersting)
-                                                </li>
-                                            </ul>
+                                    </div>
+
+                                      <div class="row publication-item">
+                                        <div class="col-lg-1 publicationyear"></div>
+                                        <div class="col-lg-8">
+                                            <a href="https://econpapers.repec.org/RePEc:inn:wpaper:2022-07" target="_blank">
+                                                Experimenting with Financial Professionals
+                                            </a>
+                                            <div class="authors">
+                                                (with C. König-Kersting, M.M. Marini)
+                                            </div>                                             
                                         </div>
-                                          <div class="col-lg-3" style="text-align:right;">
-                                              <a class="btn btn-default" href="https://econpapers.repec.org/RePEc:inn:wpaper:2022-07" target="_blank">preprint</a>
-                                          </div>
                                       </div>
-                                    <div class="row">
-                                      <div class="col-lg-9">
-                                          <ul>
-                                              <li>
-                                                  <a href="https://econpapers.repec.org/RePEc:inn:wpaper:2019-06" target="_blank">
-                                                      Individual Attitudes and Market Dynamics Towards Imprecision.
-                                                  </a>
-                                                  (with J. Rose)
-                                              </li>
-                                          </ul>
-                                      </div>
-                                      <div class="col-lg-3" style="text-align:right;">
-                                          <a class="btn btn-default" href="https://econpapers.repec.org/RePEc:inn:wpaper:2019-06" target="_blank">preprint</a>
+
+                                    <div class="row publication-item">
+                                        <div class="col-lg-1 publicationyear"></div>
+                                        <div class="col-lg-8">
+                                            <a href="https://econpapers.repec.org/RePEc:inn:wpaper:2019-06" target="_blank">
+                                                Individual Attitudes and Market Dynamics Towards Imprecision.
+                                            </a>
+                                            <div class="authors">
+                                                (with J. Rose)
+                                            </div>                                             
                                       </div>
                                     </div>
                                 </div>
@@ -507,35 +501,45 @@ font-family:'Charter'; font-size:15px;">
                                         Selected Work-in-Progress
                                     </h4>
                                 </div>
-                                <div class="panel-body papers">
-                                    <ul>
-                                        <li style="margin:8px 0">
-                                            'Large Gains, Small Losses? (Mis)representing Returns in Financial Advice' <br />
-                                            (with J. Rose)
-                                        </li>
-                                        <!--
-                                        <li style="margin:8px 0">
-                                            'Probability Weighting under Induced Anticipated Anxiety' <br />
-                                            (with J. Engelmann and J. Rose)
-                                        </li>
-                                        -->
-                                        <li style="margin:8px 0">
-                                            'Competitiveness and Speculative Behavior'
-                                            <!--
-                                            <br>
-                                            <a class="btn btn-default" href="https://osf.io/c5273/" target="_blank">material</a>
-                                            <br >
-                                            -->
-                                        </li>
-                                        <li style="margin:8px 0">
-                                            'Mining Centralization in Cryptocurrency Markets: A Laboratory Experiment'  <br />
-                                            (with A. Usvitskiy, A. Belianin, and A. Didenko)
-                                        </li>                                        
-                                        <li style="margin:8px 0">
-                                            '<a href="https://pubsonline.informs.org/doi/full/10.1287/mnsc.2022.4644#_i25" target="_blank">Management Science Reproducibility Project</a>' <br />
-                                            (with M. Fišar, B. Greiner, E. Katok, and A. Ozkes)
-                                        </li>                                        
-                                    </ul>
+                                <div class="panel-body workinprogress">
+                                    <div class="container" style="width:100%; padding-left:0; padding-right:4;">
+
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-8">                                                
+                                                Large Gains, Small Losses? (Mis)representing Returns in Financial Advice
+                                                <div class="authors">
+                                                    (with J. Rose)
+                                                </div>                                                                                                        
+                                            </div>
+                                        </div>
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-8">
+                                                Competitiveness and Speculative Behavior
+                                            </div>
+                                        </div>      
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-8">
+                                                Mining Centralization in Cryptocurrency Markets: A Laboratory Experiment
+                                                <div class="authors">
+                                                    (with A. Usvitskiy, A. Belianin, and A. Didenko)
+                                                </div>                                                                                                        
+                                            </div>
+                                        </div>                                                                          
+                                        <div class="row publication-item">
+                                            <div class="col-lg-1 publicationyear"></div>
+                                            <div class="col-lg-8">
+                                                <a href="https://pubsonline.informs.org/doi/full/10.1287/mnsc.2022.4644#_i25" target="_blank"></a>
+                                                    Management Science Reproducibility Project
+                                                </a>
+                                                <div class="authors">
+                                                    (with M. Fišar, B. Greiner, E. Katok, and A. Ozkes)
+                                                </div>                                                                                                        
+                                            </div>
+                                        </div>                                                                                   
+                                    </div>
                                 </div>
                             </div>
 
@@ -546,7 +550,7 @@ font-family:'Charter'; font-size:15px;">
                                         Selected Presentations
                                     </h4>
                                 </div>
-                                <div class="panel-body papers">
+                                <div class="panel-body presentations">
                                     <ul>
                                         <li>
                                             11/2023 &#9642; MUES Research Seminar, Masaryk University &#9642; Brno, Czech Republic
@@ -695,7 +699,7 @@ font-family:'Charter'; font-size:15px;">
                         <p>
                             <b>Refereeing:</b>
                         </p>
-                        <p class="papers">
+                        <p class="refereeing">
                             Behavior Research Methods,
                             European Economic Review,
                             Journal of Applied Econometrics,
@@ -733,7 +737,7 @@ font-family:'Charter'; font-size:15px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-2">
-                                    <i class="fas fa-envelope"></i> Christoph.Huber &#128231; wu.ac.at <br>
+                                    <i class="fas fa-envelope"></i> Christoph.Huber at wu.ac.at <br>
                                     <i class="fas fa-phone"></i> +43 (0) 1 313 36 6024 <br><br>
                                     <a href="https://scholar.google.com/citations?user=uTYLhs4AAAAJ&hl=en" target="_blank">
                                         <div class="btn btn-default"><i class="fab fa-google"></i></div>
@@ -761,7 +765,7 @@ font-family:'Charter'; font-size:15px;">
                                 <div class="col-xs-1 col-md-2"></div>
                             </div>
                             <div class="row">
-                                <p style="text-align:right; font-size:small; color: gray">
+                                <p class="roboto-slab-regular" style="text-align:right; font-size:small; color: gray">
                                     © 2024 Christoph Huber
                                 </p>
                             </div>
