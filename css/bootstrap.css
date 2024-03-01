@@ -4965,9 +4965,9 @@ a.badge:focus {
   /* background-color: #eee; */
   /* background: #000 url("../views/PXL_20231203_103240344.jpg") no-repeat center center; */
   /* background-position: 0px -580px; */
-  background: url("../views/PXL_20231203_103240344.jpg") no-repeat center center; 
+  /* background: url("../views/PXL_20231203_103240344.jpg") no-repeat center center; 
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 .jumbotron h1,
 .jumbotron .h1 {

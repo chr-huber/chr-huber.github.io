@@ -10,8 +10,26 @@ h3 {
     font-style: normal;
 }
 
-.jumbotron p{
+.jumbotron {
     font-weight: 300;
+}
+
+.jumbotron-front {
+    background: url("../views/PXL_20231203_103240344.jpg") no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron-downloads {
+    background: url("../views/PXL_20231203_103258187.jpg") no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron-teaching {
+    background: url("../views/PXL_20230919_100123998.jpg") no-repeat center center; 
+    background-size: cover;
+    background-position: center;
 }
 
 a.btn {
