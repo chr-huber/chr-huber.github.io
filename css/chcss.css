@@ -15,19 +15,31 @@ h3 {
 }
 
 .jumbotron-front {
-    background: url("../views/PXL_20231203_103240344.jpg") no-repeat center center; 
+    background: url("../views/PXL_20231203_103240344_sm.jpg") no-repeat center center; 
     background-size: cover;
     background-position: center;
 }
 
-.jumbotron-downloads {
-    background: url("../views/PXL_20231203_103258187.jpg") no-repeat center center; 
+.jumbo-bg-1 {
+    background: url("../views/PXL_20231203_103258187_sm.jpg") no-repeat center center; 
     background-size: cover;
     background-position: center;
 }
 
-.jumbotron-teaching {
-    background: url("../views/PXL_20230919_100123998.jpg") no-repeat center center; 
+.jumbo-bg-2 {
+    background: url("../views/PXL_20230919_100123998_sm.jpg") no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbo-bg-3 {
+    background: url("../views/PXL_20221001_012813508_sm.jpg") no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbo-bg-4 {
+    background: url("../views/PXL_20220925_042155165_sm.jpg") no-repeat center center; 
     background-size: cover;
     background-position: center;
 }
