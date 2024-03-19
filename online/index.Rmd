@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - _Individual attitudes and market dynamics towards imprecision_:
   - [2019-06-15: Experimental Finance 2019, Copenhagen](201906-EF/slides.html)
+  - [2024-03-19: Osaka Workshop](202403-Imprecision-Osaka.pdf)
 
 - _Truthtelling and dishonesty norms in the finance industry_:
   - [2019-06-29: JDMx meeting, Trento](201906-JDMx/slides.html)
