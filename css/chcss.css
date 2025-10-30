@@ -115,132 +115,163 @@ h3 {
 }
 
 a.btn {
-    /* margin-left: 1px; */
-    /* margin-top: 1px; */
-    padding: 2px 7px;
-    font-weight: light;
-    font-size: 10px;
-    font-family: Verdana;
-    opacity: 0.4;
+/* margin-left: 1px; */
+/* margin-top: 1px; */
+padding: 2px 7px;
+font-weight: light;
+font-size: 10px;
+font-family: Verdana;
+opacity: 0.4;
 }
-
 button.btn-default{
-    font-size: 10.5px;
-    font-family: Verdana;
+font-size: 10.5px;
+font-family: Verdana;
 }
-
 a.btn.jumbo {
-    margin-left: 1px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    padding: 1px 7px;
-    font-weight: light;
-    font-size: 10px;
-    font-family: Verdana;
-    background: rgb(35, 82, 125, .6);
-    color: white;
-    border-color: rgb(35, 82, 125, .8);
+margin-left: 1px;
+margin-top: 1px;
+margin-bottom: 1px;
+padding: 1px 7px;
+font-weight: light;
+font-size: 10px;
+font-family: Verdana;
+background: rgba(139, 69, 19, .6);  /* Saddle brown accent */
+color: white;
+border-color: rgba(139, 69, 19, .8);
 }
 a.btn.jumbo:hover {
-    margin-left: 1px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    padding: 1px 7px;
-    font-weight: light;
-    font-size: 10px;
-    font-family: Roboto;
-    background: rgb(35, 82, 125, .9);
-    color: white;
-    border-color: rgb(35, 82, 125, .8);
+margin-left: 1px;
+margin-top: 1px;
+margin-bottom: 1px;
+padding: 1px 7px;
+font-weight: light;
+font-size: 10px;
+font-family: Roboto;
+background: rgba(139, 69, 19, .9);  /* Saddle brown accent */
+color: white;
+border-color: rgba(139, 69, 19, .8);
 }
-
 span.label {
-    padding: 5px 8px;
-    font-weight: light;
-    font-family: Verdana;
-    font-size: 9.5px;
+padding: 5px 8px;
+font-weight: light;
+font-family: Verdana;
+font-size: 9.5px;
 }
-
 .papers {
-    font-size: 16px;
+font-size: 16px;
 }
-
 .workinprogress,
 .presentations,
 .grants,
 .refereeing {
-    font-size: 14px;
+font-size: 14px;
 }
-
 .publicationsheader {
-    font-size: 15px;
-    font-stretch: expanded;
-    padding-top: 8px;
-    padding-bottom: 8px;
+font-size: 15px;
+font-stretch: expanded;
+padding-top: 8px;
+padding-bottom: 8px;
 }
-
 .authors {
-    font-weight: 300; 
-    font-size:13px;
-    padding-top: 0px;
+font-weight: 300; 
+font-size:13px;
+padding-top: 0px;
 }
-
 .journalinfo {
-    font-family: 'Roboto Slab', serif; 
-    font-weight: 300; 
-    font-size:12px;
-    font-style: italic;
-    padding-top: 6px;
+font-family: 'Roboto Slab', serif; 
+font-weight: 300; 
+font-size:12px;
+font-style: italic;
+padding-top: 6px;
 }
-
 .publicationyear {
-    /* font-family: 'Roboto Slab', serif;  */
-    text-align: right;
-    font-weight: 300; 
-    /* font-size: 14px; */
+/* font-family: 'Roboto Slab', serif;  */
+text-align: right;
+font-weight: 300; 
+/* font-size: 14px; */
 }
-
 .publication-item {
-    padding-bottom:12px;
+padding-bottom:12px;
 }
-
 .material {
-    padding-top:2px;
+padding-top:2px;
 }
-
 .abstract {
-    font-weight: 300; 
-    font-size:13px;    
-    padding: 10px;
-    border: 0px;
-    color: #004689;
-    background-color: white;
+font-weight: 300; 
+font-size:13px;    
+padding: 10px;
+border: 0px;
+color: #4A4A4A;  /* Charcoal for text */
+background-color: white;
 }
-
-
 .active-ch {
-    color: #004689;
-    background-color: #e7e7e7;
+    color: #ffffff;  /* White text for contrast */
+    background-color: #4A6278;  /* Lighter slate blue-gray */
 }
-
 a.clickable-panel:hover {
-    color: #000!important;
-    text-decoration: none;
+color: #000!important;
+text-decoration: none;
 }
-
 a.clickable-panel:active {
-    color: #000!important;
-    text-decoration: none;
+color: #000!important;
+text-decoration: none;
 }
-
 a.clickable-panel:focus {
-    color: #000!important;
-    text-decoration: none;
+color: #000!important;
+text-decoration: none;
+}
+.clickable-panel .panel {
+border-width: 0;
+border-radius:0%;
+margin:0;
+/* min-height: 95px; */
 }
 
-.clickable-panel .panel {
-    border-width: 0;
-    border-radius:0%;
-    margin:0;
-    /* min-height: 95px; */
+/* OPTION 3: MIXED COLOR SCHEME */
+/* Cool primary with warm accents */
+
+/* Primary link color - Charcoal */
+a {
+    color: #6B6B6B;
+}
+
+a:hover {
+    color: #B8664D;  /* Saddle brown on hover */
+}
+
+/* Navbar styling - Dark slate blue-gray */
+.navbar-default {
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #B8664D;  /* Saddle brown accent */
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #D3D3D3;  /* Muted gray */
+    background-color: rgba(255, 255, 255, 0.1);  /* Very subtle highlight */
+}
+
+/* Section headers */
+h3 {
+    color: #2C3E50;  /* Dark slate blue-gray */
+}
+
+/* Panel accent for publications */
+.panel-default {
+    border-left: 3px solid #4A4A4A;  /* Charcoal accent */
+}
+
+.panel-default:hover {
+    border-left: 3px solid #8B4513;  /* Saddle brown on hover */
 }
