@@ -27,10 +27,10 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../views/aalto_1_20240728.webp") no-repeat center center;
+    background: url("../views/aalto_0.webp") no-repeat center center;
     background-size: cover;
     background-position: center;
-    opacity: 0.6;  /* Adjust this value: 0.5 = more faded, 0.9 = less faded */
+    opacity: 0.5;  /* Adjust this value: 0.5 = more faded, 0.9 = less faded */
     z-index: -1;
 }
 
@@ -269,9 +269,9 @@ h3 {
 
 /* Panel accent for publications */
 .panel-default {
-    border-left: 3px solid #4A4A4A;  /* Charcoal accent */
+    border-left: 3px solid #8B4513;  /* Charcoal accent */
 }
 
 .panel-default:hover {
-    border-left: 3px solid #8B4513;  /* Saddle brown on hover */
+    border-left: 3px solid #4A4A4A;  /* Saddle brown on hover */
 }
