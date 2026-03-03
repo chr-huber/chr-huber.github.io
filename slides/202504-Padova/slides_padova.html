@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="slides_padova_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slides_padova_files/libs/quarto-html/tabby.min.js"></script>
+<script src="slides_padova_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides_padova_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="slides_padova_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides_padova_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="slides_padova_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="slides_padova_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.361">
+
+  <meta name="author" content="Christoph Huber">
+  <meta name="dcterms.date" content="2025-04-28">
+  <title>Navigating Pre-Registration and Reproducibility</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="slides_padova_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides_padova_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="slides_padova_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="slides_padova_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides_padova_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides_padova_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides_padova_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+
+<section id="title-slide" data-background-color="#9BD84C" data-background-image="title-background.png" data-background-size="contain" class="center">
+<div style="width:50%"> 
+<h1 class="title" style="line-height:1em;">Navigating Pre-Registration and Reproducibility</h1>
+<hr style="border: none; border-top: 5px solid black; width: 100px; height: 1cm; text-align: left; margin: 0;">
+  <p class="author">Christoph Huber</p>
+  <p class="institute">Level Up Research: Replication in Action</p>
+  <p class="date">28 April 2025</p>
+</div>
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+
+</section>
+<section id="navigating-pre-registration-and-reproducibility" class="slide level2">
+<h2>Navigating Pre-Registration and Reproducibility</h2>
+<h3 id="goals-of-this-talk">Goals of this talk</h3>
+<ul>
+<li><p>Recognize common questionable research practices</p></li>
+<li><p>Understand the role of pre-registration and reproducibility in improving scientific credibility</p></li>
+<li><p>Learn how to pre-register studies and write pre-analysis plans</p></li>
+<li><p>Navigate the current publishing norms w.r.t pre-registration and reproducibility</p></li>
+</ul>
+</section>
+<section id="navigating-pre-registration-and-reproducibility-1" class="slide level2">
+<h2>Navigating Pre-Registration and Reproducibility</h2>
+<h3 id="outline">Outline</h3>
+</section></section>
+<section>
+<section id="why-preregistration-matters" class="title-slide slide level1 center" data-background-color="#9BD84C">
+<h1>Why Preregistration Matters</h1>
+
+</section>
+<section id="what-is-preregistration" class="slide level2">
+<h2>What is Preregistration?</h2>
+<p>Preregistration means writing down your study plan — including hypotheses, methods, and analyses — before you collect or look at the data.</p>
+<div class="fragment">
+<p>Key Idea:</p>
+<div>
+<ul>
+<li class="fragment"><p>You commit in advance to what you plan to test and how you will test it.</p>
+<ul>
+<li class="fragment"><p><strong>pre-</strong> … You commit <em>in advance</em> … <span class="math inline">\(\rightarrow\)</span> <em>before</em> data collection</p></li>
+<li class="fragment"><p><strong>-registration</strong> … You <em>commit</em> … <span class="math inline">\(\rightarrow\)</span> plan is <em>registered</em> on a public repository</p></li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li class="fragment"><p>Prevents flexible decisions that bias results (“p-hacking”).</p></li>
+<li class="fragment"><p>Makes it clear what was planned vs.&nbsp;what was discovered later.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-is-preregistration-1" class="slide level2">
+<h2>What is Preregistration?</h2>
+<p>Preregistration means writing down your study plan — including hypotheses, methods, and analyses — before you collect or look at the data.</p>
+<p><br><br></p>
+<p>Path for a preregistered study:</p>
+
+<img data-src="figures/path_prereg.png" class="r-stretch quarto-figure-center"></section>
+<section id="why-preregistration-matters-1" class="slide level2">
+<h2>Why Preregistration Matters?</h2>
+<p>Simmons et al.&nbsp;(2021): A scientist’s job consists of two parts:</p>
+<div>
+<ul>
+<li class="fragment"><p>discover true facts about the world</p></li>
+<li class="fragment"><p>interpret those facts</p>
+<ul>
+<li class="fragment">ideally in the service of building theories that allow us to better predict the future</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>You cannot competently do the second part without doing the first part. You cannot generate correct theories on a foundation of incorrect facts.</p>
+
+</div>
+<aside><div>
+<p>Simmons, J. P., D Nelson, L., &amp; Simonsohn, U. (2021). Pre‐registration: Why and how. Journal of Consumer Psychology, 31(1), 151-162.</p>
+</div></aside></section>
+<section id="why-preregistration-matters-2" class="slide level2">
+<h2>Why Preregistration Matters?</h2>
+<p><span class="math inline">\(\rightarrow\)</span> Scientific results need to be replicable, such that policies/actions can be based upon them (Ioannidis, 2005; Ioannidis et al., 2013).</p>
+<div class="fragment">
+<p><strong>Replication Crisis</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Open Science Collaboration (2015)</p>
+<ul>
+<li>36% of 97 psychology papers with significant effects replicated</li>
+</ul></li>
+<li><p>Camerer et al.&nbsp;(2016)</p>
+<ul>
+<li>61% of 18 economics lab experiments replicated (with 66% of the original effect size, on average)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Camerer et al.&nbsp;(2018)</p>
+<ul>
+<li>62% of 21 social science experiments in Nature/Science replicated</li>
+</ul></li>
+<li><p>Davis et al.&nbsp;(2023)</p>
+<ul>
+<li>80% of 10 behavioral operations management studies published in Management Science replicated</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="why-preregistration-matters-3" class="slide level2">
+<h2>Why Preregistration Matters?</h2>
+<p>Simmons et al.&nbsp;(2021): A scientist’s job consists of two parts:</p>
+<ul>
+<li><p>discover true facts about the world</p></li>
+<li><p>interpret those facts</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> unfortunately, many of the <em>facts</em> in the social sciences are wrong!</p>
+</div>
+<div class="fragment">
+<p>But why?</p>
+<p>Many published findings <em>“… are false precisely because it is easy for moral, competent researchers to generate false findings. …</em></p>
+</div>
+</section>
+<section id="why-preregistration-matters-4" class="slide level2" data-visibility="uncounted">
+<h2>Why Preregistration Matters?</h2>
+<p>Simmons et al.&nbsp;(2021): A scientist’s job consists of two parts:</p>
+<ul>
+<li><p>discover true facts about the world</p></li>
+<li><p>interpret those facts</p></li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> unfortunately, many of the <em>facts</em> in the social sciences are wrong!</p>
+<p>But why?</p>
+<p>Many published findings <em>“… are false precisely because it is easy for moral, competent researchers to generate false findings. … The bulk of the problem is not caused by immorality or incompetence. It is caused by the selective reporting of analyses that generate desirable results.</em>” (p.&nbsp;153)</p>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> more generally: <strong>questionable research practices</strong></p>
+</div>
+</section>
+<section id="questionable-research-practices" class="slide level2">
+<h2>Questionable Research Practices</h2>
+<ul>
+<li><p>research practices that are increase the risk of false-positive results, often without clear disclosure</p></li>
+<li><p>not misconduct, but more of a <em>gray area</em></p></li>
+</ul>
+<div class="fragment">
+<p>Examples:</p>
+<div>
+<ul>
+<li class="fragment"><p><strong>p-hacking:</strong> Trying many analyses and reporting only the significant ones.</p></li>
+<li class="fragment"><p><strong>HARKing</strong> (Hypothesizing After the Results are Known): Presenting a post hoc explanation as if it were planned all along.</p></li>
+<li class="fragment"><p><strong>Selective Reporting:</strong> Only reporting outcomes that “worked” and ignoring others.</p></li>
+<li class="fragment"><p><strong>Flexible Data Exclusions:</strong> Dropping participants or data points without a pre-specified rule.</p></li>
+<li class="fragment"><p><strong>Outcome Switching:</strong> Changing the primary outcome based on what looks best.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="researcher-degrees-of-freedom" class="slide level2">
+<h2>Researcher Degrees of Freedom</h2>
+<p>Questionable Research Practices can arise when there are <strong>Researcher Degrees of Freedom</strong> <br><span class="math inline">\(\rightarrow\)</span> to test a hypothesis, a researcher often has to make many analytic decisions</p>
+<div class="fragment">
+<p>For example:</p>
+<div>
+<ul>
+<li class="fragment"><p>which measures to analyze (and how to code and combine them)</p></li>
+<li class="fragment"><p>which controls to use (and how to code and combine them)</p></li>
+<li class="fragment"><p>which observations to exclude</p></li>
+<li class="fragment"><p>which moderators to test</p></li>
+<li class="fragment"><p>which subgroups to analyze</p></li>
+<li class="fragment"><p>…</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="p-hacking" class="slide level2">
+<h2>p-hacking</h2>
+<p>Null Hypothesis Significance Testing: in social sciences, we often use <span class="math inline">\(p&lt;0.05\)</span> to determine whether a result is <em>significant</em>, i.e., whether we reject the null hypothesis</p>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> we usually accept a false-positive rate of 5%</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>However, this hinges on an important assumption!</p>
+</div>
+<div class="fragment">
+<p><strong>Assumption:</strong> <em>Researchers will run exactly</em> one <em>analysis on their data!</em> <br><em>(or correct for how many analyses they are willing to run)</em></p>
+</div>
+</section>
+<section id="multiple-hypothesis-testing" class="slide level2">
+<h2>Multiple Hypothesis Testing</h2>
+
+<img data-src="figures/significant1.png" class="r-stretch quarto-figure-center"></section>
+<section id="multiple-hypothesis-testing-1" class="slide level2">
+<h2>Multiple Hypothesis Testing</h2>
+
+<img data-src="figures/significant2.png" class="r-stretch quarto-figure-center"></section>
+<section id="multiple-hypothesis-testing-2" class="slide level2">
+<h2>Multiple Hypothesis Testing</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/significant3.png"></p>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+
+<aside><div>
+<p>From https://xkcd.com/882/</p>
+</div></aside></section>
+<section id="multiple-hypothesis-testing-3" class="slide level2" data-visibility="uncounted">
+<h2>Multiple Hypothesis Testing</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/significant3.png"></p>
+</div><div class="column" style="width:50%;">
+<p>Null Hypothesis Significance Testing</p>
+<p>Standard approach: correct for multiple hypothesis tests, i.e., for how many analyses you are willing to run (e.g., Bonferroni)</p>
+</div>
+</div>
+
+<aside><div>
+<p>From https://xkcd.com/882/</p>
+</div></aside></section>
+<section id="p-hacking-1" class="slide level2">
+<h2>p-hacking</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/significant3.png"></p>
+</div><div class="column" style="width:50%;">
+<p>Null Hypothesis Significance Testing</p>
+<p><strong>If you run enough analyses, some will look ‘significant’ even if there’s no real effect.</strong></p>
+</div>
+</div>
+
+<aside><div>
+<p>From https://xkcd.com/882/</p>
+</div></aside></section>
+<section id="p-hacking-2" class="slide level2" data-visibility="uncounted">
+<h2>p-hacking</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/significant3.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>If you run enough analyses, some will look ‘significant’ even if there’s no real effect.</strong></p>
+<p>Problem with p-hacking: you do not know how many analyses the researcher actually ran!</p>
+<p><br></p>
+<p><span class="math inline">\(\rightarrow\)</span> researchers are necessarily increasing the false-positive rate they accept to a level above 5%!</p>
+</div>
+</div>
+
+<aside><div>
+<p>From https://xkcd.com/882/</p>
+<p>How much does the accepted false-positive rate increase? <span class="math inline">\(\rightarrow\)</span> depends on how many analyses researchers are willing to run and on how correlated they are</p>
+</div></aside></section>
+<section id="p-hacking-3" class="slide level2">
+<h2>p-hacking</h2>
+<p><strong>If you run enough analyses, some will look ‘significant’ even if there’s no real effect.</strong></p>
+<p>Problem with p-hacking: you do not know how many analyses the researcher actually ran!</p>
+<p><br></p>
+<p><span class="math inline">\(\rightarrow\)</span> researchers are necessarily increasing the false-positive rate they accept to a level above 5%!</p>
+<p><strong>P-hacking can make it easy to repeatedly find statistically significant support for any hypothesis</strong></p>
+</section>
+<section id="how-preregistration-improves-credibility" class="slide level2">
+<h2>How Preregistration Improves Credibility</h2>
+<p><b><u>Without pre-registration</u>, p-hacking is not just easy to <u>do</u>, but actually hard to <u>avoid</u>!</b></p>
+<div class="fragment">
+<p>To <em>not</em> p-hack, researchers have to</p>
+<div>
+<ol type="1">
+<li class="fragment"><p>perfectly plan out, in advance, all of the key details of their critical analysis,</p></li>
+<li class="fragment"><p>conduct that analysis, and</p></li>
+<li class="fragment"><p>remember to report that analysis, rather than a different analysis, as the one that “counts” (with other analyses being reported as “exploratory” or “tentative”).</p></li>
+</ol>
+</div>
+</div>
+<div class="fragment">
+<p>Researchers must decide exactly how they will conduct their key analysis before they collect their data.</p>
+</div>
+<div class="fragment">
+<p>And then they must commit to it.</p>
+</div>
+</section>
+<section id="how-preregistration-improves-credibility-1" class="slide level2" data-visibility="uncounted">
+<h2>How Preregistration Improves Credibility</h2>
+<p><b><u>Without pre-registration</u>, p-hacking is not just easy to <u>do</u>, but actually hard to <u>avoid</u>!</b></p>
+<p>To <em>not</em> p-hack, researchers have to</p>
+<ol type="1">
+<li><p>perfectly plan out, in advance, all of the key details of their critical analysis,</p></li>
+<li><p>conduct that analysis, and</p></li>
+<li><p>remember to report that analysis, rather than a different analysis, as the one that “counts” (with other analyses being reported as “exploratory” or “tentative”).</p></li>
+</ol>
+<p>Researchers must decide exactly how they will conduct their key analysis before they collect their data.</p>
+<p>And then they must commit to it. <span class="math inline">\(\rightarrow\)</span> <strong>PRE-REGISTRATION</strong></p>
+
+<aside><div>
+<p>Simmons et al.&nbsp;(2021)</p>
+</div></aside></section>
+<section id="is-preregistration-only-for-rcts" class="slide level2">
+<h2>“Is Preregistration Only for RCTs?”</h2>
+<p>Preregistration is well-suited to be applied for experimental studies, surveys, etc.</p>
+<div class="fragment">
+<p>But what about studies using <em>observational</em> (secondary) <em>data</em>?</p>
+</div>
+<div class="fragment">
+<ul>
+<li><p>None of what I said so far <em>only</em> applies to experimental research</p>
+<ul>
+<li>If anything, questionable research practices in observational research are even more common</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Almost any type of empirical study can benefit from a preregistration, especially if the authors did not have access to the final dataset before the study began!</strong></p>
+</div>
+</section>
+<section id="preregistration-vs.-registered-reports" class="slide level2">
+<h2>Preregistration vs.&nbsp;Registered Reports</h2>
+<p><strong>Preregistration</strong> is a time-stamped, read-only plan:</p>
+<p><img data-src="figures/path_prereg.png" style="width:60%"></p>
+<div class="fragment">
+<p><strong>Registered Report:</strong> extended plan that undergoes formal peer review ahead of the research</p>
+</div>
+<div class="fragment">
+<p><img data-src="figures/path_rr.png" style="width:60%"></p>
+</div>
+</section></section>
+<section>
+<section id="how-to-preregister" class="title-slide slide level1 center" data-background-color="#9BD84C">
+<h1>How to Preregister</h1>
+
+</section>
+<section id="preregistrations-and-pre-analysis-plans" class="slide level2">
+<h2>Preregistrations and Pre-analysis Plans</h2>
+<p><u>Goal of preregistration:</u> distinguish between what was <strong>planned</strong> (confirmatory, hypothesis-testing) vs.&nbsp;what was <strong>discovered later</strong> (exploratory, hypothesis, generating)</p>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> requirements very small: can be minimal, just needs to time-stamp your basic plan</p>
+</div>
+<div class="fragment">
+<p><u>More generally: </u> we want to prevent flexible decisions that can bias results (“p-hacking”)</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> specify exactly how the analysis will be conducted, step-by-step <span class="math inline">\(\rightarrow\)</span> <strong>Pre-analysis Plan (PAP)</strong></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>Recent evidence from 15 leading economics journals:</p>
+<div>
+<ul>
+<li class="fragment"><p>pre-registration in itself does not reduce p-hacking and publication bias</p></li>
+<li class="fragment"><p>pre-registration <em>including</em> PAP <span class="math inline">\(\rightarrow\)</span> reduced p-hacking and publication bias</p></li>
+</ul>
+</div>
+
+</div>
+<aside><div>
+<p>Brodeur et al.&nbsp;(2024) Do Pre-Registration and Pre-Analysis Plans Reduce p-Hacking and Publication Bias?</p>
+</div></aside></section>
+<section id="preregistrations-and-pre-analysis-plans-1" class="slide level2">
+<h2>Preregistrations and Pre-analysis Plans</h2>
+<p><u>Goal of preregistration:</u> distinguish between what was <strong>planned</strong> (confirmatory, hypothesis-testing) vs.&nbsp;what was <strong>discovered later</strong> (exploratory, hypothesis, generating)</p>
+<p><span class="math inline">\(\rightarrow\)</span> requirements very small: can be minimal, just needs to time-stamp your basic plan</p>
+<p><u>More generally: </u> we want to prevent flexible decisions that can bias results (“p-hacking”)</p>
+<p><span class="math inline">\(\rightarrow\)</span> specify exactly how the analysis will be conducted, step-by-step <span class="math inline">\(\rightarrow\)</span> <strong>Pre-analysis Plan (PAP)</strong></p>
+<p><br></p>
+<p>In economics: ~50% of pre-registration have no PAP!</p>
+<div class="fragment">
+<p>In this lecture (= what I believe you should do): pre-registrations <em>with</em> PAP</p>
+</div>
+</section>
+<section id="where-to-preregister" class="slide level2">
+<h2>Where to Preregister</h2>
+<p>You can preregister your study on a public repository for preregistrations; for example:</p>
+<ul>
+<li><p><strong>AsPredicted.org</strong> <a href="https://aspredicted.org">https://aspredicted.org</a></p>
+<ul>
+<li>Simple, standardized template</li>
+</ul></li>
+<li><p><strong>AEA RCT Registry</strong> <a href="https://www.socialscienceregistry.org/">https://www.socialscienceregistry.org/</a></p>
+<ul>
+<li>Mainy for RCTs but can also be used more generally</li>
+</ul></li>
+<li><p><strong>Open Science Framework</strong> (OSF, <a href="https://osf.io">https://osf.io</a>)</p>
+<ul>
+<li>Different templates or free-form registration</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Templates differ greatly in level of detail required!</p>
+
+</div>
+<aside><div>
+<p>There are many more, but these three are the ones most commonly used on economics, finance, and related fields.</p>
+</div></aside></section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<ul>
+<li><p>Center for Open Science / OSF: <a href="https://www.cos.io/initiatives/prereg">https://www.cos.io/initiatives/prereg</a></p></li>
+<li><p>Registration Forms and Templates: <a href="https://osf.io/zab38/wiki/home/">https://osf.io/zab38/wiki/home/</a></p></li>
+<li><p>Example preregistrations: <a href="https://osf.io/e6auq/wiki/Example%20Preregistrations/">https://osf.io/e6auq/wiki/Example%20Preregistrations/</a></p></li>
+<li><p>Lab2 Materials: <a href="https://labsquare.net/materials/educational">https://labsquare.net/materials/educational</a></p></li>
+</ul>
+</section>
+<section id="basic-elements" class="slide level2">
+<h2>Basic Elements</h2>
+<p>The structure of your preregistration and the specific headings will differ depending on the template. However, at least the following <strong>basic elements</strong> are (or should be!) <em>part of every preregistration</em>:</p>
+<div>
+<ul>
+<li class="fragment"><p>Research Questions &amp; Hypotheses</p></li>
+<li class="fragment"><p>Study design: survey design / experimental design</p>
+<ul>
+<li class="fragment"><p>Precise measures of all relevant variables</p></li>
+<li class="fragment"><p>Treatments and assignment mechanism</p></li>
+</ul></li>
+<li class="fragment"><p>Sample size you intend to collect</p></li>
+<li class="fragment"><p>Detailed pre-analysis plan</p>
+<ul>
+<li class="fragment">Explicitly states all statistical analysis you plan to conduct</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="hypotheses" class="slide level2">
+<h2>Hypotheses</h2>
+<p>Example: <br><em>“We explore various relationships between management practices and employee outcomes.”</em></p>
+<div class="fragment">
+<p>Why is this a bad example?</p>
+<div>
+<ul>
+<li class="fragment"><p>vague</p></li>
+<li class="fragment"><p>not falsifiable</p></li>
+<li class="fragment"><p>“exploring” does not commit to any test</p></li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> better: <strong>“Offering flexible working hours increases self-reported employee productivity.”</strong></p>
+</div>
+</section>
+<section id="outcome-measures" class="slide level2">
+<h2>Outcome Measures</h2>
+<p>Example:<br><em>“We measure various aspects of employee performance.”</em></p>
+<div class="fragment">
+<p>Why is this a bad example?</p>
+<div>
+<ul>
+<li class="fragment"><p>no clear primary outcome</p></li>
+<li class="fragment"><p>“various aspects” allows to cherry-pick which aspect to focus on (i.e., which one’s results you like the most)</p></li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> better: <br><strong>“Primary outcome: average self-reported productivity, measured weekly on a 5-point Likert scale.”</strong></p>
+</div>
+</section>
+<section id="sample-size-and-power-analysis" class="slide level2">
+<h2>Sample Size and Power Analysis</h2>
+<p>Example:<br><em>“We aim to get as many participants as possible.”</em></p>
+<div class="fragment">
+<p>Why bad?</p>
+<div>
+<ul>
+<li class="fragment"><p>no target or limit</p></li>
+<li class="fragment"><p>no justification</p></li>
+<li class="fragment"><p>allows you to look at the data and choose when to stop data collection (potentially depending on the results)</p></li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> better: <br>“<strong>We plan to recruit 300 participants to achieve 80% power for detecting an effect d = 0.3 at</strong> <span class="math inline">\(\alpha=0.05\)</span>.”</p>
+</div>
+</section>
+<section id="analysis-plan" class="slide level2">
+<h2>Analysis Plan</h2>
+<p>Example:<br><em>“We will analyse our hypotheses using OLS regressions.”</em></p>
+<div class="fragment">
+<ul>
+<li>far too vague <span class="math inline">\(\rightarrow\)</span> massive potential for p-hacking</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Another example: “We will use OLS regression of productivity on treatment, controlling for baseline productivity.”</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> better: “<strong>We will estimate the following regression model using OLS, with clustered standard errors at the firm level:</strong> <span class="math inline">\(P_i = \beta_0 + \beta_1 T_i + \beta_2 \text{Prod}_i + \varepsilon_i\)</span>”</p>
+</div>
+<div class="fragment">
+<p>What is maybe still missing?</p>
+</div>
+<div class="fragment">
+<p>How to deal with outliers? How to deal with missing values? Are variables transformed? Etc.</p>
+</div>
+</section>
+<section id="analysis-plan-1" class="slide level2">
+<h2>Analysis Plan</h2>
+<p>The <strong>best</strong> way to pre-register an analysis plan – although I’ve almost never seen this (yet) – is … ?</p>
+<div class="fragment">
+<p>… to already pre-register the <strong>analysis code</strong>!</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>Example: <a href="https://osf.io/qpdu3">PAP for ManyDesigns project (Huber et al., 2023)</a></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><span class="math inline">\(\rightarrow\)</span> We can think of a pre-registration as front-loading part of the work for what you will do in preparing your replication package</p>
+</div>
+</section></section>
+<section>
+<section id="lets-try-this" class="title-slide slide level1 center" data-background-color="#9BD84C">
+<h1>Let’s try this!</h1>
+
+</section>
+<section id="mini-exercise-draft-a-quick-preregistration" class="slide level2">
+<h2>Mini-Exercise: Draft a Quick Preregistration</h2>
+<p>Take a few minutes to think about a research project you are currently working on — or an idea you’ve been considering (can also be hypothetical). Write down:</p>
+<ul>
+<li><p>Main Hypothesis</p>
+<ul>
+<li>What effect are you trying to test?</li>
+</ul></li>
+<li><p>Primary Outcome</p>
+<ul>
+<li>What exactly would you measure?</li>
+</ul></li>
+<li><p>Basic Analysis Plan</p>
+<ul>
+<li>What is your analysis plan?</li>
+<li>What statistical method will you use? And how?</li>
+</ul></li>
+<li><p>Don’t overthink — just draft!</p></li>
+<li><p>Focus on being clear, not complete</p></li>
+</ul>
+<p>…</p>
+</section></section>
+<section>
+<section id="pre-registration-and-pap-recap" class="title-slide slide level1 center" data-background-color="#9BD84C">
+<h1>Pre-registration and PAP: Recap</h1>
+
+</section>
+<section id="what-to-include-in-your-pap-1" class="slide level2">
+<h2>What to include in your PAP? (1)</h2>
+<p>To enhance transparency and limit researcher degrees of freedom, the following elements should be included in your PAP:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Research Questions &amp; Hypotheses</p></li>
+<li><p>Sample</p>
+<ul>
+<li>Sample selection, a priori power calculation, justiﬁcation of sample size, population, and key mediation paths</li>
+</ul></li>
+<li><p>Sequencing of Analyses</p>
+<ul>
+<li>Order of analyses (e.g., primary vs.&nbsp;secondary tests), including subgroup analyses, heterogeneity, and robustness checks</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Design Details</p>
+<ul>
+<li>Balance tests (if applicable), data cleaning steps, handling of outliers, and transformations</li>
+</ul></li>
+<li><p>Data Sources &amp; Variables</p>
+<ul>
+<li>Outcomes, the target sample size, data collection methods, stopping rules (i.e.&nbsp;opportunistic stopping of data collection in experiments), and variable construction</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-to-include-in-your-pap-2" class="slide level2">
+<h2>What to include in your PAP? (2)</h2>
+<p>To enhance transparency and limit researcher degrees of freedom, the following elements should be included in your PAP:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Statistical Approach - Outcomes</p>
+<ul>
+<li>Deﬁne variable construction and scoring methods, and the signiﬁcance threshold used to evaluate test results</li>
+</ul></li>
+<li><p>Pilot and existing data</p>
+<ul>
+<li>Performed and planned pilot data collections, and existing data (e.g., use of secondary data, existing panel studies)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Ethics</p>
+<ul>
+<li>Address consent, data governance, and ethical principles such as Beneﬁcence and Justice</li>
+</ul></li>
+<li><p>Statistical Methods</p>
+<ul>
+<li>Explain the statistical models and methods. Include details of estimators and their implementation. Specify any control variables, moderators, or adjustments.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="increasing-the-quality-of-your-paps" class="slide level2">
+<h2>Increasing the Quality of your PAPs</h2>
+<p>PAPs especially eﬀective if they are <strong>speciﬁc</strong>, <strong>precise</strong>, and <strong>exhaustive</strong> (Bakker, Marjan, et al., 2020) <span class="math inline">\(\rightarrow\)</span> researchers can reduce unintended ﬂexibility, supporting the credibility of their ﬁndings</p>
+<p><br></p>
+<div class="fragment">
+<p>Example: <em>“We will use the general risk question (Dohmen et al., 2011) to measure risk preferences.”</em> <span class="math inline">\(\rightarrow\)</span> <strong>speciﬁc, but not precise and exhaustive</strong></p>
+</div>
+<div class="fragment">
+<p>Example: <em>“We will use the general risk question (Dohmen et al., 2011), which asks respondents to state their willingness to take risks on an 11-point Likert scale, to measure risk preferences.”</em> <br><span class="math inline">\(\rightarrow\)</span> <strong>speciﬁc and precise, but not exhaustive</strong></p>
+</div>
+</section>
+<section id="increasing-the-quality-of-your-paps-1" class="slide level2">
+<h2>Increasing the Quality of your PAPs</h2>
+<p>PAPs especially eﬀective if they are <strong>speciﬁc</strong>, <strong>precise</strong>, and <strong>exhaustive</strong> (Bakker, Marjan, et al., 2020) <span class="math inline">\(\rightarrow\)</span> researchers can reduce unintended ﬂexibility, supporting the credibility of their ﬁndings</p>
+<p><br></p>
+<p>Example: <em>“We will use the general risk question (Dohmen et al., 2011), which asks respondents to state their willingness to take risks on an 11-point Likert scale, and treat the chosen value as the continuous measure of risk preferences (i.e., the response ranges from 0 to 10, with higher values indicating higher risk tolerance).”</em> <span class="math inline">\(\rightarrow\)</span> <strong>speciﬁc, precise, and exhaustive</strong> <span class="math inline">\(\checkmark\)</span></p>
+</section>
+<section id="challenges-common-questions" class="slide level2">
+<h2>Challenges / Common questions</h2>
+<p><strong>What should I do if unforeseen issues occur before, during, or after data collection?</strong></p>
+<ul>
+<li>More generally: can I <em>change</em> my Preregistration / PAP?</li>
+</ul>
+<div class="fragment">
+<p>Yes, but …</p>
+<p><strong>Any deviations from the original plan must be reported in the paper!</strong></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><span class="math inline">\(\rightarrow\)</span> Transparent Changes Template: <a href="https://osf.io/yrvcg">https://osf.io/yrvcg</a></p>
+<p><span class="math inline">\(\rightarrow\)</span> Example: Haushofer &amp; Shapiro (2016 QJE): <a href="https://doi.org/10.1093/qje/qjw025">https://doi.org/10.1093/qje/qjw025</a></p>
+<p><span class="math inline">\(\rightarrow\)</span> Pre-registering of pilot or ex-ante manipulation check? Sure: Huber et al.&nbsp;(2024) <a href="https://osf.io/8wka2">https://osf.io/8wka2</a></p>
+</div>
+</section>
+<section id="challenges-common-questions-1" class="slide level2">
+<h2>Challenges / Common questions</h2>
+<p><strong>Can I still run exploratory analyses or robustness checks?</strong></p>
+<div class="fragment">
+<p>Yes, but …</p>
+<ul>
+<li><p>pre-registered hypotheses have to remain intact</p></li>
+<li><p>any unregistered tests have to be explicitly reported as such</p></li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rightarrow\)</span> Example: <a href="https://www.pnas.org/doi/10.1073/pnas.2215572120">Huber et al.&nbsp;(2023)</a>: preregistered vs.&nbsp;not preregistered results</p>
+<p><span class="math inline">\(\rightarrow\)</span> Another solution: add something like “This analysis is not preregistered.”</p>
+
+</div>
+<aside><div>
+<p>Adding exploratory, non-preregistered analyses often become necessary due to reviewer requests. However, the pre-registration can also help you to push back!</p>
+</div></aside></section></section>
+<section>
+<section id="navigating-the-journal-landscape" class="title-slide slide level1 center" data-background-color="#9BD84C">
+<h1>Navigating the Journal Landscape</h1>
+
+</section>
+<section id="what-do-i-really-need-to-do" class="slide level2">
+<h2>What do I <em>really</em> need to do?</h2>
+<div class="fragment">
+<p>Well, it depends …</p>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Journal policies differ a lot (both between and within fields)</p></li>
+<li><p>TOP Factor can be a useful metric (and look-up tool), however, it is not updated anymore</p>
+<ul>
+<li><p><a href="https://topfactor.org">https://topfactor.org</a></p></li>
+<li><p>Factor descriptions: <a href="https://topfactor.org/summary">https://topfactor.org/summary</a></p></li>
+<li><p>Journal finder: <a href="https://topfactor.org/journals">https://topfactor.org/journals</a></p></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Check journal or publisher pages for their current policies</li>
+</ul>
+</div>
+</section>
+<section id="do-i-really-need-to-pre-register-my-study" class="slide level2">
+<h2>Do I really need to pre-register my study?</h2>
+<div>
+<ul>
+<li class="fragment"><p>From a purely scientific standpoint: <strong>YES!</strong> (of course)</p></li>
+<li class="fragment"><p>From a journal standpoint: Well …</p>
+<ul>
+<li class="fragment"><p>On paper, no economics / finance / management journal requires pre-registration</p></li>
+<li class="fragment"><p>BUT: rejection (at least partly) based on the lack of a pre-registration is common for experimental/survey studies (at least in top journals)</p></li>
+<li class="fragment"><p>I expect policies to adapt <span class="math inline">\(\rightarrow\)</span> pre-registrations <em>and</em> PAPs will be required in the future, so why not start doing it now?</p></li>
+</ul></li>
+<li class="fragment"><p>From a selfish standpoint: also <strong>YES</strong> (see Wagenmakers and Dutilh, 2016)</p></li>
+</ul>
+</div>
+
+<aside><div>
+<p>Eric-Jan Wagenmakers and Gilles Dutilh: Seven Selfish Reasons for Preregistration: https://www.psychologicalscience.org/observer/seven-selfish-reasons-for-preregistration</p>
+</div></aside></section>
+<section id="do-i-really-need-to-prepare-a-replication-package" class="slide level2">
+<h2>Do I really need to prepare a replication package?</h2>
+<h4 id="what-we-do-at-management-science">What we do at <em>Management Science</em></h4>
+<div>
+<ul>
+<li class="fragment"><p><em>”Authors of accepted papers … must provide … the data, programs, and other details … sufficient to permit replication.”</em></p>
+<ul>
+<li class="fragment"><span class="math inline">\(\rightarrow\)</span> reproducibility</li>
+</ul></li>
+<li class="fragment"><p>Code and Data Editor (CDE) Code &amp; Data Associate Editors (CDAEs)</p>
+<ul>
+<li class="fragment">review replication packages for completeness but <u>do not (necessarily) test reproducibility</u></li>
+</ul></li>
+<li class="fragment"><p>Requirements essentially the same as for top journals in economics</p></li>
+</ul>
+</div>
+</section>
+<section id="do-i-really-need-to-prepare-a-replication-package-1" class="slide level2">
+<h2>Do I really need to prepare a replication package?</h2>
+<h4 id="what-we-do-at-management-science-1">What we do at <em>Management Science</em></h4>
+<div>
+<ul>
+<li class="fragment"><p>Before introduction of policy: 95% of papers could not be reproduced!</p>
+<ul>
+<li class="fragment">main reason for non-reproducibility: there is no replication package</li>
+</ul></li>
+<li class="fragment"><p>Since introduction: 68% of papers <em>could</em> be reproduced</p>
+<ul>
+<li class="fragment"><p>main reason for non-reproducibility: data is not shared</p></li>
+<li class="fragment"><p>nevertheless: large differences between fields</p></li>
+</ul></li>
+</ul>
+</div>
+
+<aside><div>
+<p>Fišar, M., Greiner, B., Huber, C., Katok, E., Ozkes, A. I., &amp; Management Science Reproducibility Collaboration. (2024). Reproducibility in management science. Management Science, 70(3), 1343-1356.</p>
+</div></aside></section>
+<section id="do-i-really-need-to-prepare-a-replication-package-2" class="slide level2">
+<h2>Do I really need to prepare a replication package?</h2>
+<p><strong>YES, YES, YES!</strong></p>
+<div>
+<ul>
+<li class="fragment"><p>From a purely scientific standpoint: YES (<span class="math inline">\(\rightarrow\)</span> reproducibility!)</p></li>
+<li class="fragment"><p>From a journal standpoint: YES</p>
+<ul>
+<li class="fragment"><p>20 of the 24 journals used for the UT Dallas Business School rankings have a code/data disclosure policy; in 10 of them, code/data sharing is compulsory</p></li>
+<li class="fragment"><p>23 out of top 25 jourmals in the 2022 Scimago ranking in Economics and Econometrics have a code/data disclosure policy; in 17 of them, code/data sharing is compulsory</p></li>
+</ul></li>
+<li class="fragment"><p>From a selfish standpoint: Yes</p>
+<ul>
+<li class="fragment"><p>is it <em>more</em> work? probably not, <em>if you do it from Day 1</em></p></li>
+<li class="fragment"><p>but: it helps to structure and think through the research design</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="wrap-up" class="slide level2" data-background-color="#9BD84C">
+<h2>Wrap-up</h2>
+<ul>
+<li><p>Pre-registration is about <strong>transparency</strong> (confirmatory vs.&nbsp;exploratory)</p></li>
+<li><p>Pre-registration is about the <strong>credibility</strong> of your work</p></li>
+<li><p>Pre-registration is <strong>a plan, not a prison</strong></p></li>
+<li><p>Editors and reviewers do require this (and look at it!) and will require this even more in the future<br><br></p></li>
+<li><p>Goal: <em>reduce</em> researcher degrees of freedom <br><span class="math inline">\(\rightarrow\)</span> pre-register as many decisions you anticipate as possible</p></li>
+<li><p>Workflow: Pre-registering your study and analysis plan can be the first step to reproducible (and replicable!) research</p></li>
+</ul>
+</section></section>
+<section>
+<section id="example-do-experimental-asset-markets-replicate" class="title-slide slide level1 center">
+<h1>Example: Do Experimental Asset Markets Replicate?</h1>
+
+</section>
+<section id="introduction-1" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li class="fragment"><p>asset prices bubbles and crashes are at the heart of financial markets</p></li>
+<li class="fragment"><p>joint hypothesis problem in empirical data as FV not observable</p></li>
+<li class="fragment"><p><span class="math inline">\(\rightarrow\)</span> <strong>asset market experiments</strong> <br>(Smith, Suchanek, Williams, 1988)</p></li>
+<li class="fragment"><p><img data-src="figures/Palan.png" style="width:60.0%"></p></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/crash1987a.jpg" style="margin:0;"> <img data-src="figures/gettyimages-160716299-2048x2048.jpg" style="margin:0;"></p>
+</div>
+</div>
+<aside class="notes">
+<p>costs to individuals, households, and society</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="introduction-2" class="slide level2">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Limitations of this literature:</p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/crash1987a.jpg" style="margin:0;"> <img data-src="figures/crash1987b.jpg" style="margin:0;"></p>
+</div>
+</div>
+</section>
+<section id="introduction-3" class="slide level2" data-visibility="uncounted">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Limitations of this literature:</p>
+<ul>
+<li>many results rely on a single study</li>
+<li>most results rely on <u>very few independent observations</u>
+<ul>
+<li>groups of 6, 8, 10 traders <br><span class="math inline">\(\rightarrow\)</span> only 1 independent market price per group</li>
+<li>rarely more than 10 groups, often fewer</li>
+</ul></li>
+<li>lack of randomization</li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/crash1987a.jpg" style="margin:0;"> <img data-src="figures/crash1987b.jpg" style="margin:0;"></p>
+</div>
+</div>
+</section>
+<section id="introduction-4" class="slide level2" data-visibility="uncounted">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Limitations of this literature:</p>
+<ul>
+<li>many results rely on a single study</li>
+<li>most results rely on <u>very few independent observations</u>
+<ul>
+<li>groups of 6, 8, 10 traders <br><span class="math inline">\(\rightarrow\)</span> only 1 independent market price per group</li>
+<li>rarely more than 10 groups, often fewer</li>
+</ul></li>
+<li>lack of randomization</li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> limited statistical power, weakened causal inference</p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/crash1987a.jpg" style="margin:0;"> <img data-src="figures/crash1987b.jpg" style="margin:0;"></p>
+</div>
+</div>
+</section>
+<section id="introduction-5" class="slide level2" data-visibility="uncounted">
+<h2>Introduction</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Limitations of this literature:</p>
+<ul>
+<li>many results rely on a single study</li>
+<li>most results rely on <u>very few independent observations</u>
+<ul>
+<li>groups of 6, 8, 10 traders <br><span class="math inline">\(\rightarrow\)</span> only 1 independent market price per group</li>
+<li>rarely more than 10 groups, often fewer</li>
+</ul></li>
+<li>lack of randomization</li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> limited statistical power, weakened causal inference</p>
+<p><span class="math inline">\(\rightarrow\)</span> important to assess the credibility of reported findings <br> <span class="math inline">\(\rightarrow\)</span> <strong>replications</strong></p>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/crash1987a.jpg" style="margin:0;"> <img data-src="figures/crash1987b.jpg" style="margin:0;"></p>
+</div>
+</div>
+</section>
+<section id="this-paper" class="slide level2">
+<h2>This paper</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>High-powered preregistered replications of 17 key results</p>
+<ul>
+<li><p>results taken from four prominent papers published in Am Econ Rev, J Finance, Rev Financ Stud, Rev Financ</p>
+<ul>
+<li><p>Kocher et al.&nbsp;(2019): Unleashing animal spirits: Self-control and overpricing in experimental asset markets</p></li>
+<li><p>Andrade et al.&nbsp;(2016): Bubbling with excitement: An experiment</p></li>
+<li><p>Eckel et al.&nbsp;(2015): Thar she blows? Gender, competition, and bubbles in experimental asset markets</p></li>
+<li><p>Corgnet et al.&nbsp;(2018): What makes a good trader? On the role of intuition and reflection on trader performance</p></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+
+</div>
+</div>
+</section>
+<section id="this-paper-1" class="slide level2" data-visibility="uncounted">
+<h2>This paper</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>High-powered preregistered replications of 17 key results</p>
+<ul>
+<li><p>results taken from four prominent papers published in Am Econ Rev, J Finance, Rev Financ Stud, Rev Financ</p>
+<ul>
+<li><p>Kocher et al.&nbsp;(2019): Unleashing animal spirits: Self-control and overpricing in experimental asset markets</p></li>
+<li><p>Andrade et al.&nbsp;(2016): Bubbling with excitement: An experiment</p></li>
+<li><p>Eckel et al.&nbsp;(2015): Thar she blows? Gender, competition, and bubbles in experimental asset markets</p></li>
+<li><p>Corgnet et al.&nbsp;(2018): What makes a good trader? On the role of intuition and reflection on trader performance</p></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/excitement.jpg" style="margin:0;;width:60.0%"> emotions</p>
+</div>
+</div>
+</section>
+<section id="this-paper-2" class="slide level2" data-visibility="uncounted">
+<h2>This paper</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>High-powered preregistered replications of 17 key results</p>
+<ul>
+<li><p>results taken from four prominent papers published in Am Econ Rev, J Finance, Rev Financ Stud, Rev Financ</p>
+<ul>
+<li><p>Kocher et al.&nbsp;(2019): Unleashing animal spirits: Self-control and overpricing in experimental asset markets</p></li>
+<li><p>Andrade et al.&nbsp;(2016): Bubbling with excitement: An experiment</p></li>
+<li><p>Eckel et al.&nbsp;(2015): Thar she blows? Gender, competition, and bubbles in experimental asset markets</p></li>
+<li><p>Corgnet et al.&nbsp;(2018): What makes a good trader? On the role of intuition and reflection on trader performance</p></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/excitement.jpg" style="margin:0;;width:60.0%"> emotions</p>
+<p><img data-src="figures/wolfofwallstreet.png" style="margin:0;;width:60.0%"> self-control</p>
+</div>
+</div>
+</section>
+<section id="this-paper-3" class="slide level2" data-visibility="uncounted">
+<h2>This paper</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>High-powered preregistered replications of 17 key results</p>
+<ul>
+<li><p>results taken from four prominent papers published in Am Econ Rev, J Finance, Rev Financ Stud, Rev Financ</p>
+<ul>
+<li><p>Kocher et al.&nbsp;(2019): Unleashing animal spirits: Self-control and overpricing in experimental asset markets</p></li>
+<li><p>Andrade et al.&nbsp;(2016): Bubbling with excitement: An experiment</p></li>
+<li><p>Eckel et al.&nbsp;(2015): Thar she blows? Gender, competition, and bubbles in experimental asset markets</p></li>
+<li><p>Corgnet et al.&nbsp;(2018): What makes a good trader? On the role of intuition and reflection on trader performance</p></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="figures/excitement.jpg" style="margin:0;;width:60.0%"> emotions</p>
+<p><img data-src="figures/wolfofwallstreet.png" style="margin:0;;width:60.0%"> self-control</p>
+<p><img data-src="figures/tradingfloor.jpeg" style="margin:0;;width:60.0%"> <br> behavioral/cognitive factors</p>
+</div>
+</div>
+<aside class="notes">
+<p>–&gt; relationship between asset market prices and emotions, self-control, experience, and gender<br>
+–&gt; what characteristics - cognitive reflection, fluid intelligence, and theory of mind - can explain trading success</p>
+<ul>
+<li>replication sample sizes between 1.6x and 9x original sample size<br>
+(average: 7.2x original)</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="replication-protocol" class="slide level2">
+<h2>Replication protocol</h2>
+<h3 id="treatments">Treatments</h3>
+<p>Laboratory asset market experiment with 4 conditions:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>From Andrade et al.&nbsp;(2016):<br> induce emotions with 5min movie clip</p>
+<div class="quarto-figure quarto-figure-center" style="margin:0">
+<figure>
+<p><img data-src="figures/tv.jpg" style="width:20.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p>Excitement treatment</p></li>
+<li><p>Calm treatment</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</section>
+<section id="replication-protocol-1" class="slide level2" data-visibility="uncounted">
+<h2>Replication protocol</h2>
+<h3 id="treatments-1">Treatments</h3>
+<p>Laboratory asset market experiment with 4 conditions:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>From Andrade et al.&nbsp;(2016):<br> induce emotions with 5min movie clip</p>
+<div class="quarto-figure quarto-figure-center" style="margin:0">
+<figure>
+<p><img data-src="figures/tv.jpg" style="width:20.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p>Excitement treatment</p></li>
+<li><p>Calm treatment</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>From Kocher et al.&nbsp;(2019):<br> exhaust self-control with Stroop task</p>
+<div class="quarto-figure quarto-figure-center" style="margin:0">
+<figure>
+<p><img data-src="figures/stroop.png" style="width:80.0%"></p>
+</figure>
+</div>
+<ul>
+<li><p>Low Self-Control (LowSC) treatment</p></li>
+<li><p>High Self-Control (HighSC) treatment</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="replication-protocol-2" class="slide level2">
+<h2>Replication protocol</h2>
+<h3 id="market-settings">Market settings</h3>
+<p>Continuous double-auction markets resembling Smith et al.&nbsp;(1988, SSW):</p>
+<ul>
+<li><p>long-lived asset with risky dividend payments</p></li>
+<li><p>8 or 10 traders per market</p></li>
+<li><p>Ten 2-minute periods</p></li>
+<li><p>Dividends: 0 or 10 ECUs (50% prob.)</p></li>
+<li><p>Endowments: (60; 1,000) or (20; 3,000)</p></li>
+</ul>
+</section>
+<section id="replication-protocol-3" class="slide level2" data-visibility="uncounted">
+<h2>Replication protocol</h2>
+<h3 id="market-settings-1">Market settings</h3>
+<p>Continuous double-auction markets resembling Smith et al.&nbsp;(1988, SSW):</p>
+<ul>
+<li><p>long-lived asset with risky dividend payments</p></li>
+<li><p>8 or 10 traders per market</p></li>
+<li><p>Ten 2-minute periods</p></li>
+<li><p>Dividends: 0 or 10 ECUs (50% prob.)</p></li>
+<li><p>Endowments: (60; 1,000) or (20; 3,000)</p></li>
+<li><p><em>New element:</em> 2 repetitions of each market</p></li>
+</ul>
+</section>
+<section id="data-collection" class="slide level2">
+<h2>Data collection</h2>
+<p>Preregistered to collect 166 markets in 83 sessions:</p>
+<ul>
+<li><p>31 markets per condition in replication of AOL</p></li>
+<li><p>52 markets per condition in replication of KLS</p></li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> 1.6x to 9x original sample size <br> <span class="math inline">\(\rightarrow\)</span> <strong>at least 90% power to detect 2/3 of the original effect sizes at the 5% level</strong></p>
+</section>
+<section id="data-collection-1" class="slide level2" data-visibility="uncounted">
+<h2>Data collection</h2>
+<p>Preregistered to collect 166 markets in 83 sessions:</p>
+<ul>
+<li><p>31 markets per condition in replication of AOL</p></li>
+<li><p>52 markets per condition in replication of KLS</p></li>
+</ul>
+<p><span class="math inline">\(\rightarrow\)</span> 1.6x to 9x original sample size <br> <span class="math inline">\(\rightarrow\)</span> <strong>at least 90% power to detect 2/3 of the original effect sizes at the 5% level</strong></p>
+<p><br> <strong>83 sessions</strong> with <strong>1,544 participants</strong></p>
+<ul>
+<li>Each session: either 2 conditions from AOL or 2 conditions from KLS <span class="math inline">\(\rightarrow\)</span> randomization</li>
+</ul>
+
+<aside><div>
+<ul>
+<li>Average time: 1h 50min</li>
+<li>Average payments: € 30.28 in AOL-treatments; € 37.08 in KLS-treatments</li>
+</ul>
+</div></aside></section></section>
+<section>
+
+<section id="section" class="slide level2 center" data-background-color="#9BD84C">
+<h2></h2>
+<h1>
+Results
+</h1>
+</section>
+<section id="emotions-and-market-efficiency" class="slide level2">
+<h2>Emotions and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li>overpricing (RD) is higher in the Excitement condition than in the Calm condition<br>
+p &lt; 0.001, n = 39</li>
+<li>peak overpricing (RD_MAX) is higher in the Excitement condition than in the Calm condition<br>
+p &lt; 0.001, n = 39</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Original study (Andrade et al., 2016)</strong></p>
+<p><img data-src="figures/AOL.png"></p>
+</div>
+</div>
+</section>
+<section id="emotions-and-market-efficiency-1" class="slide level2" data-visibility="uncounted">
+<h2>Emotions and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_1_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Original study (Andrade et al., 2016)</strong></p>
+<p><img data-src="figures/AOL.png"></p>
+</div>
+</div>
+</section>
+<section id="emotions-and-market-efficiency-2" class="slide level2">
+<h2>Emotions and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_1_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li class="fragment"><p>overpricing (RD) is <u>not</u> higher in the Excitement condition than in the Calm condition<br>
+p = 0.369, n = 62</p></li>
+<li class="fragment"><p>peak overpricing (RD_MAX) is <u>not</u> higher in the Excitement condition than in the Calm condition<br>
+p = 0.483, n = 62</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="emotions-and-market-efficiency-3" class="slide level2" data-visibility="uncounted">
+<h2>Emotions and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_1_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li><p>overpricing (RD) is <u>not</u> higher in the Excitement condition than in the Calm condition<br>
+p = 0.369, n = 62</p></li>
+<li><p>peak overpricing (RD_MAX) is <u>not</u> higher in the Excitement condition than in the Calm condition<br>
+p = 0.483, n = 62</p></li>
+</ul>
+<div class="alert-box warning">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Replication fails</strong> <br> effect not significant <br> effect in opposite direction</p>
+</div>
+</div>
+</div>
+</section>
+<section id="self-control-and-market-efficiency" class="slide level2">
+<h2>Self-control and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li>overpricing (RD) is higher in the LowSC than in the HighSC condition<br>
+p = 0.0742, n = 16 (Mann-Whitney U-test)<br>
+p = 0.0580 (re-estimated t-test)</li>
+<li>mispricing (RAD) is higher in the LowSC condition than in the HighSC condition<br>
+p = 0.0460, n = 16 (Mann-Whitey U-test)<br>
+p = 0.0317 (re-estimated t-test)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Original study (Kocher et al., 2019)</strong></p>
+<p><img data-src="figures/KLS.PNG"></p>
+</div>
+</div>
+</section>
+<section id="self-control-and-market-efficiency-1" class="slide level2" data-visibility="uncounted">
+<h2>Self-control and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_3_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Original study (Kocher et al., 2019)</strong></p>
+<p><img data-src="figures/KLS.PNG"></p>
+</div>
+</div>
+</section>
+<section id="self-control-and-market-efficiency-2" class="slide level2">
+<h2>Self-control and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_3_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li class="fragment"><p>overpricing (RD) is <u>not</u> higher in the LowSC than in the HighSC condition<br>
+p = 0.512, n = 104</p></li>
+<li class="fragment"><p>mispricing (RAD) is <u>not</u> higher in the LowSC condition than in the HighSC condition<br>
+p = 0.452, n = 104</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="self-control-and-market-efficiency-3" class="slide level2" data-visibility="uncounted">
+<h2>Self-control and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Direct Replication</strong> <img data-src="figures/figure_3_crop.svg" style="margin-top:0;;width:80.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:50%;">
+<p><strong><br></strong></p>
+<ul>
+<li><p>overpricing (RD) is <u>not</u> higher in the LowSC than in the HighSC condition<br>
+p = 0.512, n = 104</p></li>
+<li><p>mispricing (RAD) is <u>not</u> higher in the LowSC condition than in the HighSC condition<br>
+p = 0.452, n = 104</p></li>
+</ul>
+<div class="alert-box warning">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Replication fails</strong> <br> effect not significant <br> effect in opposite direction</p>
+</div>
+</div>
+</div>
+</section>
+<section id="gender-composition-and-market-efficiency" class="slide level2">
+<h2>Gender composition and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Original study (Eckel/Füllbrunn, 2015)</strong></p>
+<ul>
+<li>fraction of female traders is negatively associated with “bubble measures”:
+<ul>
+<li>average bias (AB): Spearman correlation −0.477 (p = 0.004, n = 35)</li>
+<li>positive deviation (PD): Spearman correlation −0.351 (p = 0.039, n = 35)</li>
+<li>boom duration: Spearman correlation −0.390 (p = 0.021, n = 35)</li>
+<li>bust duration: Spearman correlation 0.529 (p = 0.001, n = 35)</li>
+</ul></li>
+</ul>
+</div><div class="column" data-widt="55%">
+
+</div>
+</div>
+</section>
+<section id="gender-composition-and-market-efficiency-1" class="slide level2" data-visibility="uncounted">
+<h2>Gender composition and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Original study (Eckel/Füllbrunn, 2015)</strong></p>
+<ul>
+<li>fraction of female traders is negatively associated with “bubble measures”:
+<ul>
+<li>average bias (AB): Spearman correlation −0.477 (p = 0.004, n = 35)</li>
+<li>positive deviation (PD): Spearman correlation −0.351 (p = 0.039, n = 35)</li>
+<li>boom duration: Spearman correlation −0.390 (p = 0.021, n = 35)</li>
+<li>bust duration: Spearman correlation 0.529 (p = 0.001, n = 35)</li>
+</ul></li>
+</ul>
+</div><div class="column" data-widt="55%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/figure_5.svg"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gender-composition-and-market-efficiency-2" class="slide level2" data-visibility="uncounted">
+<h2>Gender composition and market efficiency</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Original study (Eckel/Füllbrunn, 2015)</strong></p>
+<ul>
+<li>fraction of female traders is negatively associated with “bubble measures”:
+<ul>
+<li>average bias (AB): Spearman correlation −0.477 (p = 0.004, n = 35)</li>
+<li>positive deviation (PD): Spearman correlation −0.351 (p = 0.039, n = 35)</li>
+<li>boom duration: Spearman correlation −0.390 (p = 0.021, n = 35)</li>
+<li>bust duration: Spearman correlation 0.529 (p = 0.001, n = 35)</li>
+</ul></li>
+</ul>
+</div><div class="column" data-widt="55%">
+<div class="alert-box warning">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Replication fails</strong></p>
+</div>
+<ul>
+<li>fraction of female traders is <u>not</u> negatively associated with “bubble measures”:
+<ul>
+<li>average bias (AB): Spearman correlation 0.139 (p = 0.075, n = 166)</li>
+<li>positive deviation (PD): Spearman correlation 0.153 (p = 0.049, n = 166)</li>
+<li>boom duration: Spearman correlation 0.093 (p = 0.234, n = 166)</li>
+<li>bust duration: Spearman correlation −0.023 (p = 0.765, n = 166)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="trading-success" class="slide level2">
+<h2>Trading success</h2>
+<p><strong>Original study (Corgnet et al., 2018)</strong></p>
+<p>Relationship trading success <span class="math inline">\(\longleftrightarrow\)</span> cognitive reflection, fluid intelligence, theory of mind</p>
+<ol type="1">
+<li><p>𝝁 = 𝜶 + [CRT, APM, TOM] 𝜷 + 𝛀 𝝎 + 𝝐</p></li>
+<li><p>𝝁 = 𝜶 + [CRT, APM, TOM] 𝜷 + [CRT 𝗑 TOM, APM 𝗑 TOM] 𝜸 + 𝛀 𝝎 + 𝝐</p></li>
+<li><p>𝝁 = 𝜶 + [SI] 𝜷1 + [HET] 𝜷2 + [SI 𝗑 HET] 𝜼 + 𝛀 𝝎 + 𝝐</p></li>
+<li><p>𝝁 = 𝜶 + [CRT, APM, TOM] 𝜷1 + [HET] 𝜷2 + [CRT 𝗑 HET, APM 𝗑 HET, TOM 𝗑 HET] 𝜻 + 𝛀 𝝎 + 𝝐</p></li>
+</ol>
+</section>
+<section id="trading-success-1" class="slide level2">
+<h2>Trading success</h2>
+<p><strong>Conceptual Replication</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/figure_6.svg"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p>Main effects:</p>
+<div class="alert-box success">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Replication successful</strong> <br></p>
+</div>
+<p><br> Interaction effects:</p>
+<div class="alert-box info">
+<p><span class="math inline">\(\rightarrow\)</span> <strong>Partly successful</strong> <br> significant effects not replicated<br> non-significant effects replicated</p>
+</div>
+</div>
+</div>
+</section>
+<section id="experience-reduces-mispricing" class="slide level2">
+<h2>Experience reduces mispricing</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<p><img data-src="figures/figure_1_crop2.svg" style="margin:0;;width:100.0%" data-fig-align="center"> <img data-src="figures/figure_3_crop2.svg" style="margin:0;;width:100.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:58%;">
+
+</div>
+</div>
+</section>
+<section id="experience-reduces-mispricing-1" class="slide level2" data-visibility="uncounted">
+<h2>Experience reduces mispricing</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<p><img data-src="figures/figure_1.svg" style="margin:0;;width:100.0%" data-fig-align="center"> <img data-src="figures/figure_3.svg" style="margin:0;;width:100.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:58%;">
+
+</div>
+</div>
+</section>
+<section id="experience-reduces-mispricing-2" class="slide level2" data-visibility="uncounted">
+<h2>Experience reduces mispricing</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<p><img data-src="figures/figure_1.svg" style="margin:0;;width:100.0%" data-fig-align="center"> <img data-src="figures/figure_3.svg" style="margin:0;;width:100.0%" data-fig-align="center"></p>
+</div><div class="column" style="width:58%;">
+<p>Two repetitions of each market</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/figure_8.svg"></p>
+</figure>
+</div>
+<p><span class="math inline">\(\rightarrow\)</span> sig. lower Relative Deviation, Peak Overpricing, and Relative Abs. Deviation in 2nd repetition</p>
+<p><span class="math inline">\(\rightarrow\)</span> <b>stylized fact confirmed</b></p>
+</div>
+</div>
+</section></section>
+<section>
+
+<section id="section-1" class="slide level2" data-background-image="thanks-background1.png">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+<ul>
+<li>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+<ul>
+<li>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-4" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+<li><p>self-control does not affect market efficiency</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-6" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+<li><p>self-control does not affect market efficiency</p></li>
+<li><p>gender composition does not affect market efficiency <br><br></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-7" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+<p><img data-src="figures/figure_7_crop1.svg" style="margin:0;;width:90.0%"></p>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+<li><p>self-control does not affect market efficiency</p></li>
+<li><p>gender composition does not affect market efficiency <br><br></p></li>
+<li><p>only 3 out of 14 original results reported as statistically significant successfully replicated</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-8" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+<p><img data-src="figures/figure_7_crop2.svg" style="margin:0;;width:90.0%"></p>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+<li><p>self-control does not affect market efficiency</p></li>
+<li><p>gender composition does not affect market efficiency <br><br></p></li>
+<li><p>only 3 out of 14 original results reported as statistically significant successfully replicated</p></li>
+<li><p>average replication effect size: <br>2.4% of the original estimates</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-9" class="slide level2" data-background-image="thanks-background1.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:37%;">
+<h2 class="thanks" style="margin:0; line-height:1em;">
+<p>Do Experimental Asset Markets Replicate?</p>
+</h2>
+<p><img data-src="figures/figure_7_crop2.svg" style="margin:0;;width:90.0%"></p>
+</div><div class="column" style="width:63%;">
+<ul>
+<li><p>High-powered, preregistered experiment with 1,544 participants to replicate 17 key results on experimental asset markets <br><br></p></li>
+<li><p>emotions do not affect market efficiency</p></li>
+<li><p>self-control does not affect market efficiency</p></li>
+<li><p>gender composition does not affect market efficiency <br><br></p></li>
+<li><p>only 3 out of 14 original results reported as statistically significant successfully replicated</p></li>
+<li><p>average replication effect size: <br>2.4% of the original estimates</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+
+<section id="section-10" class="slide level2 center" data-background-image="thanks-background.png" data-visibility="uncounted">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+
+</div><div class="column" style="width:55%;">
+<h2 class="thanks">
+<p>Thanks</p>
+</h2>
+<div style="border: none; border-top: 5px solid black; width: 100px; height: 1cm; text-align: left; margin: 0;">
+
+</div>
+<p class="thanks">
+</p><p>christoph.huber@aalto.fi</p>
+<p></p>
+<p class="thanks">
+</p><p>chr-huber.com</p>
+<p></p>
+<p class="thanks">
+</p><div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="logo3-thanks.png" width="250"></p>
+</figure>
+</div>
+<p></p>
+</div>
+</div>
+<div class="footer">
+
+</div>
+</section>
+<section id="replications-projects" class="slide level2" data-visibility="uncounted">
+<h2>Replications Projects</h2>
+<p>Reproducibility Project: Psychology (RPP; Open Science Collaboration, 2015):</p>
+<ul>
+<li>97 studies published in three psychology journals –&gt; 36% successfully replicated</li>
+</ul>
+<p>Experimental Economics Replication Project (EERP; Camerer et al., 2016):</p>
+<ul>
+<li>18 studies published in AER and QJE –&gt; 61% successfully replicated</li>
+</ul>
+<p>Social Sciences Replication Project (SSRP; Camerer et al.&nbsp;2018):</p>
+<ul>
+<li>21 social science experiments published in Nature and Science –&gt; 62% successfully replicated</li>
+</ul>
+<p>Management Science Replication Project (MSRP; Davis et al.. 2023):</p>
+<ul>
+<li>10 operations management experiments published in Management Science –&gt; 70% successfully replicated</li>
+</ul>
+</section>
+<section id="direct-replication-of-andrade-odean-liu-2016" class="slide level2" data-visibility="uncounted">
+<h2>Direct replication of Andrade, Odean, Liu (2016)</h2>
+<p><strong>Ex-ante manipulation check on Prolific</strong></p>
+<p>~200 participants randomized into two conditions: Excitement and Calm</p>
+<p>67.4% describe their emotions as “excited/eager/enthusiastic” in Excitement<br>
+2.9% in Calm (p &lt; 0.001)</p>
+<p>4.2% describe their emotions as “calm/relaxed/peaceful” in Excitement<br>
+68.0% in Calm (p &lt; 0.001)</p>
+</section>
+<section id="direct-replication-of-andrade-odean-liu-2016-1" class="slide level2" data-visibility="uncounted">
+<h2>Direct replication of Andrade, Odean, Liu (2016)</h2>
+
+<img data-src="figures/figure_2.svg" class="r-stretch quarto-figure-center"></section>
+<section id="direct-replication-of-kocher-lucks-schindler-2019" class="slide level2" data-visibility="uncounted">
+<h2>Direct replication of Kocher, Lucks, Schindler (2019)</h2>
+
+<img data-src="figures/figure_4.svg" class="r-stretch"></section>
+<section id="relevance-of-chosen-studies" class="slide level2" data-visibility="uncounted">
+<h2>Relevance of chosen studies</h2>
+<ul>
+<li>Andrade et al.&nbsp;(2016):
+<ul>
+<li>Review of Finance (IF: 5.6)</li>
+<li>cited 149 citations</li>
+</ul></li>
+<li>Kocher et al.&nbsp;(2019):
+<ul>
+<li>Review of Financial Studies (IF: 6.8)</li>
+<li>cited 53 times</li>
+</ul></li>
+<li>Eckel &amp; Füllbrunn (2015):
+<ul>
+<li>American Economic Review (IF: 10.3)</li>
+<li>cited 272 times</li>
+</ul></li>
+<li>Corgnet et al.&nbsp;(2018)
+<ul>
+<li>Journal of Finance (IF: 7.6)</li>
+<li>cited 108 times</li>
+</ul></li>
+</ul>
+<div class="footer footer-default">
+<p><img class="footer-standard" src="logo.png"> Christoph Huber</p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="slides_padova_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="slides_padova_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="slides_padova_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides_padova_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"right","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1200,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

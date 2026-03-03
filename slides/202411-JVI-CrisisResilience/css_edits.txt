@@ -1,0 +1,25 @@
+
+
+.remark-slide-content > h1:first-of-type {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.tiny {
+  font-size: 65%;
+}
+
+.left-column-reverse {
+  width: 75%;
+  height: 92%;
+  float: left;
+}
+.right-column-reverse {
+  width: 25%;
+  float: right;
+  padding-top: 1em;
+}

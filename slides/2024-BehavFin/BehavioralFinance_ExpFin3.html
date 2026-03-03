@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Behavioral Finance</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christoph Huber" />
+    <meta name="date" content="2024-05-02" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide middle inverse
+
+
+
+
+# Behavioral Finance
+
+#### Christoph Huber
+
+#### WU (Vienna University of Economics and Business)
+
+&lt;br&gt;
+### Applications of Experimental Finance 3
+#### May 2, 2024
+
+---
+
+# Efficient Market Hypothesis (EMH)
+
+.pull-left[
+Eugene Fama (1970)&lt;br&gt;
+(Nobel Laureate 2013)
+
+_"a market is efficient, if prices at all times fully reflect all available information"_
+
+
+]
+
+.pull-right[
+.center[
+![:width 55%](figures/fama.jpg)
+]
+]
+
+???
+
+E(Pt+1) = Pt+E(R)
+
+---
+
+# Three Forms of Market Efficiency
+
+Depending on the definition of „all available information“ one can distinguish 3 forms of market efficiency:
+
+--
+
+- __Weak-form efficiency__: _All historical information is already included in the market price_. Thus, nobody can gain above-average returns by developing trading rules based on past prices.
+
+--
+
+- __Semistrong-form efficiency__: At the time _public information_ (annual reports, dividends announcements,…) is issued, it _is immediately incorporated in the market price_. So, if markets are semistrong efficient, nobody can generate excess returns by trading on public information.
+
+--
+
+- __Strong-form efficiency__: _All possible information_ (insider information, information of experts,…) _is included in the market price_. Therefore, if markets are efficient in its strong form, not even insiders can expect excess returns. 
+
+---
+
+# Fama (1970)
+
+&lt;br&gt;
+
+.center[
+![:width 70%](figures/fama1970info.png)
+]
+
+Prices fully reflect all information `\(\rightarrow\)` all traders can expect the same return.
+
+---
+
+# Grossman/Stiglitz (1980)
+
+_"On the impossibility of informationally efficient markets"_
+(American Economic Review, 70(3), 1980)
+
+.center[
+![:width 70%](figures/grossman1980.png)
+]
+
+Above average return for better informed traders to cover information costs, 
+same net return
+
+---
+
+# Last Lecture
+
+- New public information is rapidly reflected in prices
+
+- There are cases of insider trading (e.g., Enron; maybe also Silicon Valley Bank?)
+
+--
+
+&lt;br&gt;
+
+`\(\rightarrow\)` markets are not strong-form efficient; maybe they are semi-strong form efficient.
+
+--
+
+&lt;br&gt;&lt;br&gt;
+
+- no persistence in mutual fund performance
+
+- mutual funds mostly _underperform_ the market
+
+
+---
+
+# This Lecture
+
+#### Another Experiment
+#### Let's check the informational efficiency of a market in a very simple framework:
+
+--
+
+The experiment is a replication of a stock market, where 10 participants trade a virtual asset. 
+The experiment consists of 20 independent rounds. 
+Each participant has a different information level about the intrinsic value of the asset.
+
+--
+
+To derive the intrinsic value of the asset each round ten coin flips are made, 
+showing either “1” or “0” each with probability 0.5. 
+The intrinsic value is the sum of these ten coins.  
+
+---
+
+# This Lecture
+
+#### Another Experiment
+
+
+Each trader has a different information level: some know many of the ten coins, others know just a few. Specifically trader I1 knows the first coin, I2 knows the first and the second coin, etc. until trader I9 who knows the first nine of the ten coins. In addition, there is a computer-simulated trader I0 knowing nothing. This trader chooses a bid of 0 or 10 randomly. 
+
+--
+
+Example:
+
+
+|     Information   level    |     0    |     1    |     2    |     3    |     4    |     5    |     6    |     7    |     8    |     9    |     10    |     intrinsic value    |
+|----------------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|--------------|
+|     Coin set 1             |          |     1    |     1    |     0    |     1    |     0    |     0    |     1    |     0    |     1    |     1     |     6        |
+|     Coin set 2             |          |     0    |     1    |     0    |     0    |     0    |     1    |     1    |     0    |     0    |     0     |     3        |
+|     …                      |          |          |          |          |          |          |          |          |          |          |           |              |
+
+---
+
+# This Lecture
+
+#### Another Experiment
+
+__Entering a separation price:__
+Each period you estimate the intrinsic value, which is the 
+sum of the ten coin flips. How you get this estimate, is up to you!
+
+Some important information on the intrinsic value:
+- The maximal value is 10
+- The minimal value is 0
+- If you enter a separation price of 0 you are a sure seller in this period
+- If you enter a separation price of 10 you are a sure buyer in this period
+
+---
+
+# This Lecture
+
+#### Another Experiment
+
+__Deriving a price and market positions:__
+The ten separation prices entered by the ten traders are ordered from the lowest to the highest and the median (between 5th and 6th separation price) is the market price for this period. All traders who have posted a separation price below the market price are sellers in this period, those who have posted a higher separation price are buyers. Those who have posted exactly the market price are neutral in this period. 
+
+Example: the arranged separation prices of the traders are 0-3-4-4-6-7-7-7-7-8. The market price is therefore 6.5 (median of 5th and 6th price). The traders with separation prices 0, 3, 4, 4, 6 are sellers, while the other five are buyers. 
+
+--
+
+__Profit per round:__
+The difference (market price minus intrinsic value) gives the profit/loss per period.
+
+---
+
+# This Lecture
+
+#### Another Experiment
+
+&lt;br&gt;&lt;br&gt;
+
+.center[
+short.wu.ac.at/experiment
+
+![:width 24%](figures/qrcode.png)
+
+]
+
+
+---
+
+# Experimental Results
+
+#### Huber et al. (2008)
+
+.center[
+![:width 70%](figures/infovalue2.jpg)
+]
+
+---
+
+# Simulation Results
+
+#### All but I0 active
+
+.center[
+![:width 70%](figures/infovalue1.png)
+]
+
+---
+
+# Schredelseker (1984)
+
+&lt;br&gt;
+
+.center[
+![:width 70%](figures/schredelseker1984.png)
+]
+
+`\(\rightarrow\)` there are areas of negative value of additional information!
+
+---
+
+# Useless Information?
+
+- Biased information: If a part of the information shows
+a different picture than the total information, some
+traders may be mislead!
+
+  - E.g.: Coins show 0000011111 - intrinsic value=5
+  
+  - Average informed traders knowing 3 to 6 coins estimate the value too low and sell the paper. Well informed know it is close to 5, while uninformed traders know too little to be mislead.
+
+- `\(\rightarrow\)` average informed traders may loose and information may be harmful
+
+  - e.g., simulation results, experiment
+  - e.g., empirical data (underperforming mutual funds)
+  
+--
+
+- One solution: Index funds, __ETFs (exchange traded funds)__
+
+
+---
+
+# ETFs 
+
+.pull-left[
+![:width 100%](figures/etf0.jpg)
+]
+
+.pull-right[
+Many investors still invest according to past performance, but 
+many also "woke up" and invest in ETF‘s (exchange traded funds, passives investment) rather than paying an expensive (but potentially useless) fund manager.
+]
+
+
+---
+
+# ETFs 
+
+
+.pull-left[
+![:width 100%](figures/etf0.jpg)
+]
+
+.pull-right[
+![:width 100%](figures/etf1.png)
+]
+---
+
+# Further research on investment funds
+
+.pull-left[
+- Cremers/Petajisto (2009)
+
+  - The percentage of index funds on all investment funds increased from 1% to 13% in the 1990s.
+  
+  - Smaller funds are more active than larger ones (in terms of turnover).
+  
+]
+
+
+.pull-right[
+![:width 80%](figures/cremers2009.png)
+]
+
+  - There is a tendency among equity funds that more and more actively managed funds invested more passively – thus, their positions in their PF‘s was quite close to the composition of their benchmark index. So, they cannot deviate much from it.
+  
+  - Relevant variable: "Active Share" (percentage of the PF-positions which deviates from the benchmark index)
+
+---
+
+# Market efficiency and bubbles
+
+.left-column-reverse[
+
+__Definition__: Market prices are strongly above their fundamentally
+justified values? Consequently, markets show only very low levels of
+(informational) efficiency during these phases. 
+
+The term "bubble" already foreshadows that the prices of some securities will
+eventually decline, probably sharply. 
+
+]
+
+.right-column-reverse[
+  ![:width 100%](figures/bubble.jpg)
+  ![:width 100%](figures/bubblecrash.jpg)
+]
+
+---
+
+# Market efficiency and bubbles
+
+.left-column-reverse[
+
+__Definition__: Market prices are strongly above their fundamentally
+justified values? Consequently, markets show only very low levels of
+(informational) efficiency during these phases. 
+
+The term "bubble" already foreshadows that the prices of some securities will
+eventually decline, probably sharply. 
+
+__Recent examples?__
+
+]
+
+.right-column-reverse[
+  ![:width 100%](figures/bubble.jpg)
+  ![:width 100%](figures/bubblecrash.jpg)
+]
+---
+
+# Market efficiency and bubbles
+
+.left-column-reverse[
+
+__Definition__: Market prices are strongly above their fundamentally
+justified values? Consequently, markets show only very low levels of
+(informational) efficiency during these phases. 
+
+The term "bubble" already foreshadows that the prices of some securities will
+eventually decline, probably sharply. 
+
+__Recent examples?__
+
+  - Dot-com bubble (2000)
+  - US real estate bubble (2002-2007)
+  - Chinese stock bubble (2007)
+  - Cryptocurrency bubble (2017-2018)
+  - Cryptocurrency bubble (2020-2022)? 
+  - ... there are many more!
+  
+
+]
+
+.right-column-reverse[
+  ![:width 100%](figures/bubble.jpg)
+  ![:width 100%](figures/bubblecrash.jpg)
+]
+  
+---
+
+# Some Examples
+
+.center[
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-1-1.png" width="1008" /&gt;
+]
+
+--
+
+.center[
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-2-1.png" width="1008" /&gt;
+]
+
+
+---
+
+# Some Examples
+
+.center[
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-3-1.png" width="1008" /&gt;
+]
+
+.center[
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-4-1.png" width="1008" /&gt;
+]
+
+---
+
+# Experiment from first lecture
+
+#### Weitzel et al. (2020, Review of Financial Studies)
+
+- Experimental asset market over 20 periods of 120s
+
+  - 8 traders per market
+
+  - Final buyback price of 28 Taler
+  
+  - Dividend and interest payments &lt;br&gt;
+    `\(\rightarrow\)` Fundamental value of the asset is 28 at each point in time
+  
+--
+
+- 4 Treatments:
+
+  - 2 Bubble Drivers: INCreasing cash, HIGH cash (in relation to assets)
+  
+  - 2 Bubble Moderators: increasing cash with SHORT selling, LOW cash 
+  
+--
+
+`\(\rightarrow\)` _You_ played the &lt;u&gt;HIGH cash&lt;/u&gt; treatment, but as a price-taker.
+
+---
+
+# Experiment from first lecture
+
+#### Your results
+
+
+
+.pull-left[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-6-1.png" width="576" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-7-1.png" width="576" /&gt;
+
+]
+
+---
+
+# Experiment from first lecture
+
+#### Your results
+
+.pull-left[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-8-1.png" width="576" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-9-1.png" width="576" /&gt;
+
+]
+
+---
+
+# Experiment from first lecture
+
+#### Your results
+
+
+
+.pull-left[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-11-1.png" width="576" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="BehavioralFinance_ExpFin3_files/figure-html/unnamed-chunk-12-1.png" width="576" /&gt;
+
+]
+
+.center[
+&lt;a style="color: red"&gt;red = price&lt;/a&gt;&lt;br&gt;
+&lt;a style="color: black"&gt;black and dashed = median forecast&lt;/a&gt;&lt;br&gt;
+&lt;a style="color: gray"&gt;gray and dashed = mean forecast&lt;/a&gt;
+]
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiment from first lecture
+
+#### Weitzel et al. (2020, Review of Financial Studies)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_moderators_mean_color.svg)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiment from first lecture
+
+#### Weitzel et al. (2020, Review of Financial Studies)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_mean_color.svg)]
+
+--
+
+.pull-right[![:width 100%](figures/GraphTreatmentPricesPROF_clean_moderators_mean_color.svg)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiment from first lecture
+
+#### Weitzel et al. (2020, Review of Financial Studies)
+
+.pull-left[![:width 100%](figures/GraphTreatmentPricesSTUD_clean_mean_color.svg)]
+
+.pull-right[![:width 100%](figures/GraphTreatmentPricesPROF_clean_mean_color.svg)]
+
+--
+
+- Bubble driver markets in PROF are significantly more efficient compared to student markets.
+- BUT: Similar treatment effects within the professional sample as with students.
+
+---
+
+# Other Experiments I
+
+#### Euphoria and Bubbles: Andrade et al. (2016, Review of Finance)
+
+Hypothesis: Positive emotions leads to more „euphoric“ pricing and
+hence to increased asset market bubbles. Conversely, if people feel
+depressed, lower bubbles should be observed.
+
+&lt;ul&gt;
+  &lt;li&gt;Treatment &lt;b&gt;Excitement&lt;/b&gt;: Subjects are shown a funny action movie of 5 minutes in advance.&lt;/li&gt;
+
+  &lt;li&gt;Treatment &lt;b&gt;Calm&lt;/b&gt;: Subjects are shown a video intended to incite calmness before trading.&lt;/li&gt;
+&lt;/ul&gt;
+
+--
+
+.center[
+![:width 40%](figures/Odean2016.png)
+]
+
+---
+
+# Other Experiments II
+
+.pull-left[
+
+#### Inexperience: Dufwenberg et al. (2005, American Economic Review)
+
+Markets are repeated three times with the same subjects; in the last repetition only one third of traders is experienced and the rest is inexperienced.
+
+.center[
+![:width 80%](figures/Dufwenberg2005.png)
+]
+
+]
+
+.pull-right[
+
+#### Inflow of inexperienced traders: Kirchler et al. (2015, European Economic Review)
+
+Every 3rd period 4 new traders enter with new cash up to period 8.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.center[
+![:width 45%](figures/Kirchler2015base.png)
+![:width 45%](figures/Kirchler2015inflow.png)
+]
+
+]
+
+`\(\rightarrow\)` reduced bubbles with repetition
+
+
+---
+
+# Some Origins of Bubbles
+
+.pull-left[
+&lt;ul&gt;
+  &lt;li&gt;Behavioral reasons:&lt;/li&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Euphoria (Andrade et al., 2016).&lt;/li&gt;
+  &lt;li&gt;Inexperience (Dufwenberg et al., 2005).&lt;/li&gt;
+  &lt;li&gt;Resale option theory (Harrison/Kreps, 1978; Ofek/Richardson, 2003).&lt;/li&gt;
+  &lt;li&gt;Confusion about fundamentals (Kirchler et al., 2012; Huber/Kirchler, 2012).&lt;/li&gt;
+  &lt;li&gt;Inflow of inexperienced traders (Kirchler et al., 2015).&lt;/li&gt;
+  &lt;li&gt;Asymmetric information bubbles (Allen et al., 1993).&lt;/li&gt;
+  &lt;li&gt;Limits of arbitrage (Abreu/Brunnermeier, 2002, 2003).&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+  
+]
+
+---
+
+# Some Origins of Bubbles
+
+.pull-left[
+&lt;ul&gt;
+  &lt;li&gt;Behavioral reasons:&lt;/li&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Euphoria (Andrade et al., 2016).&lt;/li&gt;
+  &lt;li&gt;Inexperience (Dufwenberg et al., 2005).&lt;/li&gt;
+  &lt;li&gt;Resale option theory (Harrison/Kreps, 1978; Ofek/Richardson, 2003).&lt;/li&gt;
+  &lt;li&gt;Confusion about fundamentals (Kirchler et al., 2012; Huber/Kirchler, 2012).&lt;/li&gt;
+  &lt;li&gt;Inflow of inexperienced traders (Kirchler et al., 2015).&lt;/li&gt;
+  &lt;li&gt;Asymmetric information bubbles (Allen et al., 1993).&lt;/li&gt;
+  &lt;li&gt;Limits of arbitrage (Abreu/Brunnermeier, 2002, 2003).&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+  
+]
+
+.pull-right[
+
+&lt;ul&gt;
+  &lt;li&gt;Institutional reasons:&lt;/li&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Credit bubbles and positive liquidity shocks (Geanakoplos, 2010; Haruvy/Noussair, 2006, Weitzel et al., 2020).&lt;/li&gt;
+  &lt;li&gt;Agency problems/incentives (Allen/Gorton, 1993; Kleinlercher et al., 2014; Holmen et al., 2014).&lt;/li&gt;
+  &lt;li&gt;Prohibition of short selling (Haruvy/Noussair, 2006; Weitzel et al., 2020).&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+]
+
+
+---
+class: inverse, middle, center
+
+#### christoph.huber@wu.ac.at
+#### chr-huber.com
+
+
+---
+
+# Literature
+
+.small[
+
+Andrade, E. B., Odean, T., &amp; Lin, S. (2016). Bubbling with excitement: an experiment. Review of Finance, 20(2), 447-466.
+
+Cremers, K. M., &amp; Petajisto, A. (2009). How active is your fund manager? A new measure that predicts performance. The review of financial studies, 22(9), 3329-3365.
+
+Grossman, S. J., &amp; Stiglitz, J. E. (1980). On the impossibility of informationally efficient markets. The American economic review, 70(3), 393-408.
+
+Huber, J., Kirchler, M., &amp; Sutter, M. (2008). Is more information always better?: Experimental financial markets with cumulative information. Journal of Economic Behavior &amp; Organization, 65(1), 86-104.
+
+Kirchler, M., Bonn, C., Huber, J., &amp; Razen, M. (2015). The “inflow-effect”—Trader inflow and price efficiency. European Economic Review, 77, 1-19.
+
+Schredelseker, K. (1984). Anlagestrategie und informationsnutzen am Aktienmarkt. Zeitschrift für betriebswirtschaftliche Forschung, 36, 44-59.
+
+Weitzel, U., Huber, C., Huber, J., Kirchler, M., Lindner, F., &amp; Rose, J. (2020). Bubbles and financial professionals. The Review of Financial Studies, 33(6), 2659-2696.
+
+
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

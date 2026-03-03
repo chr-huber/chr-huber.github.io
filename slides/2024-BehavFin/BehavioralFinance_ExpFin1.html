@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Behavioral Finance</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christoph Huber" />
+    <meta name="date" content="2024-04-18" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide middle inverse
+
+
+
+
+# Behavioral Finance
+
+#### Christoph Huber &lt;br&gt; WU (Vienna University of Economics and Business)
+
+&lt;br&gt;
+### Applications of Experimental Finance 1
+#### April 18, 2024
+
+---
+
+# Introduction
+
+### About your lecturer
+
+- Christoph Huber ([chr-huber.com](https://chr-huber.com))
+
+  - from Innsbruck, Austria; &lt;br&gt; International Business Studies (BA), Banking &amp; Finance (MSc), &lt;br&gt;Economics (PhD, 2021 University of Innsbruck)
+
+--
+
+  - since 2021 at WU Vienna
+
+--
+
+  - Research in market efficiency and bubbles, decision-making under uncertainty, social and cognitive factors in (financial) decision-making, (un)ethical behavior
+
+
+---
+class: inverse
+
+# Outline
+
+### Introduction: Experimental Economics and Finance
+
+--
+
+### Are Stock Market Experts _different_? 
+
+--
+
+- Stock Market Forecasts
+
+--
+
+- Overconfidence and Trust in Experts
+
+--
+
+- Myopic Loss Aversion
+
+--
+
+- Incentives and Social Competition in the Finance Industry
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experimental Economics ... and Finance?
+
+- application of experimental methods to study economic questions &lt;br&gt;
+  in a _controlled environment_
+
+- monetary payments used to mimic real-world incentives
+
+--
+
+From Bergstrom &amp; Miller: "Taking part in classroom experiments is a little like going to dinner at a cannibal’s house. Sometimes you will be the diner, sometimes you will be part of the dinner, sometimes both. &lt;br&gt;
+It is hard to imagine that a chemist can put herself in the place of a hydrogen molecule, or that a biologist knows what it feels like to be a duck. But here we are &lt;b&gt;studying the behavior and interactions of people in economically interesting situations.&lt;/b&gt; In the experiment, you will be one of these interacting economic agents, you will be able to experience the problems faced by such an agent first-hand.
+&lt;br&gt;
+We suspect that you will learn nearly as much about strategic analysis and behavior from your experience as a participant as you will from your analysis as an observer."
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experimental Economics ... and Finance?
+
+- application of experimental methods to study economic questions &lt;br&gt;
+  in a _controlled environment_
+
+- monetary payments used to mimic real-world incentives
+
+- Experimental Finance?
+  
+  - research questions related to _finance_
+  - strategic interactions, individuals’ investment decisions, and asset pricing—more broadly defined &lt;br&gt;
+  `\(\rightarrow\)` _human behavior in financial markets_
+  
+--
+
+- Participants:
+  Students, General Population, __Finance Professionals__
+
+
+---
+
+# Why Experimental Finance?
+
+Why do we need even more data? Isn‘t there enough real data, especially in finance?
+
+--
+
+- "Real" data typically includes many unobservable events that had an influence of market data (prices).
+
+- E.g. we normally cannot know investor’s expectations.
+
+- Theory of financial markets (and economics of uncertainty) is built on expectations.
+
+- We thus need data on expectations to distinguish among competing theories.
+
+---
+
+# Why Experimental Finance?
+
+- In a controlled experiment, the researcher can affect the expectations and knows the underlying parameters.
+
+- With this knowledge, we know for example the assets' fundamental values and also other predictions of alternative theories.
+
+- We can therefore conduct powerful tests of theories which were not possible from the field data (because we know little about the parameters and expectations that generate the field data from the stock exchanges).
+
+--
+
+`\(\rightarrow\)` _control_
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009.png)
+
+.small[Levitt/List (2009)]
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009_highlighted.png)
+
+.small[Levitt/List (2009)]
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+![:width 100%](figures/LevittList2009_highlighted2.png)
+
+.small[Levitt/List (2009)]
+
+???
+
+Transition from experiments more generally to experiments with _finance professionals_
+
+Explain why we should care about it
+
+Explain why we would expect differences?
+
+Maybe start with listing some common biases and heuristics?
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Experiments in the "Empirical Spectrum"
+
+.pull-left[
+University Laboratory
+![:width 100%](figures/wulabs.jpeg)
+]
+
+--
+
+.pull-right[
+Lab-in-the-Field
+![:width 100%](figures/mobile_lab1.png)
+]
+
+---
+class: inverse, center, middle
+
+# Let's start with an &lt;br&gt; &lt;b&gt;experiment&lt;/b&gt;
+
+.center[
+short.wu.ac.at/experiment
+
+![:width 24%](figures/qrcode.png)
+
+]
+
+
+---
+
+# Trading decisions 
+
+When should you invest in a given asset (e.g., a stock)?
+
+--
+
+.pull-left[
+Fundamental Analysis:
+![:width 100%](figures/fundamentalanalysis.png)
+Assumption: there is a "true" (=fair=intrinsic=fundamental) value
+
+]
+
+--
+
+.pull-right[
+
+Valuation of stocks:
+
+Discounted cash-flow method; e.g., Gordon Growth model for stocks: `\(PV = D / (r-g)\)`
+
+
+_Example:_ An analyst estimates the future long-term free cash flow of a company to be 5. The risk-adjusted interest rate he uses is 10% and he expects growth of 4% per year. The value of the company is therefore &lt;br&gt;
+PV = 5 / (0.10-0.04) = 83.3
+
+]
+
+---
+
+# Trading decisions 
+
+When should you invest in a given asset (e.g., a stock)?
+
+.pull-left[
+Fundamental Analysis:
+![:width 100%](figures/fundamentalanalysis.png)
+Assumption: there is a "true" (=fair=intrinsic=fundamental) value
+
+]
+
+.pull-right[
+
+Valuation of stocks:
+
+Discounted cash-flow method; e.g., Gordon Growth model for stocks: `\(PV = D / (r-g)\)`
+
+
+_Example:_ However, another analyst looking at the same company is a little bit more pessimistic – he expects 3% growth and a risk-adjusted interest rate of 11%. &lt;br&gt; These two changes lead to &lt;br&gt;
+PV = 5 / (0.11-0.03) = 62.5
+
+]
+
+---
+
+# Trading decisions 
+
+When should you invest in a given asset (e.g., a stock)?
+
+.pull-left[
+Fundamental Analysis:
+![:width 100%](figures/fundamentalanalysis.png)
+Assumption: there is a "true" (=fair=intrinsic=fundamental) value
+
+]
+
+.pull-right[
+
+Valuation of stocks:
+
+Discounted cash-flow method; e.g., Gordon Growth model for stocks: `\(PV = D / (r-g)\)`
+
+
+_Example:_ Finally, a third analyst looking at the same company is more optimistic – he expects 5% growth and a risk-adjusted interest rate of 9%. &lt;br&gt; These two changes lead to &lt;br&gt;
+PV = 5 / (0.09-0.05) = 125
+
+]
+
+--
+
+.pull-right[
+`\(\rightarrow\)` _Whose valuation is correct?_
+]
+
+---
+
+# Trading decisions 
+
+Why do people trade on a stock market?
+
+--
+
+- Trade only happens, when there are different expectations and opinions in a market.
+- If everyone has the same valuation, no one should trade.
+
+--
+
+What determines your trading/investment decision?
+
+--
+
+- (risk) preferences
+
+- expectations
+
+--
+
+- Behavioral Factors?
+
+  - heuristics and biases: e.g., framing effects, status quo bias, endowment effect, representativeness heuristic, 
+  availability heuristic, anchoring, ... 
+  - overconfidence
+  - etc. ...
+
+
+???
+
+ Stock Market Forecasts
+
+...
+
+---
+
+# Stock Market Experts vs. Laypeople 1 - Study
+
+Törngren/Montgomery (2004):
+
+- 2 groups of subjects: Lay people (students in psychology) vs. professionals (Broker, investment adviser, portfolio manager, analysts,…)
+
+- Estimation of the 30-day percentage change in stock prices of 20 Blue-Chip-stocks at the Stockholm stock exchange (Information: Company names, industry, monthly returns of the previous 12 months)
+
+  - Further tasks: Estimation of your own prediction error in percentage points: (|estimated return – realized return|) and estimation of the average estimation errors of the professionals and the lay people.
+  
+- The stocks have been paired and the subjects had to estimate which of the 2 stocks will perform better within the next 30 days.
+
+  - Furthermore, subjects had to predict the accuracy of their estimation.
+  
+---
+
+# Stock Market Experts vs. Laypeople 1 - Results
+
+Törngren/Montgomery (2004):
+
+.center[
+![:width 65%](figures/toerngrenmontgomery2004.png)
+]
+
+---
+
+# Stock Market Experts vs. Laypeople 1 - Interpretation
+
+Törngren/Montgomery (2004):
+
+- Task 1: Prediction errors of both groups did not differ significantly
+  
+  – Overconfidence: experts estimate that their prediction errors are much smaller than they really are.
+  
+  – Both groups believe that experts exhibit much lower prediction errors than lay people.
+
+- Task 2: Lay people are right in approx. 50% of all estimations, whereas experts are right only approx. 40% of the time (note: a random generator would be right 50% of the time!)  
+
+  – Again, there is overconfidence in both groups, whereas it is much stronger pronounced in the experts group. Experts believe that they are right in 65% of all cases, whereas the number is only 58% for lay people.
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Study
+
+Huber et al. (2019):
+
+- Laypeople rely on expert advice when making investments &lt;br&gt;
+  `\(\rightarrow\)` financial advisors, fund managers, etc.
+  
+- Emergence of social networks and social trading platforms &lt;br&gt;
+  `\(\rightarrow\)` _social information_ is an increasingly important aspect in financial decision-making
+
+--
+
+&lt;br&gt;
+
+__Research Questions:__ 
+
+- How are experts' and laypeople's own forecasts influenced by information about other people’s forecasts?
+- Do experts/laypeople expect experts/laypeople to be better in forecasting the stock market? Are they?
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Study
+
+Huber et al. (2019):
+
+Main Tasks
+
+- 30-day return prediction of S&amp;P 500, FTSE 100, ExxonMobil, BP
+  - e.g. "Over the next 30 days, for the S&amp;P 500 stock index, I expect the 
+  return to be ..." 
+
+- Forecasting accuracy
+  - e.g. "What do you think is the forecasting error of the US-American general 
+  population's return prediction regarding the US-American S&amp;P 500 stock index?"
+  
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Study
+
+Huber et al. (2019):
+
+2 `\(\times\)` 2 `\(\times\)` 3 treatment design
+
+- 2 subject pools from 2 different countries
+
+- 3 information levels
+  - No information
+  - Information on general population forecasts
+  - Information on finance professionals forecasts
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Results
+
+Huber et al. (2019):
+
+.pull-left[
+![:width 100%](figures/upper_lower_bound_ftse100.svg)
+]
+
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Results
+
+Huber et al. (2019):
+
+.pull-left[
+![:width 100%](figures/upper_lower_bound_ftse100_highlight3.svg)
+]
+
+--
+
+.pull-right[
+&lt;br&gt;&lt;br&gt;
+![:width 100%](figures/Forecasting_Table1.png)
+]
+
+- Laypeople's forecasts _partly_ shift towards their peer's forecasts
+
+- Professionals's forecasts don't shift significantly
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Results
+
+Huber et al. (2019):
+
+.pull-left[
+![:width 100%](figures/upper_lower_bound_sp500_highlight1.svg)
+]
+
+.pull-left[
+![:width 100%](figures/upper_lower_bound_ftse100_highlight1.svg)
+]
+
+- Laypeople are strongly influenced by other people’s estimates, &lt;br&gt;
+  financial professionals are less affected
+- Fin.Prof. forecasts influence all subjects more than forecasts by laypeople
+
+???
+
+The yellow circle within each spike represents subjects’ mean point prediction, while the lower and upper capped spikes represent the means of subjects’ self-reported 10% and 90% quantile for their return estimates. The line between the capped spikes thus shows the average size of subjects’  80% confidence interval for their forecasts. The green diamonds represent the corresponding information signals that were provided to subjects before they entered their estimates. The leftmost of each set of three capped spikes represents subjects’ predictions in treatment I_NO
+
+First, we focus on the yellow circles representing the corresponding average point prediction
+for each spike. On the middle of each group of three spikes (representing treatment
+IGP) we see that the provided signal is always comparatively high (between 6 and 10 percent
+expected return for the next month), which is welcome for our analysis, as we can
+then clearly see whether subjects’ forecasts are influenced by these signals. By visual
+inspection it seems that this is indeed the case: subjects take the provided information
+signal into account when making their forecasts as the average forecasts in treatment
+IGP are always higher, by up to two percentage points, than in the baseline treatment
+INO. 
+
+A second main observation is that subjects only partly follow the provided signals,
+as their forecasts are higher, but the (comparatively high) signal in treatment IGP is always
+above the 90% quantile of forecasts – this holds for all twelve sub-groups in this
+treatment. 
+
+As a third observation we see that also subjects from the finance industry
+tend to follow the signal from the general population, even though to a slightly smaller
+degree than subjects from the general population, as on all four pairwise comparisons
+the mean estimate of the general population is closer to the provided signal than the
+mean of people from the finance industry
+
+Turning to treatment IFI, in which we provide forecasting signals from the finance industry, we see that the signals are on average markedly
+lower than the (relatively high) ones in treatment IGP and usually very close to the average
+forecasts elicited in treatment INO. Thus, we cannot as unequivocally judge whether
+subjects follow the signal and find only minor differences between the level of return
+predictions in treatments INO and IFI
+
+---
+&lt;footer&gt;&lt;/footer&gt;
+
+# Stock Market Experts vs. Laypeople 2 - Results
+
+Huber et al. (2019):
+
+.pull-left[
+![:width 100%](figures/fc_error_us_for_sp500_withoutTopandBottom.svg)
+]
+
+.pull-right[
+![:width 100%](figures/fc_error_us_for_ftse100_withoutTopandBottom.svg)
+]
+
+--
+
+- all subject pools expect lower estimation errors for financial professionals 
+than for laypeople `\(\rightarrow\)` _trust in experts_
+
+???
+
+For each asset and for each subject group, the estimated forecasting errors for the general
+population (yellow bars) are consistently higher than the estimated forecasting errors
+for financial professionals (blue bars) as the blue bar is lower than the yellow one in
+each panel. This difference is statistically significant at the 5% level in 13 out of 16
+comparisons. As a key observation, we thus report that all subject groups expect more
+accurate forecasts by financial professionals than by people from the general population.
+This confidence, however, is unjustified in our study, as we find no significant difference
+between the actual forecasting errors of financial professionals and laypeople. Hence,
+we can draw two conclusions: First, financial professionals are too optimistic about their
+own forecasting accuracy compared to the predictions of the general population. And
+second, the latter are also convinced of the superior performance of financial experts
+compared to their own forecasting abilities. This result is consistent with – and might
+be a reason for – our findings above that especially laypeople act on the information
+signals provided by financial professionals, supposedly as they trust these signals more
+than their own judgement.
+
+
+---
+
+# Equity Premium Puzzle
+
+_equity premium_: the gap between the expected return on the aggregate stock market and a portfolio of fixed-income securities
+
+--
+
+.center[
+![:width 48%](figures/equitypremium.png)
+]
+
+---
+
+# Equity Premium Puzzle
+
+_equity premium_: the gap between the expected return on the aggregate stock market and a portfolio of fixed-income securities
+
+.center[
+![:width 50%](figures/equitypremiumtable.png)
+]
+
+--
+
+`\(\rightarrow\)` equity premium here is at least 3.5%
+
+--
+
+This cannot be plausibly explained with risk aversion (only _extreme_ risk
+aversion would be consistent with such an equity premium).
+
+--
+
+What _can_ explain it then? 
+--
+Behavioral Finance: _ambiguity aversion_ and _myopic loss aversion_
+
+
+
+---
+
+# Myopic Loss Aversion
+
+.pull-left[
+
+__Loss Aversion__
+
+People are more sensitive to _losses_ than to gains.
+
+![:width 70%](figures/valuefunction.png)
+
+Loss aversion parameter `\(\lambda = 2.25\)`
+
+]
+
+
+.pull-right[
+
+__Mental Accounting__
+
+_Example:_ Imagine that you have decided to see a play where admission is $10 per ticket.
+As you enter the theater, you discover that you have lost a $10 bill. Would you
+still pay $10 for a ticket to the play?
+
+]
+
+---
+
+# Myopic Loss Aversion
+
+.pull-left[
+
+__Loss Aversion__
+
+People are more sensitive to _losses_ than to gains.
+
+![:width 70%](figures/valuefunction.png)
+
+Loss aversion parameter `\(\lambda = 2.25\)`
+
+]
+
+
+.pull-right[
+
+__Mental Accounting__
+
+_Example:_ Imagine that you have decided to see a play where admission is $10 per ticket.
+As you enter the theater, you discover that you have lost a $10 bill. Would you
+still pay $10 for a ticket to the play?
+
+_Example:_ Imagine that you have decided to see a play and have paid the admission price
+of $10 per ticket. As you enter the theater, you discover that you have lost the
+ticket. The seat was not marked and the ticket cannot be recovered. Would
+you pay $10 for another ticket?
+
+]
+
+
+---
+
+# Myopic Loss Aversion
+
+.pull-left[
+
+__Loss Aversion__
+
+People are more sensitive to _losses_ than to gains.
+
+![:width 70%](figures/valuefunction.png)
+
+Loss aversion parameter `\(\lambda = 2.25\)`
+]
+
+
+.pull-right[
+
+__Mental Accounting__
+
+People budget money into mental accounts for expenses (e.g., saving for a home) or expense categories (e.g., gas money, clothing, utilities).
+
+]
+
+---
+
+# Myopic Loss Aversion
+
+_Suppose an investor must choose between a risky asset that pays an
+expected 8 percent per year with a standard deviation of 20 percent (like stocks)
+and a safe asset which pays a sure 1 percent._
+
+--
+
+What does the attractiveness of the risky asset depend on?
+--
+`\(\rightarrow\)` the investor's time horizon
+
+--
+
+&lt;br&gt;
+
+_Consider the following prospect: $200 with 50% prob. or -$100 otherwise_
+
+--
+
+- One-shot? `\(0.5 \times 200 + 2.25 \times 0.5 \times (-100) = -12.5\)`
+
+--
+
+- But what if the prospect is allowed to be run twice _before the investor notes the result_?
+
+--
+
+  - `\(0.25 \times 400 + 0.5 \times 100 + 2.25 \times 0.25 \times (-200) = 37.5\)`
+
+--
+
+Benartzi &amp; Thaler (1995): equity premium follows from people being loss averse and
+fairly frequently evaluating their wealth position (ca. once every year).
+`\(\rightarrow\)` Myopic Loss Aversion
+
+---
+
+# Stock Market Experts vs. Laypeople 3 - Study
+
+Haigh &amp; List (2005):
+
+- 2 × 2 experimental treatment design
+
+  - undergraduate students _or_ __professional traders__
+  - frequent feedback (F) _or_ infrequent feedback (I)
+  
+- Task:
+
+  - 9 investment rounds
+  - each round, decide how much out of 100 to invest in a lottery
+  - lottery: pays 2.5x investment with probability 1/3 and 0 otherwise
+  
+--
+
+- Treatment F: round-by-round investment
+- Treatment I: investment in blocks of three rounds
+
+---
+
+# Stock Market Experts vs. Laypeople 3 - Results
+
+Haigh &amp; List (2005):
+
+.center[
+![:width 50%](figures/haigh2005.png)
+]
+
+--
+
+`\(\rightarrow\)` traders exhibit behavior consistent with Myopic Loss Aversion to an
+even _greater_ extent than students
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+- Fund managers and hedge fund managers face rankings of all kinds and thus have 
+implicit _tournament incentives_.
+
+--
+
+- Hedge funds and the __2/20-rule__: managers receive 2% of assets
+under management and 20% of the profits. As assets under
+management are a convex function of past performance, _the 2%-_
+_component is a tournament component_.
+
+--
+
+.pull-left[
+- So, their salary is a convex function of past outperformance to the
+market.
+]
+
+.pull-right[
+![:width 65%](figures/hedgefundflow.png)
+]
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+Bonus payments have increased strongly in the finance industry
+over the last decades:
+
+.center[
+![:width 70%](figures/wallstreetbonuses.png)
+]
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+Kirchler et al. (2018):
+
+- Rankings and awards are pervasive features of the finance
+industry.
+
+.pull-left[
+- Rank incentives are non-monetary incentives that provide agents
+with utility or disutility depending on their rank.
+
+- Research question: Are rank
+incentives driving risk-taking
+in the finance industry?
+]
+
+.pull-right[
+![:width 75%](figures/bankerratings.png)
+]
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+Kirchler et al. (2018):
+
+- Investment game experiment: risk-free return (RF): 1.5%; risky asset (RISK):
+expected return of 3.6%, s.d. of 15.9%; 8 periods. Investments in
+RISK from 0% to 200%.
+
+- 3 Treatments, with Students and with __Financial Professionals__:
+
+  – Treatment TBASE: payout according to subject's end wealth.
+Initial endowment: 90 Euro (30 for students).
+
+  – Treatment TRANK: identical to TBASE BUT a non-incentivized
+and anonymous ranking is displayed after each period (in a
+group of 6).
+
+  – Treatment TTOUR identical to TRANK, BUT payout is
+according to anonymous ranking. Rank 1: 50% of the cake,
+Rank 2: 33.3%, Rank 3: 16.7%, Ranks 4-6: zero.
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+Kirchler et al. (2018):
+
+.pull-left[
+Students:
+![:width 85%](figures/kirchler2018_stud.png)
+]
+
+--
+
+.pull-right[
+Financial Professionals:
+![:width 85%](figures/kirchler2018_prof.png)
+]
+
+---
+
+# Incentives and Social Competition in &lt;br&gt; the Finance Industry
+
+Kirchler et al. (2018):
+
+- Both rank and tournament incentives increase risk-taking among underperforming professionals.
+
+- Only tournament incentives affect students.
+
+- Results are robust to the experimental frame
+(investment frame vs. abstract frame), to payoff consequences (own return vs. family
+return), to social identity priming (private identity vs. professional identity), and to
+professionals’ gender (no gender differences among professionals).
+
+
+---
+
+# Are bankers any different to "normal" people?
+
+Holmen et al. (2021):
+
+- Two participant groups: financial professionals and a general population sample
+
+- Series of experimental tasks: attitudes towards risk, losses, and skewness; distributional (social) preferences;
+trust and trustworthiness; (dis)honesty behavior; and personality traits
+
+- Experimental data merged with __registry data__ on socio-economic characteristics (Statistics Sweden)
+
+---
+
+# Are bankers any different to "normal" people?
+
+Holmen et al. (2021):
+
+.pull-left[
+- Bankers are ...
+]
+
+---
+
+# Are bankers any different to "normal" people?
+
+Holmen et al. (2021):
+
+.pull-left[
+- Bankers are ...
+
+  - more risk tolerant,
+  - more selfish,
+  - less trustworthy,
+  - more competitive,
+
+- ... and show ...
+
+  - higher levels of narcissism, 
+  - higher levels of psychopathy, 
+  - higher levels of Machiavellianism
+]
+
+--
+
+.pull-right[
+But after controlling for their socio-economic background, many effects disappear
+and are deflated. What remains is:
+
+- Bankers are ...
+
+  - less risk averse,
+  - less trustworthy, 
+  - more competitive,
+  - and slightly more psychopathic than the general population
+  
+]
+
+
+
+---
+class: inverse, middle, center
+
+# Thanks!
+
+#### christoph.huber@wu.ac.at
+#### chr-huber.com
+
+
+---
+
+# Literature
+
+.small[
+
+Benartzi, S., &amp; Thaler, R. H. (1995). Myopic loss aversion and the equity premium puzzle. The quarterly journal of Economics, 110(1), 73-92.
+
+Torngren, G., &amp; Montgomery, H. (2004). Worse than chance? Performance and confidence among professionals and laypeople in the stock market. The Journal of Behavioral Finance, 5(3), 148-153.
+
+Haigh, M. S., &amp; List, J. A. (2005). Do professional traders exhibit myopic loss aversion? An experimental analysis. The Journal of Finance, 60(1), 523-534.
+
+Holmén, M., Holzmeister, F., Kirchler, M., Stefan, M., &amp; Wengström, E. Economic Preferences and Personality Traits Among Finance Professionals and the General Population.
+
+Huber, C., Huber, J., &amp; Hueber, L. (2019). The effect of experts’ and laypeople’s forecasts on others’ stock market forecasts. Journal of Banking &amp; Finance, 109, 105662.
+
+Huber, C., &amp; König-Kersting, C. (2022). Experimenting with financial professionals.
+
+Kirchler, M., Lindner, F., &amp; Weitzel, U. (2018). Rankings and risk‐taking in the finance industry. The Journal of Finance, 73(5), 2271-2302.
+
+
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

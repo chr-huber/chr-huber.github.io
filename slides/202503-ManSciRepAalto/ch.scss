@@ -1,0 +1,141 @@
+
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 30px;
+$presentation-h2-font-size: 1.8em;
+$presentation-heading-line-height: 1.4;
+$presentation-block-margin: 24px;
+
+$presentation-title-slide-text-align: left;
+
+$link-color: #000000;
+
+
+
+/*-- scss:rules --*/
+
+.reveal .slide .small {
+  font-size: 0.8em;
+}
+
+/*
+.reveal .slide-logo {
+  top: 0 !important;
+  margin-top: 40px;
+  right: 30px !important;
+  max-height: 5.4rem !important;
+}
+*/
+
+
+.footer-standard {
+  position: absolute;
+  max-height: 3.5rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+
+.reveal .footer1 img {
+  position: absolute;
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+.reveal .logo img {
+  position: absolute;
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+.reveal .slide-logo {
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+}
+
+.reveal .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: auto !important;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.reveal table {
+  font-size: smaller;  
+}
+
+.reveal h2 {
+//  border-bottom: 4px solid #3399CC;
+  width: 100%!important;
+  padding-bottom: 10px;
+  padding-left: 300px !important;
+  margin-left: -300px;
+}
+
+.reveal .subtitle {
+  margin: var(--r-block-margin) 0 var(--r-block-margin) !important;
+}
+
+.reveal .author {
+  margin-bottom: 2.5rem !important;
+}
+
+.reveal .slides .reverse > h2 {
+  border-bottom: 0px !important;
+  width: 100% !important;
+} 
+
+.reveal .slides .thanks,
+.reveal .slides .thanks{
+  text-align:left;
+  padding-left:0 !important;
+  margin-left:0 !important;
+}
+
+  .alert-box {
+    padding: 0 20px;
+    margin: 0px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+
+  .alert-box.warning {
+    background-color: #FF8D4F;
+    color: black;
+    border-color: #b36337;
+  }
+
+  .alert-box.info {
+    background-color: #F7E159;
+    color: black;
+    border-color: #ad9e3e;
+  }
+
+  .alert-box.success {
+    background-color: #9BD84C;
+    color: black;
+    border-color: #5d822e;
+  }
+
+  .alert-box.error {
+    background-color: #f44336;
+    color: white;
+    border-color: #b71c1c;
+  }
+
+
+.fragment.highlight-green.visible {
+	color: #5DD089!important;
+}
+
+.fragment.highlight-green.visible.current-fragment {
+	color: #5DD089!important;
+}
