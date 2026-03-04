@@ -1,0 +1,12 @@
+# IDE
+.idea/
+.Rproj.user/
+*.Rproj
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
