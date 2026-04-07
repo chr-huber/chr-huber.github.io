@@ -12,13 +12,12 @@
         }
 
         if (pub.authors) {
-            html += '<div class="authors">' + pub.authors + '</div>';
+            var yearParen = pub.year ? ' (' + pub.year + ')' : '';
+            html += '<div class="authors">' + pub.authors + yearParen + '</div>';
         }
 
-        if (pub.journalInfo || pub.year) {
-            var jInfo = pub.journalInfo || '';
-            var yearStr = pub.year ? '<span class="pub-year">' + pub.year + '</span>' : '';
-            html += '<div class="journalinfo">' + jInfo + (jInfo && yearStr ? ', ' : '') + yearStr + '</div>';
+        if (pub.journalInfo) {
+            html += '<div class="journalinfo">' + pub.journalInfo + '</div>';
         }
 
         if (pub.authorNotes && pub.authorNotes.length) {
