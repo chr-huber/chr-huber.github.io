@@ -87,7 +87,8 @@ window.PUBLICATIONS_DATA = {
             abstract: 'Does competition affect moral behavior? This fundamental question has been debated among leading scholars for centuries, and more recently, it has been tested in experimental studies yielding a body of rather inconclusive empirical evidence. A potential source of ambivalent empirical results on the same hypothesis is design heterogeneity\u2014variation in true effect sizes across various reasonable experimental research protocols. To provide further evidence on whether competition affects moral behavior and to examine whether the generalizability of a single experimental study is jeopardized by design heterogeneity, we invited independent research teams to contribute experimental designs to a crowd-sourced project. In a large-scale online data collection, 18,123 experimental participants were randomly allocated to 45 randomly selected experimental designs out of 95 submitted designs. We find a small adverse effect of competition on moral behavior in a meta-analysis of the pooled data. The crowd-sourced design of our study allows for a clean identification and estimation of the variation in effect sizes above and beyond what could be expected due to sampling variance. We find substantial design heterogeneity\u2014estimated to be about 1.6 times as large as the average standard error of effect size estimates of the 45 research designs\u2014indicating that the informativeness and generalizability of results based on a single experimental design are limited. Drawing strong conclusions about the underlying hypotheses in the presence of substantive design heterogeneity requires moving toward much larger data collections on various experimental designs testing the same hypothesis.',
             links: [
                 { label: 'article', url: 'https://doi.org/10.1073/pnas.2215572120' },
-                { label: 'material', url: 'https://osf.io/r6anc/' }
+                { label: 'material', url: 'https://osf.io/r6anc/' },
+                { label: 'project overview', url: 'https://manydesigns.pages.dev'}
             ],
             media: [
                 { text: 'Psychology Today', url: 'https://www.psychologytoday.com/us/blog/the-social-consumer/202305/does-competition-corrupt-us' },
@@ -231,7 +232,7 @@ window.PUBLICATIONS_DATA = {
             title: 'Experimental Finance and Financial Professionals',
             titleUrl: 'https://doi.org/10.4337/9781800372337.00012',
             authors: 'F\u00fcllbrunn, S., Huber, C., K\u00f6nig-Kersting, C.',
-            journalInfo: '2022. In F\u00fcllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 64\u201372). Edward Elgar Publishing',
+            journalInfo: 'In F\u00fcllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 64\u201372). Edward Elgar Publishing',
             links: [
                 { label: 'chapter', url: 'https://doi.org/10.4337/9781800372337.00012' },
                 { label: 'preprint', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975949' }
@@ -243,7 +244,7 @@ window.PUBLICATIONS_DATA = {
             title: 'A Critical Perspective on the Conceptualization of Risk in Behavioral and Experimental Finance',
             titleUrl: 'https://doi.org/10.4337/9781800372337.00037',
             authors: 'Holzmeister, F., Huber, C., Palan, S.',
-            journalInfo: '2022. In F\u00fcllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 408\u2013413). Edward Elgar Publishing',
+            journalInfo: 'In F\u00fcllbrunn S. & Haruvy, E. (Eds.), <i>Handbook of Experimental Finance</i> (pp. 408\u2013413). Edward Elgar Publishing',
             links: [
                 { label: 'chapter', url: 'https://doi.org/10.4337/9781800372337.00037' },
                 { label: 'preprint', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3816460' }
@@ -253,17 +254,46 @@ window.PUBLICATIONS_DATA = {
 
     crowdScience: [
         {
-            id: 'Brodeur2024',
-            year: 2024,
-            title: 'Mass Reproducibility and Replicability: A New Hope',
-            titleUrl: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4790780',
-            authors: 'Brodeur, A., Mikola, D., Cook, N., ... Huber, C., ... Zhong, Y.',
-            authorNotes: ['Author of a replication report', 'Local organizer of Replication Games'],
+            id: 'Huber2026',
+            title: 'Collective Evidence on Behavioral Interventions Targeting Carbon Pricing Support: A Many-Designs Approach with 55 Studies',
+            titleUrl: 'https://doi.org/10.21203/rs.3.rs-8797610/v1',
+            authors: 'Huber, J., Holzknecht, A., Schwaiger, R., ... Huber, C., ... Zhao, X.',
+            authorNotes: ['Contributing one out of 55 study designs'],
             journalInfo: '',
+            abstract: "There is an urgent need to reduce carbon emissions globally to limit the damages caused by climate change. Most economists agree that a carbon price is an effective and cost-efficient policy to mitigate emissions, yet low public acceptance and limited political support remain major barriers to its widespread implementation. This crowdsourced 'many-designs' project presents results from 55 behavioral interventions on real-world support for carbon pricing, independently developed by international research teams randomly selected from an initial pool of 135 applications. By implementing the interventions simultaneously with almost 20,000 U.S. residents, this pre-registered study ensures the comparability of results, accelerates scientific knowledge generation, and reduces the risk of scientific malpractices. The results show very small positive but statistically significant effects of behavioral interventions on real-world support, and stated support, including the willingness to endorse a carbon price that internalizes the social costs of $120 per ton of CO2 emissions (Cohen's d's: 0.04-0.08). Put differently, this entails an increase in support for carbon pricing across measures of around two percentage points. Furthermore, the results reveal low-to-medium between-study heterogeneity (τ: 0.07-0.12, I^2: 32%-57%). Lastly, we identify strong overconfidence among research teams regarding the expected effects of their interventions and those of their peers, indicating a potential miscalibration of community expectations.",
             links: [
-                { label: 'preprint', url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4790780' }
+                { label: 'preprint', url: 'https://doi.org/10.21203/rs.3.rs-8797610/v1' },
+                { label: 'project overview', url: 'https://manydesignscarbon.online/'}
             ]
-        }
+        },                                
+        {
+            id: 'Brodeur2026',
+            year: 2026,
+            title: 'Reproducibility and robustness of economics and political science research',
+            titleUrl: 'https://doi.org/10.1038/s41586-026-10251-x',
+            authors: 'Aczel, B., Szaszi, B., Clelland, H., ... Huber, C., ... Nosek, B.',
+            authorNotes: ['Local organizer of Replication Games', 'Author of a replication report'],
+            journalInfo: 'Nature, 652, pp. 151–156',
+            abstract: 'Science aspires to be cumulative. Reproducibility efforts strengthen science by testing the reliability of published findings, promoting self-correction, and informing policy-making. Computational reproductions, whereby independent researchers reproduce the results of published studies, are an essential diagnostic tool. Such efforts should have greater visibility. However, little social science reproduction and robustness has been conducted at scale. Here we reproduced original analyses and conducted robustness checks of 110 articles that were published in leading economics and political science journals with mandatory data and code sharing policies. We found that more than 85% of published claims were computationally reproducible. In robustness checks, our reanalyses showed that 72% of statistically significant estimates remain significant and in the same direction, and the median reproduced effect size is nearly the same as the originally published effect size (that is, 99% of the published effect size). Additionally, 6 independent research teams examined 12 pre-specified hypotheses about determinants of robustness. Research teams with more experience found lower levels of robustness, and robustness did not correlate with author characteristics or data availability.',
+            links: [
+                { label: 'article', url: 'https://doi.org/10.1038/s41586-026-10251-x' },
+                { label: 'preprint', url: 'https://ideas.repec.org/p/zbw/i4rdps/287.html' }
+            ]
+        },        
+        {
+            id: 'Aczel2026',
+            year: 2026,
+            title: 'Investigating the analytical robustness of the social and behavioural sciences',
+            titleUrl: 'https://doi.org/10.1038/s41586-025-09844-9',
+            authors: 'Aczel, B., Szaszi, B., Clelland, H., ... Huber, C., ... Nosek, B.',
+            authorNotes: ['Reanalysis of one out of 100 studies'],
+            journalInfo: 'Nature, 652, pp. 135–142',
+            abstract: 'The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. We examined a stratified random sample of 100 studies published between 2009 and 2018, in which, for one claim per study, at least five reanalysts independently reanalysed the original data. The statistical appropriateness of the reanalyses was assessed in peer evaluations, and the robustness indicators were inspected along a range of research characteristics and study designs. We found that 34% of the independent reanalyses yielded the same result (within a tolerance region of ±0.05 Cohen’s d) as the original report; with a four times broader tolerance region, this indicator increased to 57%. Of the reanalyses conducted, 74% reached the same conclusion as the original investigation, 24% yielded no effects or inconclusive results and 2% reported the opposite effect. This exploratory study indicates that the common single-path analyses in social and behavioural research should not be simply assumed to be robust to alternative analyses4. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.',
+            links: [
+                { label: 'article', url: 'https://doi.org/10.1038/s41586-025-09844-9' },
+                { label: 'preprint', url: 'https://doi.org/10.31222/osf.io/twqsv_v1' }
+            ]
+        },
     ],
 
     workingPapers: [

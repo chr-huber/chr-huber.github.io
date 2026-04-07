@@ -191,16 +191,13 @@ padding-top: 0px;
 }
 .journalinfo {
 font-family: 'Roboto Slab', serif; 
-font-weight: 300; 
+font-weight: 400; 
 font-size:12px;
 font-style: italic;
 padding-top: 6px;
 }
-.publicationyear {
-/* font-family: 'Roboto Slab', serif;  */
-text-align: right;
-font-weight: 300; 
-/* font-size: 14px; */
+.pub-year {
+font-style: normal;
 }
 .publication-item {
 padding: 8px 10px 10px;

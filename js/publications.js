@@ -3,8 +3,7 @@
 
     function renderPubItem(pub) {
         var html = '<div class="row publication-item">';
-        html += '<div class="col-xs-2 col-sm-1 publicationyear">' + (pub.year || '') + '</div>';
-        html += '<div class="col-xs-10 col-sm-11">';
+        html += '<div class="col-xs-12">';
 
         if (pub.titleUrl) {
             html += '<a href="' + pub.titleUrl + '" target="_blank">' + pub.title + '</a>';
@@ -16,16 +15,18 @@
             html += '<div class="authors">' + pub.authors + '</div>';
         }
 
+        if (pub.journalInfo || pub.year) {
+            var jInfo = pub.journalInfo || '';
+            var yearStr = pub.year ? '<span class="pub-year">' + pub.year + '</span>' : '';
+            html += '<div class="journalinfo">' + jInfo + (jInfo && yearStr ? ', ' : '') + yearStr + '</div>';
+        }
+
         if (pub.authorNotes && pub.authorNotes.length) {
-            html += '<div class="authors" style="margin-top: 4px;"><ul>';
+            html += '<div class="authors" style="margin-top: 4px; margin-bottom: 8px;"><ul>';
             pub.authorNotes.forEach(function (note) {
                 html += '<li>' + note + '</li>';
             });
             html += '</ul></div>';
-        }
-
-        if (pub.journalInfo) {
-            html += '<div class="journalinfo">' + pub.journalInfo + '</div>';
         }
 
         var hasAbstract = pub.abstract && pub.abstract.length > 0;
