@@ -179,10 +179,15 @@ font-size: 16px;
 font-size: 14px;
 }
 .publicationsheader {
-font-size: 15px;
+font-size: 18px;
 font-stretch: expanded;
-padding-top: 8px;
-padding-bottom: 8px;
+font-weight: 600;
+letter-spacing: 0.3px;
+color: #4A4A4A;
+padding-top: 12px;
+padding-bottom: 6px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+margin-bottom: 6px;
 }
 .authors {
 font-weight: 300; 
@@ -298,6 +303,13 @@ a:hover {
 /* Section headers */
 h3 {
     color: #2C3E50;  /* Dark slate blue-gray */
+}
+
+#research h3 {
+    text-align: center;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.15);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
 }
 
 /* Panel accent for publications */

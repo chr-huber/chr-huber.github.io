@@ -91,6 +91,5 @@
         renderSection('Book Chapters', data.bookChapters, 'pub-chapters');
         renderSection('Contributions to Crowd-Science Projects', data.crowdScience, 'pub-crowdscience');
         renderSection(null, data.workingPapers, 'pub-working');
-        renderSection(null, data.workInProgress, 'pub-wip');
     });
 }());
