@@ -33,7 +33,7 @@ window.PUBLICATIONS_DATA = {
         },
         {
             id: 'HuberKoenig2022',
-            year: 2024,
+            year: 2025,
             title: 'Experimenting with Financial Professionals',
             titleUrl: 'https://doi.org/10.1016/j.jbankfin.2024.107329',
             authors: 'Huber, C., K\u00f6nig-Kersting, C., Marini, M.M.',
