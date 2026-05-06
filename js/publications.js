@@ -1,9 +1,106 @@
 (function () {
     'use strict';
 
+    function escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function setAbstractExpanded(item, expanded) {
+        var abstractEl = item.querySelector('.pub-abstract');
+        if (!abstractEl) return;
+
+        item.classList.toggle('abstract-expanded', expanded);
+        item.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        abstractEl.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+
+        if (expanded) {
+            abstractEl.style.maxHeight = abstractEl.scrollHeight + 'px';
+        } else {
+            abstractEl.style.maxHeight = '0px';
+        }
+    }
+
+    function collapseSiblingAbstracts(item) {
+        var siblings = document.querySelectorAll('.publication-item.abstract-expanded');
+        Array.prototype.forEach.call(siblings, function (sibling) {
+            if (sibling !== item) {
+                setAbstractExpanded(sibling, false);
+            }
+        });
+    }
+
+    function bindPublicationInteractions(root) {
+        if (!root) return;
+
+        var items = root.querySelectorAll('.publication-item.has-abstract');
+        Array.prototype.forEach.call(items, function (item) {
+            var abstractEl = item.querySelector('.pub-abstract');
+            if (!abstractEl) return;
+
+            setAbstractExpanded(item, false);
+
+            item.addEventListener('click', function (event) {
+                if (event.target.closest('a, button')) return;
+                var shouldExpand = !item.classList.contains('abstract-expanded');
+                if (shouldExpand) {
+                    collapseSiblingAbstracts(item);
+                }
+                setAbstractExpanded(item, shouldExpand);
+            });
+
+            item.addEventListener('keydown', function (event) {
+                if (event.target !== item) return;
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                var shouldExpand = !item.classList.contains('abstract-expanded');
+                if (shouldExpand) {
+                    collapseSiblingAbstracts(item);
+                }
+                setAbstractExpanded(item, shouldExpand);
+            });
+
+            abstractEl.addEventListener('transitionend', function (event) {
+                if (event.propertyName !== 'max-height') return;
+                if (item.classList.contains('abstract-expanded')) {
+                    abstractEl.style.maxHeight = abstractEl.scrollHeight + 'px';
+                }
+            });
+        });
+
+        if (items.length > 0) {
+            setAbstractExpanded(items[0], true);
+        }
+
+        window.addEventListener('resize', function () {
+            Array.prototype.forEach.call(items, function (item) {
+                if (!item.classList.contains('abstract-expanded')) return;
+                var abstractEl = item.querySelector('.pub-abstract');
+                if (abstractEl) {
+                    abstractEl.style.maxHeight = abstractEl.scrollHeight + 'px';
+                }
+            });
+        });
+    }
+
     function renderPubItem(pub) {
-        var html = '<div class="row publication-item">';
+        var hasAbstract = pub.abstract && pub.abstract.length > 0;
+        var hasMedia = pub.media && pub.media.length > 0;
+        var hasLinks = pub.links && pub.links.length > 0;
+        var itemClasses = 'row publication-item' + (hasAbstract ? ' has-abstract' : '');
+        var itemAttrs = hasAbstract
+            ? ' tabindex="0" role="button" aria-expanded="false" aria-controls="' + pub.id + '-abstract" aria-label="Show abstract for ' + escapeHtml(pub.title) + '"'
+            : '';
+        var html = '<div class="' + itemClasses + '"' + itemAttrs + '>';
         html += '<div class="col-xs-12">';
+        html += '<div class="publication-main">';
+        if (hasAbstract) {
+            html += '<span class="publication-indicator" aria-hidden="true"></span>';
+        }
 
         if (pub.titleUrl) {
             html += '<a href="' + pub.titleUrl + '" target="_blank">' + pub.title + '</a>';
@@ -20,6 +117,8 @@
             html += '<div class="journalinfo">' + pub.journalInfo + '</div>';
         }
 
+        html += '</div>';
+
         if (pub.authorNotes && pub.authorNotes.length) {
             html += '<div class="authors" style="margin-top: 4px; margin-bottom: 8px;"><ul>';
             pub.authorNotes.forEach(function (note) {
@@ -28,15 +127,8 @@
             html += '</ul></div>';
         }
 
-        var hasAbstract = pub.abstract && pub.abstract.length > 0;
-        var hasMedia = pub.media && pub.media.length > 0;
-        var hasLinks = pub.links && pub.links.length > 0;
-
         if (hasAbstract || hasLinks || hasMedia) {
             html += '<div class="material">';
-            if (hasAbstract) {
-                html += '<a class="btn btn-default" data-toggle="collapse" data-target="#' + pub.id + '-abstract">abstract</a>';
-            }
             if (hasLinks) {
                 pub.links.forEach(function (link) {
                     html += '<a class="pub-tag" href="' + link.url + '" target="_blank">' + link.label + '</a>';
@@ -49,7 +141,7 @@
         }
 
         if (hasAbstract) {
-            html += '<div class="collapse material" id="' + pub.id + '-abstract">';
+            html += '<div class="pub-abstract material" id="' + pub.id + '-abstract" aria-hidden="true">';
             html += '<div class="well abstract">' + pub.abstract + '</div>';
             html += '</div>';
         }
@@ -91,5 +183,6 @@
         renderSection('Book Chapters', data.bookChapters, 'pub-chapters');
         renderSection('Contributions to Crowd-Science Projects', data.crowdScience, 'pub-crowdscience');
         renderSection(null, data.workingPapers, 'pub-working');
+        bindPublicationInteractions(document);
     });
 }());
