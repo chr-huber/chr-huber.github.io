@@ -209,11 +209,50 @@ padding: 8px 10px 10px;
 margin-bottom: 6px;
 background: rgba(0,0,0,0.02);
 border-radius: 3px;
+border: 1px solid transparent;
+transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.publication-item.has-abstract {
+cursor: pointer;
+}
+.publication-item.has-abstract:hover,
+.publication-item.has-abstract:focus,
+.publication-item.abstract-expanded {
+background: rgba(74, 98, 120, 0.08);
+border-color: rgba(74, 98, 120, 0.24);
+box-shadow: 0 8px 22px rgba(74, 98, 120, 0.10);
+}
+.publication-item.has-abstract:focus {
+outline: none;
+}
+.publication-main {
+position: relative;
+padding-right: 20px;
+}
+.publication-indicator {
+position: absolute;
+top: 2px;
+right: 0;
+width: 10px;
+height: 10px;
+border-right: 1.5px solid rgba(74, 98, 120, 0.5);
+border-bottom: 1.5px solid rgba(74, 98, 120, 0.5);
+transform: rotate(45deg);
+transition: transform 220ms ease, border-color 180ms ease, top 220ms ease;
+}
+.publication-item.has-abstract:hover .publication-indicator,
+.publication-item.has-abstract:focus .publication-indicator,
+.publication-item.abstract-expanded .publication-indicator {
+border-color: rgba(74, 98, 120, 0.9);
+}
+.publication-item.abstract-expanded .publication-indicator {
+top: 6px;
+transform: rotate(-135deg);
 }
 .material {
 padding-top:2px;
 }
-.material:not(.collapse) {
+.material:not(.collapse):not(.pub-abstract) {
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -234,6 +273,20 @@ justify-content: flex-end;
     background: transparent;
     box-shadow: none;
 }
+.pub-abstract {
+display: block;
+padding-top: 2px;
+max-height: 0;
+overflow: hidden;
+opacity: 0;
+transform: translateY(-4px);
+transition: max-height 260ms ease, opacity 220ms ease, transform 220ms ease;
+will-change: max-height, opacity, transform;
+}
+.publication-item.abstract-expanded .pub-abstract {
+opacity: 1;
+transform: translateY(0);
+}
 .abstract {
 font-weight: 300; 
 font-size:13px;    
@@ -241,6 +294,7 @@ padding: 10px;
 border: 0px;
 color: #4A4A4A;  /* Charcoal for text */
 background-color: white;
+margin-top: 6px;
 }
 .active-ch {
     color: #ffffff;  /* White text for contrast */
