@@ -305,7 +305,14 @@ window.PUBLICATIONS_DATA = {
             links: [
                 { label: 'article', url: 'https://doi.org/10.1038/s41586-025-09844-9' },
                 { label: 'preprint', url: 'https://doi.org/10.31222/osf.io/twqsv_v1' }
-            ]
+            ],
+            media: [
+                { text: 'Science', url: 'https://www.science.org/content/article/across-social-sciences-half-research-doesn-t-replicate' },
+                { text: 'New York Times', url: 'https://www.nytimes.com/2026/04/01/science/ai-experiments-replication.html' },
+                { text: 'Aalto University', url: 'https://www.aalto.fi/en/news/scientific-conclusions-depend-on-who-performs-the-analysis' },
+                { text: 'ORF.at (German)', url: 'https://science.orf.at/stories/3234910/' },
+                { text: 'Die Zeit (German)', url: 'https://www.zeit.de/gesundheit/2026-04/wissenschaftliche-studien-forschung-vertrauen-brian-nosek' }
+            ]            
         },
     ],
 
