@@ -260,7 +260,7 @@ transform: rotate(-135deg);
 .material {
 padding-top:2px;
 }
-.material:not(.collapse):not(.pub-abstract) {
+.material:not(.collapse):not(.pub-abstract):not(.pub-media) {
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -294,6 +294,28 @@ will-change: max-height, opacity, transform;
 .publication-item.abstract-expanded .pub-abstract {
 opacity: 1;
 transform: translateY(0);
+}
+.pub-media {
+display: block;
+padding-top: 0;
+max-height: 0;
+width: max-content;
+max-width: 100%;
+margin-left: auto;
+overflow: hidden;
+opacity: 0;
+transform: translateY(-4px);
+transition: max-height 220ms ease, opacity 180ms ease, transform 180ms ease;
+will-change: max-height, opacity, transform;
+}
+.publication-item.media-expanded .pub-media {
+opacity: 1;
+transform: translateY(0);
+}
+.pub-media .abstract {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
 }
 .abstract {
 font-weight: 300; 
