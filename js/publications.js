@@ -42,7 +42,7 @@
             var abstractEl = item.querySelector('.pub-abstract');
             if (!abstractEl) return;
 
-            setAbstractExpanded(item, false);
+            setAbstractExpanded(item, item.classList.contains('abstract-expanded'));
 
             item.addEventListener('click', function (event) {
                 if (event.target.closest('a, button')) return;
@@ -72,7 +72,7 @@
             });
         });
 
-        if (items.length > 0) {
+        if (items.length > 0 && !root.querySelector('.publication-item.abstract-expanded')) {
             setAbstractExpanded(items[0], true);
         }
 
@@ -87,13 +87,14 @@
         });
     }
 
-    function renderPubItem(pub) {
+    function renderPubItem(pub, isInitiallyExpanded) {
         var hasAbstract = pub.abstract && pub.abstract.length > 0;
         var hasMedia = pub.media && pub.media.length > 0;
         var hasLinks = pub.links && pub.links.length > 0;
-        var itemClasses = 'row publication-item' + (hasAbstract ? ' has-abstract' : '');
+        var startsExpanded = hasAbstract && !!isInitiallyExpanded;
+        var itemClasses = 'row publication-item' + (hasAbstract ? ' has-abstract' : '') + (startsExpanded ? ' abstract-expanded' : '');
         var itemAttrs = hasAbstract
-            ? ' tabindex="0" role="button" aria-expanded="false" aria-controls="' + pub.id + '-abstract" aria-label="Show abstract for ' + escapeHtml(pub.title) + '"'
+            ? ' tabindex="0" role="button" aria-expanded="' + (startsExpanded ? 'true' : 'false') + '" aria-controls="' + pub.id + '-abstract" aria-label="Show abstract for ' + escapeHtml(pub.title) + '"'
             : '';
         var html = '<div class="' + itemClasses + '"' + itemAttrs + '>';
         html += '<div class="col-xs-12">';
@@ -103,9 +104,9 @@
         }
 
         if (pub.titleUrl) {
-            html += '<a href="' + pub.titleUrl + '" target="_blank">' + pub.title + '</a>';
+            html += '<a class="publication-title" href="' + pub.titleUrl + '" target="_blank">' + pub.title + '</a>';
         } else {
-            html += pub.title;
+            html += '<span class="publication-title">' + pub.title + '</span>';
         }
 
         if (pub.authors) {
@@ -141,8 +142,12 @@
         }
 
         if (hasAbstract) {
-            html += '<div class="pub-abstract material" id="' + pub.id + '-abstract" aria-hidden="true">';
-            html += '<div class="well abstract">' + pub.abstract + '</div>';
+            var abstractAttrs = ' class="pub-abstract material" id="' + pub.id + '-abstract" aria-hidden="' + (startsExpanded ? 'false' : 'true') + '"';
+            if (startsExpanded) {
+                abstractAttrs += ' style="max-height:none; opacity:1; transform:translateY(0);"';
+            }
+            html += '<div' + abstractAttrs + '>';
+            html += '<div class="well abstract"><span class="abstract-label">Abstract:</span> ' + pub.abstract + '</div>';
             html += '</div>';
         }
 
@@ -160,7 +165,7 @@
         return html;
     }
 
-    function renderSection(title, items, containerId) {
+    function renderSection(title, items, containerId, expandFirstItem) {
         if (!items || !items.length) return;
         var el = document.getElementById(containerId);
         if (!el) return;
@@ -169,8 +174,8 @@
             html += '<div class="publicationsheader">' + title + '</div>';
         }
         html += '<div class="container" style="width:100%; padding-left:0; padding-right:4;">';
-        items.forEach(function (pub) {
-            html += renderPubItem(pub);
+        items.forEach(function (pub, index) {
+            html += renderPubItem(pub, !!expandFirstItem && index === 0);
         });
         html += '</div>';
         el.innerHTML = html;
@@ -179,7 +184,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         var data = window.PUBLICATIONS_DATA;
         if (!data) return;
-        renderSection('Journal Articles', data.journalArticles, 'pub-journal');
+        renderSection('Journal Articles', data.journalArticles, 'pub-journal', true);
         renderSection('Book Chapters', data.bookChapters, 'pub-chapters');
         renderSection('Contributions to Crowd-Science Projects', data.crowdScience, 'pub-crowdscience');
         renderSection(null, data.workingPapers, 'pub-working');
