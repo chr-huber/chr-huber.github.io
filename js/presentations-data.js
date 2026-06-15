@@ -314,5 +314,12 @@ window.PRESENTATIONS_DATA = [
         label: '2025-04-28: Padova: Navigating Pre-Registration and Reproducibility',
         url: 'slides/202504-Padova/slides_padova.html',
         format: 'HTML'
-    }
+    },
+    {
+        topic: 'Information Environments and Asset Markets',
+        date: '2026-06-15',
+        label: '2026-06-15: Information Environments and Asset Markets',
+        url: 'slides/202606-InfoEnvAssetMarkets-EF.pptx',
+        format: 'PPTX'
+    }    
 ];
