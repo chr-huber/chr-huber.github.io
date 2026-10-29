@@ -9,11 +9,12 @@ window.PUBLICATIONS_DATA = {
         {
             id: 'Huber2024REAM',
             title: 'Do experimental asset market results replicate? High-powered preregistered replications of 17 key results',
-            titleUrl: 'https://doi.org/10.2139/ssrn.5048949',
+            titleUrl: 'https://doi.org/10.1111/jofi.70100',
             authors: 'Huber, C., Holzmeister, F., Johannesson, M., K\u00f6nig-Kersting, C., Dreber, A., Huber, J., Kirchler, M.',
             journalInfo: 'Journal of Finance, Forthcoming',
             abstract: 'Experimental asset markets provide a controlled approach to studying financial markets. We attempt to replicate 17 key results from four prominent studies, collecting new data from 166 markets with 1,544 participants. Only 3 of the 14 original results reported as statistically significant were successfully replicated. We fail to replicate findings on emotions, self-control, and gender differences in bubble formation but confirm that experience reduces bubbles and cognitive skills explain trading success. Our study demonstrates the importance of replications in enhancing the credibility of scientific results in this field.',
             links: [
+                { label: 'article', url: 'https://doi.org/10.1111/jofi.70100'},
                 { label: 'preprint', url: 'https://doi.org/10.2139/ssrn.5048949' },
                 { label: 'materials', url: 'https://osf.io/5ypku/' }
             ]
