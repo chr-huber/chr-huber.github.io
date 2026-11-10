@@ -319,6 +319,16 @@ window.PUBLICATIONS_DATA = {
 
     workingPapers: [
         {
+            id: 'Huber2026CodePaper',
+            title: 'Code-Paper Consistency in Economics and Finance',
+            titleUrl: 'https://dx.doi.org/10.2139/ssrn.7681378',
+            authors: '(with P.F. Seidel, S. Seyfi, E. Vihriälä)',
+            abstract: "We develop a structured protocol employing large language models to review 1,820 articles from leading economics and finance journals for code-paper discrepancies, that is, cases in which the analysis code does not implement what the paper describes. Our review compares each claim---a statement about the implemented analysis---with the corresponding analysis code. Of the claims for which our review reaches a conclusion, 10% show a discrepancy, and 49% of the articles in our sample contain at least one potentially serious discrepancy that relates to a central result, with robustness checks placing this share between 37% and 56%. In a preliminary analysis, we find that resolving a discrepancy materially changes reported results in a non-trivial fraction of cases. Discrepancies appear throughout the research process, with the highest rates in claims about sample rules, parameter values, and variable definitions, and they are common across journals, fields, and years. A code-paper review step complementary to journals' existing policies is feasible and can strengthen the credibility of empirical research.",
+            links: [
+                { label: 'preprint', url: 'https://dx.doi.org/10.2139/ssrn.7681378' }
+            ]
+        },        
+        {
             id: 'Blackburn2022',
             title: 'Cooperation among an anonymous group protected Bitcoin during failures of decentralization',
             titleUrl: 'https://doi.org/10.48550/arXiv.2206.02871',
