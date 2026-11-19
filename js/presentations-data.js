@@ -321,5 +321,12 @@ window.PRESENTATIONS_DATA = [
         label: '2026-06-15: Information Environments and Asset Markets',
         url: 'slides/202606-InfoEnvAssetMarkets-EF.pptx',
         format: 'PPTX'
-    }    
+    },
+    {
+        topic: 'What Matters to Investors Around the World',
+        date: '2026-11-19',
+        label: '2026-11-19: Humboldt-Universität zu Berlin, Finance Research Seminar',
+        url: 'slides/202611-HUBerlin-WhatMatters.pdf',
+        format: 'PDF'
+    }
 ];
