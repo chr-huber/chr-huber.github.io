@@ -1,0 +1,391 @@
+
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 30px;
+$presentation-h2-font-size: 1.8em;
+$presentation-heading-line-height: 1.4;
+$presentation-block-margin: 24px;
+
+$presentation-title-slide-text-align: left;
+
+$link-color: #000000;
+
+
+
+/*-- scss:rules --*/
+
+.reveal .slide .small {
+  font-size: 0.8em;
+}
+
+/*
+.reveal .slide-logo {
+  top: 0 !important;
+  margin-top: 40px;
+  right: 30px !important;
+  max-height: 5.4rem !important;
+}
+*/
+
+
+.footer-standard {
+  position: absolute;
+  max-height: 3.5rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+
+.reveal .footer1 img {
+  position: absolute;
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+.reveal .logo img {
+  position: absolute;
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 0 !important;
+}
+
+.reveal .slide-logo {
+  max-height: 8rem !important;
+  left: 0px !important;
+  bottom: 0px !important;
+}
+
+.reveal .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: auto !important;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.reveal table {
+  font-size: smaller;  
+}
+
+.reveal h2 {
+  padding-bottom: 10px;
+}
+
+.reveal .subtitle {
+  margin: var(--r-block-margin) 0 var(--r-block-margin) !important;
+}
+
+.reveal .author {
+  margin-bottom: 2.5rem !important;
+}
+
+.reveal .slides .reverse > h2 {
+  border-bottom: 0px !important;
+  width: 100% !important;
+} 
+
+.reveal .slides .thanks,
+.reveal .slides .thanks{
+  text-align:left;
+  padding-left:0 !important;
+  margin-left:0 !important;
+}
+
+  .alert-box {
+    padding: 0 20px;
+    margin: 0px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+
+  .alert-box.warning {
+    background-color: #FF8D4F;
+    color: black;
+    border-color: #b36337;
+  }
+
+  .alert-box.info {
+    background-color: #F7E159;
+    color: black;
+    border-color: #ad9e3e;
+  }
+
+  .alert-box.success {
+    background-color: #9BD84C;
+    color: black;
+    border-color: #5d822e;
+  }
+
+  .alert-box.error {
+    background-color: #f44336;
+    color: white;
+    border-color: #b71c1c;
+  }
+
+
+/* --- added for NCBEE 2026 lecture: review markers --- */
+.verify {
+  color: #C62828;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.todo {
+  background-color: #F7E159;
+  color: black;
+  font-weight: bold;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+}
+
+.reveal .slide .smaller {
+  font-size: 0.7em;
+}
+
+
+/* --- layout: title slide, section dividers, thanks slide, footer --- */
+
+$aalto-green: #9BD84C;
+
+/* title slide: text on the green left half, photo fills the right half of the screen */
+#title-slide .title-block,
+.reveal .slides section.title2 .title-block {
+  width: 46%;
+}
+#title-slide .title,
+.reveal .slides section.title2 .title {
+  font-size: 2.3em;
+  line-height: 1.1;
+  margin-bottom: 0.6em;
+}
+#title-slide .title-rule,
+.reveal .slides section.title2 .title-rule {
+  border: none;
+  border-top: 5px solid black;
+  width: 100px;
+  margin: 0 0 1.2em 0;
+}
+#title-slide .author,
+.reveal .slides section.title2 .author {
+  font-weight: 600;
+  margin-bottom: 1.2rem !important;
+}
+#title-slide .institute,
+#title-slide .date,
+.reveal .slides section.title2 .institute,
+.reveal .slides section.title2 .date {
+  font-size: 0.75em;
+  margin: 0.3em 0;
+}
+/* second title slide: longer title, so a bit smaller */
+.reveal .slides section.title2 .title {
+  font-size: 1.75em;
+}
+
+/* photo panels: right half on the title slide, left 40% on the thanks slide.
+   Screen: backgrounds live in .backgrounds (same order as slides).
+   Print (?print-pdf): each page carries its own background. */
+.reveal .backgrounds > .slide-background:first-child .slide-background-content,
+.pdf-page:has(> #title-slide) .slide-background-content,
+.reveal .backgrounds .slide-background.title2 .slide-background-content,
+.pdf-page:has(> section.title2) .slide-background-content {
+  left: 50%;
+  width: 50%;
+}
+.reveal .backgrounds > .slide-background:last-child .slide-background-content,
+.pdf-page:has(> [data-state="is-thanks"]) .slide-background-content {
+  width: 40%;
+}
+
+/* title slide: stacked logo in the footer corner, no footer text / slide number.
+   thanks slide: no footer at all. (!important: Quarto sets footer display inline) */
+.reveal .footer-title-logo {
+  display: none;
+}
+html:not(.print-pdf) .reveal-viewport.is-title .reveal .footer-standard,
+html:not(.print-pdf) .reveal-viewport.is-title .reveal .footer-text,
+html:not(.print-pdf) .reveal-viewport.is-title .reveal .slide-number,
+html:not(.print-pdf) .reveal-viewport.is-thanks .reveal .footer,
+html:not(.print-pdf) .reveal-viewport.is-thanks .reveal .slide-number {
+  display: none !important;
+}
+html:not(.print-pdf) .reveal-viewport.is-title .reveal .footer-title-logo {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 9rem;
+  max-height: none !important;
+  margin: 0;
+}
+
+/* section dividers: same black rule as the title slide */
+.reveal .slides section.title-slide.level1 h1 {
+  font-size: 2.3em;
+  text-align: left;
+}
+.reveal .slides section.title-slide.level1 h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  border-top: 5px solid black;
+  margin-top: 0.4em;
+}
+
+/* footer: small logo bottom-left, short text next to it */
+.reveal .footer {
+  font-size: 14px !important;
+  color: #555;
+}
+.reveal .progress {
+  color: $aalto-green;
+}
+
+/* footnotes (::: aside) */
+.reveal .slides section .aside,
+.reveal .slides section aside:not(.notes) {
+  font-size: 0.45em;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* PDF export: per-page footers (see print-footer.html) */
+.reveal .pdf-page .footer-pdf {
+  position: absolute !important;
+  display: block !important;
+}
+.reveal .pdf-page .footer-pdf-title .footer-standard,
+.reveal .pdf-page .footer-pdf-title .footer-text,
+.reveal .pdf-page:has(> #title-slide) .slide-number-pdf,
+.reveal .pdf-page:has(> [data-state="is-thanks"]) .slide-number-pdf {
+  display: none !important;
+}
+.reveal .pdf-page .footer-pdf-title .footer-title-logo {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 9rem;
+  max-height: none !important;
+  margin: 0;
+}
+
+/* small reference line under a slide heading */
+.reveal .slides section .ref-line {
+  font-size: 0.5em;
+  color: #555;
+  line-height: 1.3;
+  margin-top: -0.6em;
+}
+
+#title-slide .subtitle {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: -0.4em 0 0.8em 0 !important;
+}
+
+/* centred column */
+.reveal .tc {
+  text-align: center;
+}
+
+/* compact tables inside .smaller (e.g. FV table) */
+.reveal .smaller table th,
+.reveal .smaller table td {
+  padding: 0.12em 0.5em;
+}
+
+/* tighter spacing around images (reveal default is a full block margin) */
+.reveal .slides section img {
+  margin: 4px 0;
+}
+.reveal .slides section .quarto-figure {
+  margin: 0;
+}
+.reveal .slides section .quarto-figure p {
+  margin: 0;
+}
+
+/* fundamental value table (Experiment 1) */
+.reveal .fv-table table {
+  width: auto !important;
+  margin: 0 auto;
+  font-size: 0.85em;
+  border-collapse: collapse;
+}
+.reveal .fv-table th,
+.reveal .fv-table td {
+  padding: 0.16em 0.8em !important;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+}
+.reveal .fv-table thead th {
+  border-bottom: 2px solid black;
+  font-weight: 600;
+  line-height: 1.15;
+  vertical-align: bottom;
+}
+.reveal .fv-table tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+.reveal .fv-table td:nth-child(3) {
+  color: #666;
+}
+.reveal .fv-table th:last-child,
+.reveal .fv-table td:last-child {
+  background: rgba(155, 216, 76, 0.35);
+}
+
+/* footer text: part 1 (experiments) until the second title slide (.title2), part 2 after.
+   The class footer-part2-on is set by print-footer.html (screen: on the viewport,
+   PDF: on each page's footer copy). */
+.reveal .footer .footer-part2 {
+  display: none;
+}
+.reveal-viewport.footer-part2-on .reveal .footer .footer-part1,
+.reveal .pdf-page .footer-pdf.footer-part2-on .footer-part1 {
+  display: none;
+}
+.reveal-viewport.footer-part2-on .reveal .footer .footer-part2,
+.reveal .pdf-page .footer-pdf.footer-part2-on .footer-part2 {
+  display: inline;
+}
+
+/* Weitzel et al. slides: takeaway under the figures, tight so the figures can stay large */
+.reveal .weitzel-takeaway {
+  margin-top: -30px;
+}
+.reveal .weitzel-takeaway ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reveal .slides section.weitzel h4 {
+  margin-bottom: 0;
+}
+.reveal .slides section.weitzel .columns {
+  margin-top: -25px;
+}
+
+/* recap section ("Bubbles and crashes in financial markets"): larger text, tight spacing */
+.reveal .slide .recap-text {
+  font-size: 0.95em;
+  line-height: 1.25;
+}
+.reveal .slide .recap-text p,
+.reveal .slide .recap-text ul {
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+.reveal .slide .recap-text li {
+  margin: 0;
+}
+.reveal .slide .recap-text h4 {
+  margin-bottom: 0.3em;
+}

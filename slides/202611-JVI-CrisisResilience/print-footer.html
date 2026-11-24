@@ -1,0 +1,45 @@
+<script>
+// Footer text switches at the second title slide (section.title2): before it the footer
+// names the lab experiment, from it on the bubbles lecture (see .footer-part1/2 in ch.scss).
+(function () {
+  if (/print-pdf/i.test(window.location.search)) return;
+  function update() {
+    // document order, not Reveal.getSlides(): that skips uncounted slides like .title2
+    var split = document.querySelector('.reveal .slides section.title2');
+    var now = Reveal.getCurrentSlide();
+    var on = !!(split && now && (now === split ||
+      (split.compareDocumentPosition(now) & Node.DOCUMENT_POSITION_FOLLOWING)));
+    document.querySelector('.reveal-viewport').classList.toggle('footer-part2-on', on);
+  }
+  Reveal.on('ready', update);
+  Reveal.on('slidechanged', update);
+  if (Reveal.isReady && Reveal.isReady()) update();
+})();
+
+// PDF export (?print-pdf): the default footer is one fixed element that would print
+// identically on every page. Give each page its own copy instead, so the title slide
+// shows the stacked logo and the thanks slide shows no footer.
+(function () {
+  if (!/print-pdf/i.test(window.location.search)) return;
+  function perPageFooters() {
+    var foot = document.querySelector('.reveal > .footer-default');
+    if (!foot || foot.dataset.split) return;
+    foot.dataset.split = '1';
+    var part2 = false;
+    document.querySelectorAll('.pdf-page').forEach(function (page) {
+      var slide = page.querySelector('section');
+      if (slide && slide.classList.contains('title2')) part2 = true;
+      var state = slide ? slide.getAttribute('data-state') : null;
+      if (state === 'is-thanks') return;
+      var f = foot.cloneNode(true);
+      f.classList.add('footer-pdf');
+      if (part2) f.classList.add('footer-part2-on');
+      if (state === 'is-title') f.classList.add('footer-pdf-title');
+      page.appendChild(f);
+    });
+    foot.style.setProperty('display', 'none', 'important');
+  }
+  if (document.querySelector('.pdf-page')) perPageFooters();
+  Reveal.on('pdf-ready', perPageFooters);
+})();
+</script>
