@@ -138,22 +138,6 @@ When asked for a participant label, enter your **first name**.
 </div>
 ```
 
-## Earnings from the experiments
-
-#### Experiment 1
-
-{{< include live/_exp1_earnings.md >}}
-
-## Earnings from the experiments {visibility="uncounted"}
-
-#### Experiment 2
-
-{{< include live/_exp2_earnings.md >}}
-
-::: notes
-Winners of the prize draw (chance proportional to earnings) are in live/winners.txt, written by R/experiment_results.R.
-:::
-
 ## Outline
 
 ::: incremental
@@ -580,6 +564,12 @@ Percentages in the chart are the relative deviation (RD): average over periods o
 
 ## Experiment 1
 
+#### Your earnings
+
+{{< include live/_exp1_earnings.md >}}
+
+## Experiment 1
+
 #### Evidence from 166 markets with 1,544 participants
 
 4 conditions, same results: consistent bubble-crash pattern
@@ -978,9 +968,7 @@ April 24/25, 2024:
 ::: {.column .small width="45%"}
 -   The announcement *"China's economy grows by 3%"* would likely lead to a market crash. The message *"Germany's economy grows by 3%"* to a positive price jump.
 
-::: fragment
 -   2009–2019 the Chinese economy grew by a cumulative +180%, the German economy grew by only +14%.
-:::
 
 ::: {.fragment fragment-index="2"}
 -   However, the Chinese stock index did not grow as much as the German DAX index.
@@ -1099,6 +1087,12 @@ Why?
 Belief in mean-reversion?
 :::
 :::
+
+## Risk Preferences: Experiment 2
+
+#### Your earnings
+
+{{< include live/_exp2_earnings.md >}}
 
 ## Risk Preferences: Experiment 2
 
@@ -1415,7 +1409,7 @@ Krugman, P. (23 Nov 2026). Pop! Goes the bubble. *Substack*.
 Chart is our own (FRED: NCBCEL / GDP, data to Q2 2026, i.e. before the October peak); Krugman shows a similar measure. Ties back to the definition slide: we cannot observe the fundamental value, so he asks whether productivity or profits could justify the prices. His estimate: returning to 2019 valuations would wipe out about $25 trillion, roughly 80% of GDP. He does not discuss the Fed, leverage or circular deals; those are on the Minsky slide.
 :::
 
-## What can policymakers take away?
+## Takeaways
 
 ::: columns
 ::: {.column .small width="60%"}
