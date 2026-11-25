@@ -288,6 +288,13 @@ window.PRESENTATIONS_DATA = [
         format: 'HTML'
     },
     {
+        topic: 'JVI: Crisis and resilience',
+        date: '2026-11-24',
+        label: '2026-11-24: Bubbles and crashes in financial markets',
+        url: 'slides/202611-JVI-CrisisResilience/slides_jvi.html',
+        format: 'HTML'
+    },
+    {
         topic: 'Other',
         date: '2023-05-26',
         label: '2023-05-26: YEM 2023, Discussion',
