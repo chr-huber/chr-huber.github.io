@@ -335,5 +335,12 @@ window.PRESENTATIONS_DATA = [
         label: '2026-11-19: Humboldt-Universität zu Berlin, Finance Research Seminar',
         url: 'slides/202611-HUBerlin-WhatMatters.pdf',
         format: 'PDF'
+    },
+    {
+        topic: 'Code-paper consistency in economics and finance',
+        date: '2026-11-17',
+        label: '2026-11-17: Leibniz Open Science Day 2026',
+        url: 'slides/202611-LeibnizOSD-CodePaper.pdf',
+        format: 'PDF'
     }
 ];
