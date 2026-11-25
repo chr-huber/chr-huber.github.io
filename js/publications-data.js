@@ -267,16 +267,16 @@ window.PUBLICATIONS_DATA = {
 
     crowdScience: [
         {
-            id: 'Huber2026',
-            year: 'Working Paper',
-            title: 'Collective Evidence on Behavioral Interventions Targeting Carbon Pricing Support: A Many-Designs Approach with 55 Studies',
+            id: 'Holzknecht2026',
+            year: '2026',
+            title: ' Fifty-five crowdsourced designs assessing carbon pricing support in the USA ',
             titleUrl: 'https://doi.org/10.21203/rs.3.rs-8797610/v1',
-            authors: 'Huber, J., Holzknecht, A., Schwaiger, R., ... Huber, C., ... Zhao, X.',
+            authors: 'Holzknecht, A., Schwaiger, R., Blanco, E., ... Huber, C., ... Zhao, X.',
             authorNotes: ['Contributing one out of 55 study designs'],
-            journalInfo: '',
-            abstract: "There is an urgent need to reduce carbon emissions globally to limit the damages caused by climate change. Most economists agree that a carbon price is an effective and cost-efficient policy to mitigate emissions, yet low public acceptance and limited political support remain major barriers to its widespread implementation. This crowdsourced 'many-designs' project presents results from 55 behavioral interventions on real-world support for carbon pricing, independently developed by international research teams randomly selected from an initial pool of 135 applications. By implementing the interventions simultaneously with almost 20,000 U.S. residents, this pre-registered study ensures the comparability of results, accelerates scientific knowledge generation, and reduces the risk of scientific malpractices. The results show very small positive but statistically significant effects of behavioral interventions on real-world support, and stated support, including the willingness to endorse a carbon price that internalizes the social costs of $120 per ton of CO2 emissions (Cohen's d's: 0.04-0.08). Put differently, this entails an increase in support for carbon pricing across measures of around two percentage points. Furthermore, the results reveal low-to-medium between-study heterogeneity (τ: 0.07-0.12, I^2: 32%-57%). Lastly, we identify strong overconfidence among research teams regarding the expected effects of their interventions and those of their peers, indicating a potential miscalibration of community expectations.",
+            journalInfo: 'Nature Human Behaviour',
+            abstract: "A carbon price is an effective and cost-efficient policy to mitigate emissions, yet low public acceptance and limited political support remain major barriers to its widespread implementation. This crowdsourced ‘many-designs’ project presents results from 55 behavioural interventions on real-world support for carbon pricing, independently developed by international research teams. By implementing all designs simultaneously with almost 20,000 US residents, this preregistered study shows very small positive but statistically significant effects of behavioural interventions on a set of design-specific proxies of real-world support (Cohen’s d = 0.06; 99.5% confidence interval (CI) 0.001 to 0.124) and on 4 out of 5 common measures of stated support (Cohen’s d values 0.06–0.08; 99.5% CIs from 0.006 to 0.112 and from 0.020 to 0.133; between 1.7 and 2.4 percentage points in increased support across outcomes), including the willingness to endorse a carbon price that internalizes the social costs of US$120 per ton of CO2 emissions (d = 0.06; 99.5% CI 0.012 to 0.118). Furthermore, the results reveal low-to-medium between-study heterogeneity (τ = 0.07–0.12). Lastly, we identify strong overconfidence among research teams regarding the expected effects of their interventions and those of their peers, indicating a miscalibration of community expectations.",
             links: [
-                { label: 'preprint', url: 'https://doi.org/10.21203/rs.3.rs-8797610/v1' },
+                { label: 'article', url: 'https://doi.org/10.1038/s41562-026-02629-8' },
                 { label: 'project overview', url: 'https://manydesignscarbon.online/'}
             ]
         },                                
